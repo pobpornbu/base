@@ -1,0 +1,130 @@
+input[type=text],input[type=button],input[type=submit],input[type=reset],
+textarea, button, select {
+  &:focus {
+    outline: none;
+  }
+}
+
+
+// Input
+// ---------------------------------------
+.input-text-height(){
+  @height: 34px; 
+  @padding-vertical: 4px; 
+  @padding-horizontal: 10px
+}
+
+.text__label {
+  .input-text-height();
+    padding: @padding-vertical @padding-horizontal;
+    line-height: @height - (@padding-vertical * 2);
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.component(input{
+  .option(primary{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding: 4px 10px;
+    line-height: 34px;
+    height: 34px;
+    margin: 0;
+    // Set margin-bottom at .form-group
+    box-shadow: none;
+    .input-style(@input-primary-bg-color-theme, @input-primary-font-color-theme, @input-primary-border-color-theme);
+    .border-radius(3px);
+  });
+});
+
+.button__wrap {
+  display:block; width: 300px; color: @black; background-color:@white; position: absolute; bottom: 25px;
+  &:hover {
+    .no-csstransform &, .no-csstransforms3d & {
+      background-color: darken(@white, 15%);
+    }
+  }
+}
+  .button--cube {
+    width: 300px; height: 34px;
+  }
+    .button--face {
+      font-family: "Ropa Sans"; font-size: 16px; color: @black; border: 2px solid @black;
+      padding: 5px 15px;
+      text-align: center; text-transform: capitalize;
+
+      &:first-of-type {
+        background-color: @white;
+      }
+
+      &:nth-of-type(2) {
+        background: @black;
+        color: @white;
+      }
+
+      &:nth-of-type(3) {
+        background: darken(@white, 20%);
+      }
+
+      &:last-of-type {
+        background: darken(@white, 30%);
+      }
+    }
+
+// Radio
+// ------------------------------------------------------
+// <fieldset class="form-group">
+//   <input id="female" name="gender" type="radio">
+//   <label class="input__radio"  for="female"> Female </label>
+//   <input id="male" name="gender" type="radio" >
+//   <label class="input__radio" for="male"> Male </label>
+// </fieldset>
+
+input[type=radio],input[type=checkbox]{
+  display: none;
+}
+.input__radio, .input__checkbox {
+  display: inline-block;
+  cursor: pointer;
+}
+.input__radio:before, .input__checkbox:before {
+  font-size: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align:middle;
+  text-align: center;
+  border-radius: 10px;
+}
+.input__radio:before {
+  .icon-iconicon("\f3a6");
+}
+input[type=radio]:checked + .input__radio:before {
+  .icon-iconicon("\f3a7");
+}
+
+// Checkbox
+// ------------------------------------------------------
+// <fieldset class="form-group">
+//   <input type="checkbox" id="subscribe" name="subscribe">
+//   <label class="input__checkbox --primary" for="subscribe">I agree to the Term of Use and Privacy Policy</label>
+// </fieldset>
+
+.input__checkbox:before {
+  .icon-iconicon("\f372");
+}
+
+input[type=checkbox]:checked + .input__checkbox:before {
+  .icon-iconicon("\f374");
+}
+
+// Theme color for radio and checkbox
+// ------------------------------------------------------
+.input--primary {
+  .input-radio-checkbox-color(@input-radio-color-theme, before);
+}
+input[type=radio]:checked + .input--primary:before,
+input[type=checkbox]:checked + .input--primary:before {
+  color: @color-primary;
+}

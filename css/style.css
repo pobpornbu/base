@@ -1,0 +1,451 @@
+.button-size-normal {
+  padding: 6px 20px;
+}
+.round {
+  -webkit-border-radius: 1000px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1000px;
+  -moz-background-clip: padding;
+  border-radius: 1000px;
+  background-clip: padding-box;
+}
+.button {
+  font-family: Tahoma, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  padding: 6px 20px;
+  -webkit-border-radius: 1000px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1000px;
+  -moz-background-clip: padding;
+  border-radius: 1000px;
+  background-clip: padding-box;
+}
+.button:focus {
+  outline: none;
+  -webkit-appearance: none;
+}
+.button.\--solid-primary {
+  border: 1px solid rgba(255, 255, 255, 0);
+  background-color: #52d2ca;
+  color: #ffffff;
+}
+.button.\--solid-primary:hover,
+.button.\--solid-primary:focus,
+.button.\--solid-primary:active,
+.button.\--solid-primary.active,
+.button.\--solid-primary:disabled,
+.button.\--solid-primary.disabled {
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.button.\--solid-primary:hover {
+  background-color: #75dbd5;
+}
+.button.\--solid-primary:focus,
+.button.\--solid-primary:active,
+.button.\--solid-primary.active {
+  background-color: #36bcb2;
+}
+.button.\--solid-primary:disabled,
+.button.\--solid-primary.disabled {
+  background-color: #bcc0c4;
+}
+.button.\--solid-primary:hover {
+  color: #ffffff;
+}
+.button.\--solid-primary:focus,
+.button.\--solid-primary:active,
+.button.\--solid-primary.active {
+  color: #ffffff;
+}
+.button.\--solid-primary:disabled,
+.button.\--solid-primary.disabled {
+  color: #ffffff;
+}
+.button.\--outline-primary {
+  border: 1px solid #52d2ca;
+  background-color: rgba(255, 255, 255, 0);
+  color: #52d2ca;
+}
+.button.\--outline-primary:hover {
+  border: 1px solid #75dbd5;
+}
+.button.\--outline-primary:focus,
+.button.\--outline-primary:active,
+.button.\--outline-primary.active {
+  border: 1px solid #36bcb2;
+}
+.button.\--outline-primary:disabled,
+.button.\--outline-primary.disabled {
+  border: 1px solid #bcc0c4;
+}
+.button.\--outline-primary:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+.button.\--outline-primary:focus,
+.button.\--outline-primary:active,
+.button.\--outline-primary.active {
+  background-color: #36bcb2;
+}
+.button.\--outline-primary:disabled,
+.button.\--outline-primary.disabled {
+  background-color: #e8eaeb;
+}
+.button.\--outline-primary:hover {
+  color: #75dbd5;
+}
+.button.\--outline-primary:focus,
+.button.\--outline-primary:active,
+.button.\--outline-primary.active {
+  color: #ffffff;
+}
+.button.\--outline-primary:disabled,
+.button.\--outline-primary.disabled {
+  color: #bcc0c4;
+}
+.button.\--outline-secondary {
+  border: 1px solid #7a8189;
+  background-color: rgba(255, 255, 255, 0);
+  color: #7a8189;
+}
+.button.\--outline-secondary:hover {
+  border: 1px solid #75dbd5;
+}
+.button.\--outline-secondary:focus,
+.button.\--outline-secondary:active,
+.button.\--outline-secondary.active {
+  border: 1px solid #36bcb2;
+}
+.button.\--outline-secondary:disabled,
+.button.\--outline-secondary.disabled {
+  border: 1px solid #bcc0c4;
+}
+.button.\--outline-secondary:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+.button.\--outline-secondary:focus,
+.button.\--outline-secondary:active,
+.button.\--outline-secondary.active {
+  background-color: #36bcb2;
+}
+.button.\--outline-secondary:disabled,
+.button.\--outline-secondary.disabled {
+  background-color: #e8eaeb;
+}
+.button.\--outline-secondary:hover {
+  color: #75dbd5;
+}
+.button.\--outline-secondary:focus,
+.button.\--outline-secondary:active,
+.button.\--outline-secondary.active {
+  color: #ffffff;
+}
+.button.\--outline-secondary:disabled,
+.button.\--outline-secondary.disabled {
+  color: #bcc0c4;
+}
+.button.\--outline-favorite {
+  border: 1px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+  color: #ffffff;
+}
+.button.\--outline-favorite:hover {
+  border: 1px solid #f7976d;
+}
+.button.\--outline-favorite:focus,
+.button.\--outline-favorite:active,
+.button.\--outline-favorite.active {
+  border: 1px solid #f57d48;
+}
+.button.\--outline-favorite:disabled,
+.button.\--outline-favorite.disabled {
+  border: 1px solid #bcc0c4;
+}
+.button.\--outline-favorite:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+.button.\--outline-favorite:focus,
+.button.\--outline-favorite:active,
+.button.\--outline-favorite.active {
+  background-color: #f57d48;
+}
+.button.\--outline-favorite:disabled,
+.button.\--outline-favorite.disabled {
+  background-color: #e8eaeb;
+}
+.button.\--outline-favorite:hover {
+  color: #f7976d;
+}
+.button.\--outline-favorite:focus,
+.button.\--outline-favorite:active,
+.button.\--outline-favorite.active {
+  color: #ffffff;
+}
+.button.\--outline-favorite:disabled,
+.button.\--outline-favorite.disabled {
+  color: #bcc0c4;
+}
+.button.\--icon {
+  padding: 6px 20px 6px 40px;
+  position: relative;
+  border: none;
+}
+.button.\--icon:before {
+  font-size: 26px;
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  margin-left: -70px;
+}
+.button.\--facebook {
+  color: #ffffff;
+  background-color: #3b579d;
+}
+.button.\--facebook:hover {
+  background-color: #496fad;
+}
+.button.\--facebook:focus,
+.button.\--facebook:active,
+.button.\--facebook.active {
+  background-color: #2d4a84;
+}
+.button.\--facebook:disabled,
+.button.\--facebook.disabled {
+  background-color: #bcc0c4;
+}
+.button__wrap {
+  display: block;
+  width: 300px;
+  color: #000000;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 25px;
+}
+.no-csstransform .button__wrap:hover,
+.no-csstransforms3d .button__wrap:hover {
+  background-color: #d9d9d9;
+}
+.button--cube {
+  width: 300px;
+  height: 34px;
+}
+.button--face {
+  font-family: "Ropa Sans";
+  font-size: 16px;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 5px 15px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.button--face:first-of-type {
+  background-color: #ffffff;
+}
+.button--face:nth-of-type(2) {
+  background: #000000;
+  color: #ffffff;
+}
+.button--face:nth-of-type(3) {
+  background: #cccccc;
+}
+.button--face:last-of-type {
+  background: #b3b3b3;
+}
+input[type=text]:focus,
+input[type=button]:focus,
+input[type=submit]:focus,
+input[type=reset]:focus,
+textarea:focus,
+button:focus,
+select:focus {
+  outline: none;
+}
+.text__label {
+  padding: 4px 10px;
+  line-height: 26px;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+.input.\--primary {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding: 4px 10px;
+  line-height: 34px;
+  height: 34px;
+  margin: 0;
+  box-shadow: none;
+  border: 1px solid #d3d5d8;
+  background-color: #ffffff;
+  color: #a7abb0;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.input.\--primary:hover {
+  border: 1px solid #52d2ca;
+}
+.input.\--primary:focus,
+.input.\--primary:active,
+.input.\--primary.active {
+  border: 1px solid #36bcb2;
+}
+.input.\--primary:disabled,
+.input.\--primary.disabled {
+  border: 1px solid #de1f09;
+}
+.input.\--primary:hover {
+  background-color: #ffffff;
+}
+.input.\--primary:focus,
+.input.\--primary:active,
+.input.\--primary.active {
+  background-color: #ffffff;
+}
+.input.\--primary:disabled,
+.input.\--primary.disabled {
+  background-color: #e8eaeb;
+}
+.input.\--primary:hover {
+  color: #a7abb0;
+}
+.input.\--primary:focus,
+.input.\--primary:active,
+.input.\--primary.active {
+  color: #222d3a;
+}
+.input.\--primary:disabled,
+.input.\--primary.disabled {
+  color: #bcc0c4;
+}
+.button__wrap {
+  display: block;
+  width: 300px;
+  color: #000000;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 25px;
+}
+.no-csstransform .button__wrap:hover,
+.no-csstransforms3d .button__wrap:hover {
+  background-color: #d9d9d9;
+}
+.button--cube {
+  width: 300px;
+  height: 34px;
+}
+.button--face {
+  font-family: "Ropa Sans";
+  font-size: 16px;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 5px 15px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.button--face:first-of-type {
+  background-color: #ffffff;
+}
+.button--face:nth-of-type(2) {
+  background: #000000;
+  color: #ffffff;
+}
+.button--face:nth-of-type(3) {
+  background: #cccccc;
+}
+.button--face:last-of-type {
+  background: #b3b3b3;
+}
+input[type=radio],
+input[type=checkbox] {
+  display: none;
+}
+.input__radio,
+.input__checkbox {
+  display: inline-block;
+  cursor: pointer;
+}
+.input__radio:before,
+.input__checkbox:before {
+  font-size: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 10px;
+}
+.input__radio:before {
+  content: "\f3a6";
+  display: inline-block;
+  font-family: "Ionicons", Tahoma, sans-serif;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+input[type=radio]:checked + .input__radio:before {
+  content: "\f3a7";
+  display: inline-block;
+  font-family: "Ionicons", Tahoma, sans-serif;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.input__checkbox:before {
+  content: "\f372";
+  display: inline-block;
+  font-family: "Ionicons", Tahoma, sans-serif;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+input[type=checkbox]:checked + .input__checkbox:before {
+  content: "\f374";
+  display: inline-block;
+  font-family: "Ionicons", Tahoma, sans-serif;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.input--primary {
+  color: #7a8189;
+}
+.input--primary:hover:before {
+  color: #75dbd5;
+}
+.input--primary:focus:before,
+.input--primary:active:before,
+.input--primary.active:before {
+  color: #36bcb2;
+}
+.input--primary:disabled:before,
+.input--primary.disabled:before {
+  color: #bcc0c4;
+}
+input[type=radio]:checked + .input--primary:before,
+input[type=checkbox]:checked + .input--primary:before {
+  color: #52d2ca;
+}
