@@ -1,10 +1,51 @@
-input[type=text],input[type=button],input[type=submit],input[type=reset],
-textarea, button, select {
+input, textarea, button, select {
+  outline: none;
   &:focus {
     outline: none;
   }
 }
+// Placeholder
+// ---------------------------------------
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {  
+   color: @gray-step-4;  
+}
 
+// Search
+// ---------------------------------------
+input[type=search] {
+  .appearance(textfield);
+  .box-sizing(content-box);
+  font-family: inherit;
+  font-size: 100%;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.component(input {
+  .part(search {
+    width: 100px;
+    .round;
+    .transition(all .5s);
+
+    &:focus {
+      width: 150px;
+    }
+  });
+  .part(icon {
+    .option(search {
+      font-size: 16px;
+      color: @gray-step-5;
+    });
+  });
+});
 
 // Input
 // ---------------------------------------
@@ -16,25 +57,46 @@ textarea, button, select {
 
 .text__label {
   .input-text-height();
-    padding: @padding-vertical @padding-horizontal;
-    line-height: @height - (@padding-vertical * 2);
-    font-size: 13px;
-    margin-bottom: 0;
+  padding: @padding-vertical @padding-horizontal;
+  line-height: @height - (@padding-vertical * 2);
+  font-size: 13px;
+  margin-bottom: 0;
 }
 
 .component(input{
-  .option(primary{
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
+  .box-shadow(none);
+  .part(wrap{
+    .option(icon{
+      position: relative;
+    });
+  });
+  .part(text{
     width: 100%;
-    padding: 4px 10px;
-    line-height: 34px;
-    height: 34px;
+    .radius;
+  });
+  .part(icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    .input-text-height();
+    width: @height;
+    height: @height;
+    line-height: @height !important;
+    text-align: center;
+  });
+
+  .option(primary{
+    .input-text-height();
+    height: @height;
+    line-height: @height;
+    padding: @padding-vertical @padding-horizontal;
     margin: 0;
     // Set margin-bottom at .form-group
-    box-shadow: none;
     .input-style(@input-primary-bg-color-theme, @input-primary-font-color-theme, @input-primary-border-color-theme);
-    .border-radius(3px);
   });
 });
 
@@ -128,3 +190,52 @@ input[type=radio]:checked + .input--primary:before,
 input[type=checkbox]:checked + .input--primary:before {
   color: @color-primary;
 }
+
+// Tab
+// ------------------------------------------------------
+// <ul class="nav nav-tabs [ tab__wrap --primary ]" role="tablist" id="myTab">
+//   <li role="presentation" class="active [ tab__head ]">
+//     <a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="[ tab__link ]">Home</a>
+//   </li>
+//   <li role="presentation" class="[ tab__head ]">
+//     <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="[ tab__link ]">Profile</a>
+//   </li>
+//   <li role="presentation" class="[ tab__head ]">
+//     <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" class="[ tab__link ]">Messages</a>
+//   </li>
+//   <li role="presentation" class="[ tab__head ]">
+//     <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab" class="[ tab__link ]">Settings</a>
+//   </li>
+// </ul>
+
+.component(tab {
+  .part(wrap {
+    .option(primary {
+      background: @color-primary;
+    });
+  });
+  .part(head {
+    &.active {
+      .tab__link {
+        border-bottom: 3px solid @color-hilight;
+        border-top: 1px solid rgba(255, 255, 255, 0);
+        border-left: 1px solid rgba(255, 255, 255, 0);
+        border-right: 1px solid rgba(255, 255, 255, 0);
+        background-color: @white;
+        .border-radius(0);
+        padding: 10px 15px 8px; 
+      }
+    }
+  });
+  .part(link {
+    &:hover {
+      border-bottom: 3px solid @color-hilight;
+      border-top: 1px solid rgba(255, 255, 255, 0);
+      border-left: 1px solid rgba(255, 255, 255, 0);
+      border-right: 1px solid rgba(255, 255, 255, 0);
+      background-color: @white;
+      .border-radius(0);
+      padding: 10px 15px 8px;
+    }
+  });
+});

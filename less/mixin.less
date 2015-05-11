@@ -127,6 +127,16 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
+.icon-fontawesome(@icon) {
+	content: @icon;
+	display: inline-block;
+  font: normal normal normal FontAwesome, Tahoma, sans-serif;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  transform: translate(0, 0);
+}
 
 .icon-style(@font-size: 30px; @color: @icon-primary-color-theme){
 	font-size: @font-size;
