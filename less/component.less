@@ -15,6 +15,11 @@ input, textarea, button, select {
 
 // Search
 // ---------------------------------------
+// <div class="form-group input__wrap --icon">
+//   <input type="search" name="search" class="input__search input --primary" placeholder="Search" results="5" autosave="some_unique_value">
+//   <i class="fa fa-search input__icon --search"></i>
+// </div>
+      
 input[type=search] {
   .appearance(textfield);
   .box-sizing(content-box);
@@ -43,6 +48,8 @@ input[type="search"]::-webkit-search-results-decoration {
     .option(search {
       font-size: 16px;
       color: @gray-step-5;
+      .input-text-height();
+      line-height: @height;
     });
   });
 });
@@ -76,6 +83,11 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 100%;
     .radius;
   });
+  .part(textarea {
+    width: 100%;
+    .radius;
+    // line-height: 34px !important;
+  });
   .part(icon {
     position: absolute;
     top: 0;
@@ -85,14 +97,13 @@ input[type="search"]::-webkit-search-results-decoration {
     .input-text-height();
     width: @height;
     height: @height;
-    line-height: @height !important;
     text-align: center;
   });
 
   .option(primary{
     .input-text-height();
     height: @height;
-    line-height: @height;
+    // line-height: @height;
     padding: @padding-vertical @padding-horizontal;
     margin: 0;
     // Set margin-bottom at .form-group
@@ -100,39 +111,23 @@ input[type="search"]::-webkit-search-results-decoration {
   });
 });
 
-.button__wrap {
-  display:block; width: 300px; color: @black; background-color:@white; position: absolute; bottom: 25px;
-  &:hover {
-    .no-csstransform &, .no-csstransforms3d & {
-      background-color: darken(@white, 15%);
-    }
-  }
+
+// Textarea
+// ---------------------------------------
+
+.no-textarea-style {
+  .input-style(@input-primary-bg-color-theme, @input-primary-font-color-theme, rgba(255,255,255,0));
+  box-shadow: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none; 
+  overflow: auto; // prevent scrollbar in IE
 }
-  .button--cube {
-    width: 300px; height: 34px;
-  }
-    .button--face {
-      font-family: "Ropa Sans"; font-size: 16px; color: @black; border: 2px solid @black;
-      padding: 5px 15px;
-      text-align: center; text-transform: capitalize;
 
-      &:first-of-type {
-        background-color: @white;
-      }
-
-      &:nth-of-type(2) {
-        background: @black;
-        color: @white;
-      }
-
-      &:nth-of-type(3) {
-        background: darken(@white, 20%);
-      }
-
-      &:last-of-type {
-        background: darken(@white, 30%);
-      }
-    }
 
 // Radio
 // ------------------------------------------------------

@@ -20,7 +20,7 @@
     -webkit-appearance: none;
   }
   .option(solid-primary{
-    .input-style(@button-solid-primary-theme; @button-solid-font-color-theme; rgba(255,255,255,0));
+    .input-style(@button-solid-primary-theme; @button-solid-font-color-theme; @button-solid-primary-theme);
   });
   .option(outline-primary {
     .input-style(@button-outline-primary-bg-theme; @button-outline-primary-color-theme; @button-outline-primary-border-theme);
@@ -48,6 +48,40 @@
     .input-bg(@button-facebook-bg-color-theme);
   });
 });
+
+.button__wrap {
+  display:block; width: 300px; color: @black; background-color:@white; position: absolute; bottom: 25px;
+  &:hover {
+    .no-csstransform &, .no-csstransforms3d & {
+      background-color: darken(@white, 15%);
+    }
+  }
+}
+  .button--cube {
+    width: 300px; height: 34px;
+  }
+    .button--face {
+      font-family: "Ropa Sans"; font-size: 16px; color: @black; border: 2px solid @black;
+      padding: 5px 15px;
+      text-align: center; text-transform: capitalize;
+
+      &:first-of-type {
+        background-color: @white;
+      }
+
+      &:nth-of-type(2) {
+        background: @black;
+        color: @white;
+      }
+
+      &:nth-of-type(3) {
+        background: darken(@white, 20%);
+      }
+
+      &:last-of-type {
+        background: darken(@white, 30%);
+      }
+    }
 
 .button__wrap {
   display:block; width: 300px; color: @black; background-color:@white; position: absolute; bottom: 25px;

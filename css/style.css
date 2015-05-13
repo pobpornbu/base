@@ -40,17 +40,21 @@
   -webkit-appearance: none;
 }
 .button.\--solid-primary {
-  border: 1px solid rgba(255, 255, 255, 0);
+  border: 1px solid #52d2ca;
   background-color: #52d2ca;
   color: #ffffff;
 }
-.button.\--solid-primary:hover,
+.button.\--solid-primary:hover {
+  border: 1px solid #75dbd5;
+}
 .button.\--solid-primary:focus,
 .button.\--solid-primary:active,
-.button.\--solid-primary.active,
+.button.\--solid-primary.active {
+  border: 1px solid #36bcb2;
+}
 .button.\--solid-primary:disabled,
 .button.\--solid-primary.disabled {
-  border: 1px solid rgba(255, 255, 255, 0);
+  border: 1px solid #bcc0c4;
 }
 .button.\--solid-primary:hover {
   background-color: #75dbd5;
@@ -265,6 +269,44 @@
 .button--face:last-of-type {
   background: #b3b3b3;
 }
+.button__wrap {
+  display: block;
+  width: 300px;
+  color: #000000;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 25px;
+}
+.no-csstransform .button__wrap:hover,
+.no-csstransforms3d .button__wrap:hover {
+  background-color: #d9d9d9;
+}
+.button--cube {
+  width: 300px;
+  height: 34px;
+}
+.button--face {
+  font-family: "Ropa Sans";
+  font-size: 16px;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 5px 15px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.button--face:first-of-type {
+  background-color: #ffffff;
+}
+.button--face:nth-of-type(2) {
+  background: #000000;
+  color: #ffffff;
+}
+.button--face:nth-of-type(3) {
+  background: #cccccc;
+}
+.button--face:last-of-type {
+  background: #b3b3b3;
+}
 input,
 textarea,
 button,
@@ -318,6 +360,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .input__icon.\--search {
   font-size: 16px;
   color: #7a8189;
+  line-height: 34px;
 }
 .text__label {
   padding: 4px 10px;
@@ -344,6 +387,15 @@ input[type="search"]::-webkit-search-results-decoration {
   border-radius: 3px;
   background-clip: padding-box;
 }
+.input__textarea {
+  width: 100%;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
 .input__icon {
   position: absolute;
   top: 0;
@@ -352,12 +404,10 @@ input[type="search"]::-webkit-search-results-decoration {
   display: block;
   width: 34px;
   height: 34px;
-  line-height: 34px !important;
   text-align: center;
 }
 .input.\--primary {
   height: 34px;
-  line-height: 34px;
   padding: 4px 10px;
   margin: 0;
   border: 1px solid #d3d5d8;
@@ -400,43 +450,51 @@ input[type="search"]::-webkit-search-results-decoration {
 .input.\--primary.disabled {
   color: #bcc0c4;
 }
-.button__wrap {
-  display: block;
-  width: 300px;
-  color: #000000;
+.no-textarea-style {
+  border: 1px solid rgba(255, 255, 255, 0);
   background-color: #ffffff;
-  position: absolute;
-  bottom: 25px;
+  color: #a7abb0;
+  box-shadow: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  overflow: auto;
 }
-.no-csstransform .button__wrap:hover,
-.no-csstransforms3d .button__wrap:hover {
-  background-color: #d9d9d9;
+.no-textarea-style:hover,
+.no-textarea-style:focus,
+.no-textarea-style:active,
+.no-textarea-style.active,
+.no-textarea-style:disabled,
+.no-textarea-style.disabled {
+  border: 1px solid rgba(255, 255, 255, 0);
 }
-.button--cube {
-  width: 300px;
-  height: 34px;
-}
-.button--face {
-  font-family: "Ropa Sans";
-  font-size: 16px;
-  color: #000000;
-  border: 2px solid #000000;
-  padding: 5px 15px;
-  text-align: center;
-  text-transform: capitalize;
-}
-.button--face:first-of-type {
+.no-textarea-style:hover {
   background-color: #ffffff;
 }
-.button--face:nth-of-type(2) {
-  background: #000000;
-  color: #ffffff;
+.no-textarea-style:focus,
+.no-textarea-style:active,
+.no-textarea-style.active {
+  background-color: #ffffff;
 }
-.button--face:nth-of-type(3) {
-  background: #cccccc;
+.no-textarea-style:disabled,
+.no-textarea-style.disabled {
+  background-color: #e8eaeb;
 }
-.button--face:last-of-type {
-  background: #b3b3b3;
+.no-textarea-style:hover {
+  color: #a7abb0;
+}
+.no-textarea-style:focus,
+.no-textarea-style:active,
+.no-textarea-style.active {
+  color: #222d3a;
+}
+.no-textarea-style:disabled,
+.no-textarea-style.disabled {
+  color: #bcc0c4;
 }
 input[type=radio],
 input[type=checkbox] {
