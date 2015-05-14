@@ -70,6 +70,11 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-bottom: 0;
 }
 
+// Theme
+.theme-input-primary {
+  .input-style(@input-primary-bg-color-theme, @input-primary-font-color-theme, @input-primary-border-color-theme);
+}
+
 .component(input{
   display: inline-block;
   position: relative;
@@ -186,55 +191,3 @@ input[type=checkbox]:checked + .input--primary:before {
   color: @color-primary;
 }
 
-// Tab
-// ------------------------------------------------------
-// <ul class="nav nav-tabs [ tab__wrap --primary ]" role="tablist" id="myTab">
-//   <li role="presentation" class="active [ tab__head ]">
-//     <a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="[ tab__link ]">Home</a>
-//   </li>
-//   <li role="presentation" class="[ tab__head ]">
-//     <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="[ tab__link ]">Profile</a>
-//   </li>
-//   <li role="presentation" class="[ tab__head ]">
-//     <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" class="[ tab__link ]">Messages</a>
-//   </li>
-//   <li role="presentation" class="[ tab__head ]">
-//     <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab" class="[ tab__link ]">Settings</a>
-//   </li>
-// </ul>
-
-.tab-no-style {
-  border: none;
-  .border-radius(0);
-  margin: 0;
-}
-
-.tab-selected {
-  border-bottom: 3px solid @color-hilight;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  background-color: @white;
-  padding: 10px 15px 8px;
-}
-
-.component(tab {
-  .part(wrap {
-    .option(primary {
-      background: @color-primary;
-    });
-  });
-  .part(head {
-    &.active {
-      .tab__link {
-        .tab-selected !important;
-      }
-    }
-  });
-  .part(link {
-    .tab-no-style !important;
-    &:hover {
-      .tab-selected !important;
-    }
-  });
-});
