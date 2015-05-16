@@ -18,7 +18,8 @@ $('select').each(function(){
     for (var i = 0; i < numberOfOptions; i++) {
         $('<li />', {
             text: $this.children('option').eq(i).text(),
-            rel: $this.children('option').eq(i).val()
+            rel: $this.children('option').eq(i).val(),
+            class: $this.children('option').eq(i).attr('class')
         }).appendTo($list);
     }
   
@@ -40,10 +41,14 @@ $('select').each(function(){
     $listItems.click(function(e) {
         e.stopPropagation();
         $styledSelect.text($(this).text()).removeClass('active');
-        // $this.val($(this).attr('rel'));
-        // $list.hide();
-        // console.log($(this).attr('rel'));
-        window.location.href= $(this).attr('rel')+'.html'; 
+        if(($listItems).hasClass('link')){
+            window.location.href= $(this).attr('rel')+'.html';             
+        }else{
+            $this.val($(this).attr('rel'));
+            $list.hide();
+            console.log($(this).attr('rel'));
+        }
+
     });
   
     $(document).click(function() {
