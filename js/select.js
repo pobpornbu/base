@@ -39,11 +39,11 @@ $('select').each(function(){
 
     $listItems.click(function(e) {
         e.stopPropagation();
-        // $this.attr("href", $(this))
         $styledSelect.text($(this).text()).removeClass('active');
         // $this.val($(this).attr('rel'));
         // $list.hide();
-        console.log($(this).val());
+        // console.log($(this).attr('rel'));
+        window.location.href= $(this).attr('rel')+'.html'; 
     });
   
     $(document).click(function() {
