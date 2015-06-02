@@ -1,0 +1,24 @@
+.mixin {
+  text-shadow+: 0 2px 4px rgba(0, 0, 0, 0.8), 1px 1px 2px rgb(242, 242, 242);
+}
+
+.cls {
+  &__more {
+    .mixin;
+    text-shadow+: 1px 1px 3px @black;
+  }
+}
+
+.generate-color(8);
+
+.generate-color(@n, @row: 1, @darken-percent: 10) when (@row =< @n) {
+  .li-@{row} {
+    background-color: darken(#ffffff, unit(@darken-percent, %));
+  }
+  .generate-color(@n, (@row + 1), @darken-percent + 10);
+}
+
+.loop__container {
+  width: 200px;
+  height: 30px;
+}
