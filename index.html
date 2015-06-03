@@ -82,7 +82,7 @@
   <meta name="twitter:creator" content="">
   <meta name="twitter:image:src" content="">
 </head>
-<body>
+<body ng-app="BaselineApp">
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -90,7 +90,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
-        <img alt="Brand" src="...">
+        <img alt="Brand" src="/images/favicon.png">
       </a>
     </div>
     <form class="navbar-form navbar-right" role="search">
@@ -101,132 +101,22 @@
     </form>
   </div>
 </nav>
-  <div class="container">
-    <div class="row">
-      <div class="one-half column">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
-      </div>
-    </div>
-    <div class="row">
-      <ul class="nav nav-tabs [ tab__wrap --primary ]" role="tablist" id="myTab">
-        <li role="presentation" class=" [ tab__head ] active">
-          <a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="[ tab__link ]">Home</a>
-        </li>
-        <li role="presentation" class="tab__head">
-          <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="[ tab__link ]">Profile</a>
-        </li>
-        <li role="presentation" class="tab__head">
-          <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" class="[ tab__link ]">Messages</a>
-        </li>
-        <li role="presentation" class="tab__head">
-          <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab" class="[ tab__link ]">Settings</a>
-        </li>
-      </ul>
-
-      <div class="tab-content">
-        <div role="tabpanel" class="[ tab-pane active ]" id="home">
-          <h2>Home</h2>
-          This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a></div>
-        <div role="tabpanel" class="[ tab-pane ]" id="profile">
-          <h2>profile</h2>
-          This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a></div>
-        <div role="tabpanel" class="[ tab-pane ]" id="messages">
-          <h2>Message</h2>
-          This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a></div>
-        <div role="tabpanel" class="[ tab-pane ]" id="settings">
-          <h2>Settings</h2>
-          This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a></div>
-      </div>
-    </div>
-    <div class="row">
-      <form class="col-xs-12">
-        <fieldset class="form-group">
-          <div class="col-xs-12 col-sm-3">
-            <label for="firstname" class="text__label">First Name</label>
-          </div>
-          <div class="col-xs-12 col-sm-9">
-            <div class="validate__container">
-              <input id="firstname" type="text" class="input input__text --primary" name="firstname" placeholder="firstname" required/>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset class="form-group">
-          <div class="col-xs-12 col-sm-3">
-            <label for="skill" class="text__label">Skills</label>
-          </div>
-          <div class="col-xs-12 col-sm-9">
-            <textarea name="skill" id="skill" class="input input__textarea --primary js-comment-textarea" placeholder="Tell us more about yourself"></textarea>
-          </div>
-        </fieldset>
-        <fieldset class="form-group">
-          <div class="col-xs-12 col-sm-3">
-            <label for="gender" class="text__label">Gender</label>
-          </div>
-          <div class="col-xs-12 col-sm-9">
-            <input type="radio" name="gender" id="female">
-            <label class="input__radio input--primary"  for="female"></label>
-            <span class="text__label">Female</span>
-            <input type="radio" name="gender" id="male">
-            <label class="input__radio input--primary" for="male"></label>
-            <span class="text__label">Male</span>
-          </div>
-        </fieldset>
-        <fieldset class="form-group">
-          <div class="col-xs-12 col-sm-9 col-sm-offset-3">
-            <input type="checkbox" id="subscribe" name="subscribe">
-            <label class="input__checkbox input--primary" for="subscribe"></label>
-            <span class="text__label">I agree to the Term of Use and Privacy Policy</span>
-          </div>
-        </fieldset>
-        <fieldset class="form-group">
-          <div class="col-xs-12 col-sm-9 col-sm-offset-3">
-            <select id="mounth">
-              <option value="hide">Month</option>
-              <option value="january" rel="icon-temperature">January</option>
-              <option value="february">February</option>
-              <option value="march">March</option>
-              <option value="april">April</option>
-              <option value="may">May</option>
-              <option value="june">June</option>
-              <option value="july">July</option>
-              <option value="august">August</option>
-              <option value="september">September</option>
-              <option value="october">October</option>
-              <option value="november">November</option>
-              <option value="december">December</option>
-            </select> 
-            <select id="year">
-              <option value="hide">-- Year --</option>
-              <option value="2010">2010</option>
-              <option value="2011">2011</option>
-              <option value="2012">2012</option>
-              <option value="2013">2013</option>
-              <option value="2014">2014</option>
-              <option value="2015">2015</option>
-            </select>
-          </div>
-        </fieldset>
-        <fieldset class="form-group">
-          <div class="col-xs-12 col-sm-9 col-sm-offset-3">
-            <input type="submit" value="Cancel" class="button --outline-secondary"></input>
-            <input type="submit" value="Save" class="button --solid-primary"></input>
-          </div>
-        </fieldset>
-
-      </form>
-    </div>
-  </div>
+<div class="container" ng-view>
+</div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <script src=""></script>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bower_components/modernizr/modernizr.js"></script>
   <script src="bower_components/detectizr/dist/detectizr.min.js"></script>
-  <script src="bower_components/autosize/dest/autosize.min.js"></script>
+  <script src="bower_components/autosize/dist/autosize.min.js"></script>
+  <script src="app/app.js"></script>
   <script src="js/component.js"></script>
   <script src="js/sidebar.js"></script>
   <script src="js/select.js"></script>
