@@ -1,0 +1,122 @@
+@keyframes layer1 {
+  0%, 65% {
+    fill: #b2b2b2;
+  }
+  75%, 82% {
+    fill: #4b4b4b;
+  }
+  92%, 100% {
+    fill: #b2b2b2;
+  }
+}
+
+@keyframes layer2 {
+  0%, 40% {
+    fill: #b2b2b2;
+  }
+  50%, 86% {
+    fill: #4b4b4b;
+  }
+  96%, 100% {
+    fill: #b2b2b2;
+  }
+}
+
+@keyframes layer3 {
+  0%, 15% {
+    fill: #b2b2b2;
+  }
+  25%, 90% {
+    fill: #4b4b4b;
+  }
+  100% {
+    fill: #b2b2b2;
+  }
+}
+
+@keyframes firstdisappear {
+  0%  { opacity: 0;  }
+  30% { opacity: 1;  }
+  // 30% { opacity: 0.5;}
+  // 90% { opacity: 1;}
+  100%{ opacity: 0;  }
+}
+
+@keyframes seconddisappear {
+  0%  { opacity: 0;  }
+  // 20% { opacity: 0.3;}
+  50% { opacity: 1;}
+  // 60% { opacity: 0.8;}
+  // 75% { opacity: 1;}
+  100%{ opacity: 0;  }
+}
+
+@keyframes thirddisappear {
+  0%  { opacity: 0;  }
+  // 30% { opacity: 0.3;}
+  80% { opacity: 1;  }
+  // 90% { opacity: 0.8;}
+  // 60% { opacity: 1;  }
+  100%{ opacity: 0;  }
+}
+
+@keyframes moveleft {
+  0, 100% { left: 0; }
+  50% { left: 100%; }
+}
+@keyframes moveright {
+  0,100% { left: 100%; }
+  50% { left: 0; }
+}
+
+.buffer__container {
+  display: inline-block;
+  width: 200px;
+  margin-right: 30px;
+}
+
+.layer {
+  animation: 4s linear infinite;
+
+}
+.animate--original {
+  .layer1 {
+    animation-name: layer1;
+  }
+
+  .layer2 {
+    animation-name: layer2;
+  }
+
+  .layer3 {
+    animation-name: layer3;
+  }
+}
+
+.animate--opacity {
+  .layer1 {
+    animation-name: firstdisappear;
+  }
+  .layer2 {
+    animation-name: seconddisappear;
+  }
+  .layer3 {
+    animation-name: thirddisappear;
+  }
+}
+
+.animate--shake {
+  &.buffer__container {
+    position: relative;
+    padding: 0 25px;
+  }
+  .layer {
+    position: absolute;
+  }
+  .layer1, .layer3 {
+    animation-name: moveleft;
+  }
+  .layer2 {
+    animation-name: moveright;
+  }
+}
