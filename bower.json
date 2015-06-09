@@ -30,6 +30,7 @@
     "ionicons": "~2.0.1",
     "font-awesome": "~4.3.0",
     "angular-route": "~1.4.0",
-    "autosize": "~3.0.6"
+    "autosize": "~3.0.6",
+    "moment-timezone": "~0.4.0"
   }
 }
