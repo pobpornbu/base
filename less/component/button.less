@@ -1,3 +1,9 @@
+.no-button-default {
+  outline: none;
+  .appearance(none);
+  border: none;
+}
+
 .button-typo(@font-size: 13px) {
   font-family: @font-family-sans-serif;
   font-weight: 400;
@@ -10,27 +16,43 @@
 .button-size-icon {
   padding: 6px 20px 6px 40px;
 }
+.button-size-no-border {
+  padding: 8px 20px 9px;
+}
 
 .component(button {
   .button-typo;
   .button-size-normal;
-  .round;
   &:focus {
     outline: none;
     -webkit-appearance: none;
   }
   .option(solid-primary{
-    .input-style(@button-solid-primary-theme; @button-solid-font-color-theme; @button-solid-primary-theme);
+    .input-style(@button-primary-bg-theme; @button-solid-font-color-theme; @button-primary-bg-theme);
   });
+  .option(solid-secondary{
+    .input-style(@button-secondary-bg-theme; @button-solid-font-color-theme; @button-secondary-bg-theme);
+  });
+
   .option(outline-primary {
-    .input-style(@button-outline-primary-bg-theme; @button-outline-primary-color-theme; @button-outline-primary-border-theme);
+    .input-style(@button-outline-primary-bg; @button-outline-primary-color; @button-outline-primary-color);
   });
   .option(outline-secondary {
-    .input-style(@button-outline-secondary-bg-theme; @button-outline-secondary-color-theme; @button-outline-secondary-border-theme);
+    .input-style(@button-outline-secondary-bg; @button-outline-secondary-color; @button-outline-secondary-color);
   });
   .option(outline-favorite {
     .input-style(@button-outline-favorite-bg-theme; @button-outline-favorite-color-theme; @button-outline-favorite-border-theme);
   });
+
+  .option(bg-primary{
+    .input-bg(@button-primary-bg-theme);
+    color: @white;
+  });
+  .option(bg-secondary{
+    .input-bg(@button-secondary-bg-theme);
+    color: @white;
+  });
+
   .option(icon {
     padding: 6px 20px 6px 40px;
     position: relative;
@@ -44,8 +66,18 @@
     }
   });
   .option(facebook {
-    color: rgb(255, 255, 255);
     .input-bg(@button-facebook-bg-color-theme);
+    color: rgb(255, 255, 255);
+  });
+  .option(twitter {
+    .input-bg(@button-twitter-bg-color-theme);
+    color: rgb(255, 255, 255);
+  });
+
+  .part(link{
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+    }
   });
 });
 

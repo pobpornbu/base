@@ -9,8 +9,8 @@ input, textarea, button, select {
 ::-webkit-input-placeholder,
 :-moz-placeholder,
 ::-moz-placeholder,
-:-ms-input-placeholder {  
-   color: @gray-step-4;  
+:-ms-input-placeholder {
+   color: @gray-step-4;
 }
 
 // Search
@@ -19,10 +19,9 @@ input, textarea, button, select {
 //   <input type="search" name="search" class="input__search input --primary" placeholder="Search" results="5" autosave="some_unique_value">
 //   <i class="fa fa-search input__icon --search"></i>
 // </div>
-      
+
 input[type=search] {
   .appearance(textfield);
-  .box-sizing(content-box);
   font-family: inherit;
   font-size: 100%;
 }
@@ -47,9 +46,9 @@ input[type="search"]::-webkit-search-results-decoration {
   .part(icon {
     .option(search {
       font-size: 16px;
-      color: @gray-step-5;
+      color: @gray;
       .input-text-height();
-      line-height: @height;
+      line-height: @height - 4;
     });
   });
 });
@@ -57,8 +56,8 @@ input[type="search"]::-webkit-search-results-decoration {
 // Input
 // ---------------------------------------
 .input-text-height(){
-  @height: 34px; 
-  @padding-vertical: 4px; 
+  @height: 34px;
+  @padding-vertical: 4px;
   @padding-horizontal: 10px
 }
 
@@ -129,7 +128,7 @@ input[type="search"]::-webkit-search-results-decoration {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  outline: none; 
+  outline: none;
   overflow: auto; // prevent scrollbar in IE
 }
 

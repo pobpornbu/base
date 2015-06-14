@@ -1,35 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <link rel="icon" type="image/png" href="images/favicon.png" /> -->
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
-</head>
-<body>
-<div class="container">
   <div class="row">
     <div class="col-xs-12">
+      <h1>Button</h1>
+      <div class="row">
+        <h5>Button Base</h5>
+        <button class="button">Button</button>
+        <button class="button round">Button</button>
+        <button class="button radius">Button</button>
+      </div>
+      <div class="row">
+        <h5>Bg + Round Border</h5>
+        <samp class="clearfix">
+          <input type="submit" value="Cancel" class="button --outline-secondary"></input>
+          <input type="submit" value="Send" class="button --outline-primary"></input>
+          <input type="submit" value="Save" class="button --solid-primary"></input>
+          <input type="submit" value="Save" class="button --solid-secondary"></input>
+          <button class="button --icon --facebook ion-social-facebook">สมัครด้วย Facebook</button>
+        </samp>
+        <code class="code__wrap clearfix">
+<pre>
+&lt;input type="submit" value="Cancel" class="button --outline-secondary"&gt;&lt;/input&gt;
+&lt;input type="submit" value="Send" class="button --outline-primary"&gt;&lt;/input&gt;
+&lt;input type="submit" value="Save" class="button --solid-primary"&gt;&lt;/input&gt;
+&lt;input type="submit" value="Save" class="button --solid-secondary"&gt;&lt;/input&gt;
+&lt;button class="button --icon --facebook ion-social-facebook"&gt;สมัครด้วย Facebook&lt;/button&gt;</pre>
+        </code>
+      </div>
+      <div class="row">
+        <h5>Round Border</h5>
+        <samp class="clearfix">
+          <input type="button" class="button round --solid-primary" value="Submit"></input>
+          <input type="button" class="button round --solid-secondary" value="Cancel"></input>
+          <button class="button round --icon --twitter ion-social-twitter">สมัครด้วย Twitter</button>
+        </samp>
+        <code class="code__wrap clearfix">
+<pre>&lt;input type="button" class="button round --solid-primary" value="Submit"&gt;&lt;/input&gt;
+&lt;input type="button" class="button round --solid-secondary" value="Cancel"&gt;&lt;/input&gt;
+&lt;button class="button round --icon --twitter ion-social-twitter"&gt;สมัครด้วย Twitter&lt;/button&gt;
+</pre>
+        </code>
+      </div>
+      <div class="row">
+        <h5>Radius Border</h5>
+        <samp class="clearfix">
+          <input type="button" class="button radius --solid-primary" value="Submit"></input>
+          <input type="button" class="button radius --solid-secondary" value="Cancel"></input>
+        </samp>
+        <code class="code__wrap clearfix">
+<pre>&lt;input type="button" class="button radius --solid-primary" value="Submit"&gt;&lt;/input&gt;
+&lt;input type="button" class="button radius --solid-secondary" value="Cancel"&gt;&lt;/input&gt;
+</pre>
+        </code>
+      </div>
+      <div class="row">
+        <h5>No Border</h5>
+        <a href="#/" class="button button__link --bg-primary">Home</a>
+      </div>
+    </div>
+    <!-- <div class="col-xs-12">
       <div class="button__wrap" data-toggle="modal" data-target="#taskworldModal">
         <div class="button--cube">
           <span class="button--face">read more</span>
@@ -38,13 +66,6 @@
           <span class="button--face">read more</span>
         </div>
       </div>
-    </div>
-    <div class="col-xs-12">
-      <input type="submit" value="Cancel" class="button --outline-secondary"></input>
-      <input type="submit" value="Save" class="button --solid-primary"></input>
-      <button class="button --icon --facebook ion-social-facebook">สมัครด้วย Facebook</button>
-    </div>
+    </div> -->
   </div>
-</div>
-</body>
-</html>
+
