@@ -8,14 +8,18 @@
     text-shadow+: 1px 1px 3px @black;
   }
 }
+@am-theme-color: rgb(0, 57, 93), #092042, rgb(221, 241, 245), #F5EE9E, #FCD475, #F08523;
+@pm-theme-color: rgb(215, 33, 67), rgb(126, 18, 79), rgb(162, 141, 199), rgb(232, 207, 240), rgb(175, 236, 249), rgb(24, 194, 194);
 
-.generate-color(8);
 
-.generate-color(@n, @row: 1, @darken-percent: 10) when (@row =< @n) {
+.generate-color(8, @am-theme-color);
+
+.generate-color(@n, @color, @row: 1, @darken-percent: 10) when (@row =< @n) {
   .li-@{row} {
-    background-color: darken(#ffffff, unit(@darken-percent, %));
+    // background-color: darken(@color, unit(@darken-percent, %));
+    background-color: extract(@color, @row);
   }
-  .generate-color(@n, (@row + 1), @darken-percent + 10);
+  .generate-color(@n, @color, (@row + 1), @darken-percent + 10);
 }
 
 .loop__container {

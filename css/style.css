@@ -940,28 +940,28 @@ input[type=checkbox]:checked + .input--primary:before {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 1px 1px 2px #f2f2f2, 1px 1px 3px #000000;
 }
 .li-1 {
-  background-color: #e6e6e6;
+  background-color: #00395d;
 }
 .li-2 {
-  background-color: #cccccc;
+  background-color: #092042;
 }
 .li-3 {
-  background-color: #b3b3b3;
+  background-color: #ddf1f5;
 }
 .li-4 {
-  background-color: #999999;
+  background-color: #f5ee9e;
 }
 .li-5 {
-  background-color: #808080;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #666666;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: #4d4d4d;
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: #333333;
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .loop__container {
   width: 200px;
