@@ -30,6 +30,9 @@ BaselineApp.config(['$routeProvider',
       when('/animation', {
         templateUrl: 'partials/animation.html'
       }).
+      when('/gridalicious', {
+        templateUrl: 'partials/gridalicious.html'
+      }).
       otherwise({
         redirectTo: '/'
       });
