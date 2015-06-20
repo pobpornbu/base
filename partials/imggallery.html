@@ -1,0 +1,67 @@
+
+<div id="header">
+    <h1>Image Gallery</h1>
+</div>
+<div id="container">
+<!--<script type="text/x-handlebars-template" id="waterfall-tpl">-->
+<!-- {{#result}} -->
+    <div class="item">
+        <img src="images/sample1.jpg"/>
+    </div>
+    <div class="item">
+        <img src="images/sample2.jpg"/>
+    </div>
+    <div class="item">
+        <img src="images/sample10.jpg"/>
+    </div>
+    <div class="item">
+        <img src="images/sample3.jpg"/>
+    </div>
+    <div class="item">
+        <img src="images/sample4.jpg"/>
+    </div>
+    <div class="item">
+        <img src="images/sample12.jpg"/>
+    </div>
+    <div class="item">
+        <img src="images/sample5.jpg"/>
+    </div>
+    <div class="item">
+        <img src="images/sample6.jpg"/>
+    </div>
+    <div class="item">
+        <img src="images/sample7.jpg"/>
+    </div>
+    <div class="item">
+        <img src="images/sample8.jpg"/>
+    </div>
+    <div class="item">
+        <img src="images/sample9.jpg"/>
+    </div>
+    <div class="item">
+        <img src="images/sample11.jpg"/>
+    </div>
+</div>
+<!-- {{/result}} -->
+<!-- </script> -->
+<!-- <script src="jquery.js"></script> -->
+<!-- <script src="js/libs/handlebars/handlebars.js"></script> -->
+<script src="js/jquery.grid-a-licious.min.js"></script>
+<script>
+$("#container").gridalicious({
+  width: 300,
+  gutter: 1,
+  selector: '.item',
+  animate: true,
+  animationOptions: {
+    queue: true,
+    speed: 200,
+    duration: 300,
+    effect: 'fadeInOnAppear',
+    complete: function(){
+        alert('complete');
+    }
+  }
+});
+</script>
+
