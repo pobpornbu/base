@@ -366,6 +366,7 @@ input[type=checkbox]:checked + .input--primary:before {
   padding: 8px 20px 9px;
 }
 .button {
+  display: inline-block;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 13px;
@@ -613,11 +614,25 @@ input[type=checkbox]:checked + .input--primary:before {
   background-color: #e4e9f0;
 }
 .button.\--icon {
+  font-size: 26px;
+  color: #92a6c2;
+  cursor: pointer;
+}
+.button.\--icon-left {
+  padding: 6px 10px 6px 40px;
+  position: relative;
+}
+.button.\--icon-left:before {
+  font-size: 26px;
+  position: absolute;
+  top: 2px;
+  left: 10px;
+}
+.button.\--icon-register {
   padding: 6px 20px 6px 40px;
   position: relative;
-  border: none;
 }
-.button.\--icon:before {
+.button.\--icon-register:before {
   font-size: 26px;
   position: absolute;
   top: 2px;
@@ -625,8 +640,21 @@ input[type=checkbox]:checked + .input--primary:before {
   margin-left: -70px;
 }
 .button.\--facebook {
+  border: 1px solid #3b579d;
   background-color: #3b579d;
   color: #ffffff;
+}
+.button.\--facebook:hover {
+  border: 1px solid #496fad;
+}
+.button.\--facebook:focus,
+.button.\--facebook:active,
+.button.\--facebook.active {
+  border: 1px solid #2d4a84;
+}
+.button.\--facebook:disabled,
+.button.\--facebook.disabled {
+  border: 1px solid #bcc0c4;
 }
 .button.\--facebook:hover {
   background-color: #496fad;
@@ -640,9 +668,30 @@ input[type=checkbox]:checked + .input--primary:before {
 .button.\--facebook.disabled {
   background-color: #bcc0c4;
 }
+.button.\--facebook:hover,
+.button.\--facebook:focus,
+.button.\--facebook:active,
+.button.\--facebook.active,
+.button.\--facebook:disabled,
+.button.\--facebook.disabled {
+  color: #ffffff;
+}
 .button.\--twitter {
+  border: 1px solid #33ccff;
   background-color: #33ccff;
   color: #ffffff;
+}
+.button.\--twitter:hover {
+  border: 1px solid #54d8fc;
+}
+.button.\--twitter:focus,
+.button.\--twitter:active,
+.button.\--twitter.active {
+  border: 1px solid #00bbed;
+}
+.button.\--twitter:disabled,
+.button.\--twitter.disabled {
+  border: 1px solid #bcc0c4;
 }
 .button.\--twitter:hover {
   background-color: #54d8fc;
@@ -655,6 +704,51 @@ input[type=checkbox]:checked + .input--primary:before {
 .button.\--twitter:disabled,
 .button.\--twitter.disabled {
   background-color: #bcc0c4;
+}
+.button.\--twitter:hover,
+.button.\--twitter:focus,
+.button.\--twitter:active,
+.button.\--twitter.active,
+.button.\--twitter:disabled,
+.button.\--twitter.disabled {
+  color: #ffffff;
+}
+.button.\--googleplus {
+  border: 1px solid #de4d38;
+  background-color: #de4d38;
+  color: #ffffff;
+}
+.button.\--googleplus:hover {
+  border: 1px solid #f75b4b;
+}
+.button.\--googleplus:focus,
+.button.\--googleplus:active,
+.button.\--googleplus.active {
+  border: 1px solid #ce3b2c;
+}
+.button.\--googleplus:disabled,
+.button.\--googleplus.disabled {
+  border: 1px solid #bcc0c4;
+}
+.button.\--googleplus:hover {
+  background-color: #f75b4b;
+}
+.button.\--googleplus:focus,
+.button.\--googleplus:active,
+.button.\--googleplus.active {
+  background-color: #ce3b2c;
+}
+.button.\--googleplus:disabled,
+.button.\--googleplus.disabled {
+  background-color: #bcc0c4;
+}
+.button.\--googleplus:hover,
+.button.\--googleplus:focus,
+.button.\--googleplus:active,
+.button.\--googleplus.active,
+.button.\--googleplus:disabled,
+.button.\--googleplus.disabled {
+  color: #ffffff;
 }
 .button__link:hover,
 .button__link:active,
@@ -1312,4 +1406,10 @@ body {
 }
 .animate--shake .layer2 {
   animation-name: moveright;
+}
+.bs-button .button {
+  margin-bottom: 10px;
+}
+.social__dialog .button {
+  margin-right: 5px;
 }

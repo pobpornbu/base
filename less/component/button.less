@@ -21,6 +21,7 @@
 }
 
 .component(button {
+  display: inline-block;
   .button-typo;
   .button-size-normal;
   &:focus {
@@ -52,26 +53,41 @@
     .input-bg(@button-secondary-bg-theme);
     color: @white;
   });
-
-  .option(icon {
+  .option(icon{
+    font-size: 26px;
+    color: @brand-secondary;
+    cursor: pointer;
+  });
+  .option(icon-left {
+    padding: 6px 10px 6px 40px;
+    position: relative;
+    &:before {
+      font-size: 26px;
+      position: absolute;
+      top: 2px;
+      left: 10px;
+    }
+  });
+  .option(icon-register {
     padding: 6px 20px 6px 40px;
     position: relative;
-    border: none;
     &:before {
       font-size: 26px;
       position: absolute;
       top: 2px;
       left: 50%;
-      margin-left: -70px;
+      margin-left: -70px;      
     }
   });
+
   .option(facebook {
-    .input-bg(@button-facebook-bg-color-theme);
-    color: rgb(255, 255, 255);
+    .input-style(@button-facebook-bg-color-theme, @white, @button-facebook-bg-color-theme);
   });
   .option(twitter {
-    .input-bg(@button-twitter-bg-color-theme);
-    color: rgb(255, 255, 255);
+    .input-style(@button-twitter-bg-color-theme, @white, @button-twitter-bg-color-theme);
+  });
+  .option(googleplus {
+    .input-style(@button-googleplus-bg-color-theme, @white, @button-googleplus-bg-color-theme);
   });
 
   .part(link{
