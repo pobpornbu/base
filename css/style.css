@@ -1,3 +1,4 @@
+@import '../css/nationtv-font.css';
 .nation-brand-color {
   background-color: #2f4590;
 }
@@ -38,7 +39,100 @@
   background-color: #e2e6f6;
 }
 .nation-brand-12 {
+  background-color: #eaedf8;
+}
+.nation-brand-13 {
   background-color: #f5f7fc;
+}
+.rainbow-lighter-blue .active {
+  background-color: #00a3cc;
+}
+.rainbow-lighter-blue .normal {
+  background-color: #00ccff;
+}
+.rainbow-lighter-blue .hover {
+  background-color: #4ddbff;
+}
+.rainbow-light-blue .active {
+  background-color: #0060cc;
+}
+.rainbow-light-blue .normal {
+  background-color: #0078ff;
+}
+.rainbow-light-blue .hover {
+  background-color: #4da0ff;
+}
+.rainbow-blue .active {
+  background-color: #0000cc;
+}
+.rainbow-blue .normal {
+  background-color: #0000ff;
+}
+.rainbow-blue .hover {
+  background-color: #4d4dff;
+}
+.rainbow-purple .active {
+  background-color: #6000cc;
+}
+.rainbow-purple .normal {
+  background-color: #7800ff;
+}
+.rainbow-purple .hover {
+  background-color: #a04dff;
+}
+.rainbow-pink .active {
+  background-color: #cc009a;
+}
+.rainbow-pink .normal {
+  background-color: #ff00c0;
+}
+.rainbow-pink .hover {
+  background-color: #ff4dd3;
+}
+.rainbow-red .active {
+  background-color: #cc0000;
+}
+.rainbow-red .normal {
+  background-color: #ff0000;
+}
+.rainbow-red .hover {
+  background-color: #ff4d4d;
+}
+.rainbow-orange .active {
+  background-color: #cc5200;
+}
+.rainbow-orange .normal {
+  background-color: #ff6600;
+}
+.rainbow-orange .hover {
+  background-color: #ff944d;
+}
+.rainbow-yellow .active {
+  background-color: #cc9a00;
+}
+.rainbow-yellow .normal {
+  background-color: #ffc000;
+}
+.rainbow-yellow .hover {
+  background-color: #ffd34d;
+}
+.rainbow-dark-yellow .active {
+  background-color: #d79507;
+}
+.rainbow-dark-yellow .normal {
+  background-color: #f8b119;
+}
+.rainbow-dark-yellow .hover {
+  background-color: #faca63;
+}
+.rainbow-light-green .active {
+  background-color: #9baa1e;
+}
+.rainbow-light-green .normal {
+  background-color: #c2d526;
+}
+.rainbow-light-green .hover {
+  background-color: #d6e364;
 }
 .rel {
   position: relative;
@@ -64,6 +158,1055 @@
   padding: 0;
   margin: 0;
 }
+.header {
+  position: relative;
+  overflow: hidden;
+  font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .header {
+    font-size: 48px;
+  }
+}
+.header.\--middleline {
+  text-align: center;
+}
+.header.\--middleline span {
+  display: inline-block;
+  position: relative;
+  padding: 0 15px;
+  vertical-align: baseline;
+  zoom: 1;
+  line-height: 1.5;
+}
+.header.\--middleline span:before,
+.header.\--middleline span:after {
+  content: '';
+  display: inline-block;
+  width: 1000px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.header.\--middleline span:before {
+  right: 100%;
+}
+.header.\--middleline span:after {
+  left: 100%;
+}
+.header.\--middleline + .header.\--highlight {
+  display: block;
+  font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #435979;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: -10px;
+}
+.header.\--leftline span {
+  display: inline-block;
+  position: relative;
+  padding: 0 15px 0 0;
+  vertical-align: baseline;
+  zoom: 1;
+}
+.header.\--leftline span:after {
+  content: '';
+  display: inline-block;
+  width: 1000px;
+  height: 35px;
+  background: url("../images-v3/striped.png") repeat;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 100%;
+}
+.header.\--leftline.primary {
+  color: #c7b6de;
+}
+.header.\--leftline.entertainment {
+  color: #00ccff;
+}
+.header.\--leftline.sport {
+  color: #0078ff;
+}
+.header.\--leftline.lifestyle {
+  color: #0000ff;
+}
+.header.\--leftline.economy_business {
+  color: #7800ff;
+}
+.header.\--leftline.politics {
+  color: #ff00c0;
+}
+.header.\--leftline.crime {
+  color: #ff6600;
+}
+.header.\--leftline.foreign {
+  color: #ffc000;
+}
+.header.\--leftline.social {
+  color: #c2d526;
+}
+.header.\--leftline.live {
+  color: #f6b300;
+}
+.header.\--leftline.topstory {
+  color: #c7b6de;
+}
+.header.\--leftline.tvprogram {
+  color: #c7b6de;
+}
+.header.\--leftline.mostlist {
+  color: #c7b6de;
+}
+.header.\--leftline.hotnews {
+  color: #c7b6de;
+}
+.header.\--leftline.recommended {
+  color: #ac93ce;
+}
+.header.\--leftline.canonlife {
+  color: #e91f2e;
+}
+.header.\--leftline.primary {
+  color: #c7b6de;
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline .li-15 {
+  background-color: extract(color, 15);
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline .li-14 {
+  background-color: extract(color, 14);
+}
+.header.\--leftline .li-15 {
+  background-color: extract(color, 15);
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline .li-13 {
+  background-color: extract(color, 13);
+}
+.header.\--leftline .li-14 {
+  background-color: extract(color, 14);
+}
+.header.\--leftline .li-15 {
+  background-color: extract(color, 15);
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline .li-12 {
+  background-color: extract(color, 12);
+}
+.header.\--leftline .li-13 {
+  background-color: extract(color, 13);
+}
+.header.\--leftline .li-14 {
+  background-color: extract(color, 14);
+}
+.header.\--leftline .li-15 {
+  background-color: extract(color, 15);
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline .li-11 {
+  background-color: extract(color, 11);
+}
+.header.\--leftline .li-12 {
+  background-color: extract(color, 12);
+}
+.header.\--leftline .li-13 {
+  background-color: extract(color, 13);
+}
+.header.\--leftline .li-14 {
+  background-color: extract(color, 14);
+}
+.header.\--leftline .li-15 {
+  background-color: extract(color, 15);
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline .li-10 {
+  background-color: extract(color, 10);
+}
+.header.\--leftline .li-11 {
+  background-color: extract(color, 11);
+}
+.header.\--leftline .li-12 {
+  background-color: extract(color, 12);
+}
+.header.\--leftline .li-13 {
+  background-color: extract(color, 13);
+}
+.header.\--leftline .li-14 {
+  background-color: extract(color, 14);
+}
+.header.\--leftline .li-15 {
+  background-color: extract(color, 15);
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline .li-9 {
+  background-color: extract(color, 9);
+}
+.header.\--leftline .li-10 {
+  background-color: extract(color, 10);
+}
+.header.\--leftline .li-11 {
+  background-color: extract(color, 11);
+}
+.header.\--leftline .li-12 {
+  background-color: extract(color, 12);
+}
+.header.\--leftline .li-13 {
+  background-color: extract(color, 13);
+}
+.header.\--leftline .li-14 {
+  background-color: extract(color, 14);
+}
+.header.\--leftline .li-15 {
+  background-color: extract(color, 15);
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline .li-8 {
+  background-color: extract(color, 8);
+}
+.header.\--leftline .li-9 {
+  background-color: extract(color, 9);
+}
+.header.\--leftline .li-10 {
+  background-color: extract(color, 10);
+}
+.header.\--leftline .li-11 {
+  background-color: extract(color, 11);
+}
+.header.\--leftline .li-12 {
+  background-color: extract(color, 12);
+}
+.header.\--leftline .li-13 {
+  background-color: extract(color, 13);
+}
+.header.\--leftline .li-14 {
+  background-color: extract(color, 14);
+}
+.header.\--leftline .li-15 {
+  background-color: extract(color, 15);
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline .li-7 {
+  background-color: extract(color, 7);
+}
+.header.\--leftline .li-8 {
+  background-color: extract(color, 8);
+}
+.header.\--leftline .li-9 {
+  background-color: extract(color, 9);
+}
+.header.\--leftline .li-10 {
+  background-color: extract(color, 10);
+}
+.header.\--leftline .li-11 {
+  background-color: extract(color, 11);
+}
+.header.\--leftline .li-12 {
+  background-color: extract(color, 12);
+}
+.header.\--leftline .li-13 {
+  background-color: extract(color, 13);
+}
+.header.\--leftline .li-14 {
+  background-color: extract(color, 14);
+}
+.header.\--leftline .li-15 {
+  background-color: extract(color, 15);
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline .li-6 {
+  background-color: extract(color, 6);
+}
+.header.\--leftline .li-7 {
+  background-color: extract(color, 7);
+}
+.header.\--leftline .li-8 {
+  background-color: extract(color, 8);
+}
+.header.\--leftline .li-9 {
+  background-color: extract(color, 9);
+}
+.header.\--leftline .li-10 {
+  background-color: extract(color, 10);
+}
+.header.\--leftline .li-11 {
+  background-color: extract(color, 11);
+}
+.header.\--leftline .li-12 {
+  background-color: extract(color, 12);
+}
+.header.\--leftline .li-13 {
+  background-color: extract(color, 13);
+}
+.header.\--leftline .li-14 {
+  background-color: extract(color, 14);
+}
+.header.\--leftline .li-15 {
+  background-color: extract(color, 15);
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline .li-5 {
+  background-color: extract(color, 5);
+}
+.header.\--leftline .li-6 {
+  background-color: extract(color, 6);
+}
+.header.\--leftline .li-7 {
+  background-color: extract(color, 7);
+}
+.header.\--leftline .li-8 {
+  background-color: extract(color, 8);
+}
+.header.\--leftline .li-9 {
+  background-color: extract(color, 9);
+}
+.header.\--leftline .li-10 {
+  background-color: extract(color, 10);
+}
+.header.\--leftline .li-11 {
+  background-color: extract(color, 11);
+}
+.header.\--leftline .li-12 {
+  background-color: extract(color, 12);
+}
+.header.\--leftline .li-13 {
+  background-color: extract(color, 13);
+}
+.header.\--leftline .li-14 {
+  background-color: extract(color, 14);
+}
+.header.\--leftline .li-15 {
+  background-color: extract(color, 15);
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline .li-4 {
+  background-color: extract(color, 4);
+}
+.header.\--leftline .li-5 {
+  background-color: extract(color, 5);
+}
+.header.\--leftline .li-6 {
+  background-color: extract(color, 6);
+}
+.header.\--leftline .li-7 {
+  background-color: extract(color, 7);
+}
+.header.\--leftline .li-8 {
+  background-color: extract(color, 8);
+}
+.header.\--leftline .li-9 {
+  background-color: extract(color, 9);
+}
+.header.\--leftline .li-10 {
+  background-color: extract(color, 10);
+}
+.header.\--leftline .li-11 {
+  background-color: extract(color, 11);
+}
+.header.\--leftline .li-12 {
+  background-color: extract(color, 12);
+}
+.header.\--leftline .li-13 {
+  background-color: extract(color, 13);
+}
+.header.\--leftline .li-14 {
+  background-color: extract(color, 14);
+}
+.header.\--leftline .li-15 {
+  background-color: extract(color, 15);
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline .li-3 {
+  background-color: extract(color, 3);
+}
+.header.\--leftline .li-4 {
+  background-color: extract(color, 4);
+}
+.header.\--leftline .li-5 {
+  background-color: extract(color, 5);
+}
+.header.\--leftline .li-6 {
+  background-color: extract(color, 6);
+}
+.header.\--leftline .li-7 {
+  background-color: extract(color, 7);
+}
+.header.\--leftline .li-8 {
+  background-color: extract(color, 8);
+}
+.header.\--leftline .li-9 {
+  background-color: extract(color, 9);
+}
+.header.\--leftline .li-10 {
+  background-color: extract(color, 10);
+}
+.header.\--leftline .li-11 {
+  background-color: extract(color, 11);
+}
+.header.\--leftline .li-12 {
+  background-color: extract(color, 12);
+}
+.header.\--leftline .li-13 {
+  background-color: extract(color, 13);
+}
+.header.\--leftline .li-14 {
+  background-color: extract(color, 14);
+}
+.header.\--leftline .li-15 {
+  background-color: extract(color, 15);
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline .li-2 {
+  background-color: extract(color, 2);
+}
+.header.\--leftline .li-3 {
+  background-color: extract(color, 3);
+}
+.header.\--leftline .li-4 {
+  background-color: extract(color, 4);
+}
+.header.\--leftline .li-5 {
+  background-color: extract(color, 5);
+}
+.header.\--leftline .li-6 {
+  background-color: extract(color, 6);
+}
+.header.\--leftline .li-7 {
+  background-color: extract(color, 7);
+}
+.header.\--leftline .li-8 {
+  background-color: extract(color, 8);
+}
+.header.\--leftline .li-9 {
+  background-color: extract(color, 9);
+}
+.header.\--leftline .li-10 {
+  background-color: extract(color, 10);
+}
+.header.\--leftline .li-11 {
+  background-color: extract(color, 11);
+}
+.header.\--leftline .li-12 {
+  background-color: extract(color, 12);
+}
+.header.\--leftline .li-13 {
+  background-color: extract(color, 13);
+}
+.header.\--leftline .li-14 {
+  background-color: extract(color, 14);
+}
+.header.\--leftline .li-15 {
+  background-color: extract(color, 15);
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline .li-1 {
+  background-color: color;
+}
+.header.\--leftline .li-2 {
+  background-color: extract(color, 2);
+}
+.header.\--leftline .li-3 {
+  background-color: extract(color, 3);
+}
+.header.\--leftline .li-4 {
+  background-color: extract(color, 4);
+}
+.header.\--leftline .li-5 {
+  background-color: extract(color, 5);
+}
+.header.\--leftline .li-6 {
+  background-color: extract(color, 6);
+}
+.header.\--leftline .li-7 {
+  background-color: extract(color, 7);
+}
+.header.\--leftline .li-8 {
+  background-color: extract(color, 8);
+}
+.header.\--leftline .li-9 {
+  background-color: extract(color, 9);
+}
+.header.\--leftline .li-10 {
+  background-color: extract(color, 10);
+}
+.header.\--leftline .li-11 {
+  background-color: extract(color, 11);
+}
+.header.\--leftline .li-12 {
+  background-color: extract(color, 12);
+}
+.header.\--leftline .li-13 {
+  background-color: extract(color, 13);
+}
+.header.\--leftline .li-14 {
+  background-color: extract(color, 14);
+}
+.header.\--leftline .li-15 {
+  background-color: extract(color, 15);
+}
+.header.\--leftline .li-16 {
+  background-color: extract(color, 16);
+}
+.header.\--leftline.lifestyle {
+  padding-left: 10px;
+}
+.header__wrap.\--dotted {
+  display: block;
+  text-align: left;
+  font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+.header__wrap.\--dotted:before,
+.header__wrap.\--dotted:after {
+  content: '';
+  display: inline-block;
+  width: 1000px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.header__wrap.\--dotted:before {
+  background: url(../images-v3/dot.svg) repeat-x top left;
+  z-index: 2;
+}
+.header__wrap.\--dotted:after {
+  z-index: 1;
+}
+.header__wrap.\--dotted .header__text {
+  z-index: 3;
+  display: inline-block;
+  position: relative;
+  padding: 0 6px 0 0;
+  vertical-align: baseline;
+  zoom: 1;
+}
+.header__wrap.\--dotted.\--lifestyle:after {
+  background-color: #0000ff;
+}
+.header__wrap.\--dotted.\--lifestyle .header__text {
+  color: #0000ff;
+}
+.header__wrap.\--dotted.\--recommended:after {
+  background-color: #ac93ce;
+}
+.header__wrap.\--dotted.\--recommended .header__text {
+  color: #ac93ce;
+  text-transform: uppercase;
+}
+.header__wrap.\--dotted.\--hotnews:before {
+  background: url(../images-v3/dot-lightblue.svg) repeat-x top left;
+}
+.header__wrap.\--dotted.\--hotnews:after {
+  background-color: #c7b6de;
+}
+.header__wrap.\--dotted.\--hotnews .header__text {
+  color: #c7b6de;
+}
+.header__wrap.\--category {
+  display: block;
+  height: 39px;
+  margin: 0 0 15px 0;
+  position: relative;
+}
+.header__wrap.\--category .header__text {
+  display: inline-block;
+  font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+  min-width: 160px;
+  padding: 5px 10px 0;
+  margin: 0;
+  height: 34px;
+  position: absolute;
+  top: 0;
+}
+.header__wrap.\--category .header__text:after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 17px solid rgba(255, 255, 255, 0);
+  border-right: 10px solid rgba(255, 255, 255, 0);
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+}
+.header__wrap.\--category .button__wrap.\--arrow-right {
+  height: 34px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.header__wrap.\--category .button__icon.\--arrow-right {
+  height: 34px;
+}
+.header__wrap.\--category .button__icon.\--arrow-right:before {
+  position: relative;
+  top: -10px;
+}
+.header__wrap.\--category.\--canonlife {
+  border-bottom: 5px solid #e91f2e;
+}
+.header__wrap.\--category.\--canonlife .header__text {
+  background-color: #e91f2e;
+}
+.header__wrap.\--category.\--canonlife .header__text:after {
+  border-left: 10px solid #e91f2e;
+  border-bottom: 17px solid #e91f2e;
+}
+.header__wrap.\--category.\--canonlife .header__text {
+  width: 140px;
+}
+.header__wrap.\--dotted.\--entertainment:after {
+  background-color: #00ccff;
+}
+.header__wrap.\--dotted.\--entertainment .header__text {
+  color: #00ccff;
+}
+.header__wrap.\--dotted.\--sport:after {
+  background-color: #0078ff;
+}
+.header__wrap.\--dotted.\--sport .header__text {
+  color: #0078ff;
+}
+.header__wrap.\--dotted.\--lifestyle:after {
+  background-color: #0000ff;
+}
+.header__wrap.\--dotted.\--lifestyle .header__text {
+  color: #0000ff;
+}
+.header__wrap.\--dotted.\--economy_business:after {
+  background-color: #7800ff;
+}
+.header__wrap.\--dotted.\--economy_business .header__text {
+  color: #7800ff;
+}
+.header__wrap.\--dotted.\--politics:after {
+  background-color: #ff00c0;
+}
+.header__wrap.\--dotted.\--politics .header__text {
+  color: #ff00c0;
+}
+.header__wrap.\--dotted.\--crime:after {
+  background-color: #ff6600;
+}
+.header__wrap.\--dotted.\--crime .header__text {
+  color: #ff6600;
+}
+.header__wrap.\--dotted.\--foreign:after {
+  background-color: #ffc000;
+}
+.header__wrap.\--dotted.\--foreign .header__text {
+  color: #ffc000;
+}
+.header__wrap.\--dotted.\--social:after {
+  background-color: #c2d526;
+}
+.header__wrap.\--dotted.\--social .header__text {
+  color: #c2d526;
+}
+.header__wrap.\--dotted.\--live:after {
+  background-color: #f6b300;
+}
+.header__wrap.\--dotted.\--live .header__text {
+  color: #f6b300;
+}
+.header__wrap.\--dotted.\--topstory:after {
+  background-color: #c7b6de;
+}
+.header__wrap.\--dotted.\--topstory .header__text {
+  color: #c7b6de;
+}
+.header__wrap.\--dotted.\--tvprogram:after {
+  background-color: #c7b6de;
+}
+.header__wrap.\--dotted.\--tvprogram .header__text {
+  color: #c7b6de;
+}
+.header__wrap.\--dotted.\--mostlist:after {
+  background-color: #c7b6de;
+}
+.header__wrap.\--dotted.\--mostlist .header__text {
+  color: #c7b6de;
+}
+.header__wrap.\--dotted.\--hotnews:after {
+  background-color: #c7b6de;
+}
+.header__wrap.\--dotted.\--hotnews .header__text {
+  color: #c7b6de;
+}
+.header__wrap.\--dotted.\--recommended:after {
+  background-color: #ac93ce;
+}
+.header__wrap.\--dotted.\--recommended .header__text {
+  color: #ac93ce;
+}
+.header__wrap.\--dotted.\--canonlife:after {
+  background-color: #e91f2e;
+}
+.header__wrap.\--dotted.\--canonlife .header__text {
+  color: #e91f2e;
+}
+.header__wrap.\--dotted.\--primary:after {
+  background-color: #c7b6de;
+}
+.header__wrap.\--dotted.\--primary .header__text {
+  color: #c7b6de;
+}
+.header.\--middleline.\--entertainment {
+  color: #00ccff;
+  line-height: 1.5;
+}
+.header.\--middleline.\--entertainment span:before,
+.header.\--middleline.\--entertainment span:after {
+  background-color: #00ccff;
+}
+.header.\--middleline.\--sport {
+  color: #0078ff;
+  line-height: 1.5;
+}
+.header.\--middleline.\--sport span:before,
+.header.\--middleline.\--sport span:after {
+  background-color: #0078ff;
+}
+.header.\--middleline.\--lifestyle {
+  color: #0000ff;
+  line-height: 1.5;
+}
+.header.\--middleline.\--lifestyle span:before,
+.header.\--middleline.\--lifestyle span:after {
+  background-color: #0000ff;
+}
+.header.\--middleline.\--economy_business {
+  color: #7800ff;
+  line-height: 1.5;
+}
+.header.\--middleline.\--economy_business span:before,
+.header.\--middleline.\--economy_business span:after {
+  background-color: #7800ff;
+}
+.header.\--middleline.\--politics {
+  color: #ff00c0;
+  line-height: 1.5;
+}
+.header.\--middleline.\--politics span:before,
+.header.\--middleline.\--politics span:after {
+  background-color: #ff00c0;
+}
+.header.\--middleline.\--crime {
+  color: #ff6600;
+  line-height: 1.5;
+}
+.header.\--middleline.\--crime span:before,
+.header.\--middleline.\--crime span:after {
+  background-color: #ff6600;
+}
+.header.\--middleline.\--foreign {
+  color: #ffc000;
+  line-height: 1.5;
+}
+.header.\--middleline.\--foreign span:before,
+.header.\--middleline.\--foreign span:after {
+  background-color: #ffc000;
+}
+.header.\--middleline.\--social {
+  color: #c2d526;
+  line-height: 1.5;
+}
+.header.\--middleline.\--social span:before,
+.header.\--middleline.\--social span:after {
+  background-color: #c2d526;
+}
+.header.\--middleline.\--live {
+  color: #f6b300;
+  line-height: 1.5;
+}
+.header.\--middleline.\--live span:before,
+.header.\--middleline.\--live span:after {
+  background-color: #f6b300;
+}
+.header.\--middleline.\--topstory {
+  color: #c7b6de;
+  line-height: 1.5;
+}
+.header.\--middleline.\--topstory span:before,
+.header.\--middleline.\--topstory span:after {
+  background-color: #c7b6de;
+}
+.header.\--middleline.\--tvprogram {
+  color: #c7b6de;
+  line-height: 1.5;
+}
+.header.\--middleline.\--tvprogram span:before,
+.header.\--middleline.\--tvprogram span:after {
+  background-color: #c7b6de;
+}
+.header.\--middleline.\--mostlist {
+  color: #c7b6de;
+  line-height: 1.5;
+}
+.header.\--middleline.\--mostlist span:before,
+.header.\--middleline.\--mostlist span:after {
+  background-color: #c7b6de;
+}
+.header.\--middleline.\--hotnews {
+  color: #c7b6de;
+  line-height: 1.5;
+}
+.header.\--middleline.\--hotnews span:before,
+.header.\--middleline.\--hotnews span:after {
+  background-color: #c7b6de;
+}
+.header.\--middleline.\--recommended {
+  color: #ac93ce;
+  line-height: 1.5;
+}
+.header.\--middleline.\--recommended span:before,
+.header.\--middleline.\--recommended span:after {
+  background-color: #ac93ce;
+}
+.header.\--middleline.\--canonlife {
+  color: #e91f2e;
+  line-height: 1.5;
+}
+.header.\--middleline.\--canonlife span:before,
+.header.\--middleline.\--canonlife span:after {
+  background-color: #e91f2e;
+}
+.header.\--middleline.\--primary {
+  color: #c7b6de;
+  line-height: 1.5;
+}
+.header.\--middleline.\--primary span:before,
+.header.\--middleline.\--primary span:after {
+  background-color: #c7b6de;
+}
+.header__wrap.\--category.\--entertainment {
+  border-bottom: 5px solid #00ccff;
+}
+.header__wrap.\--category.\--entertainment .header__text {
+  background-color: #00ccff;
+}
+.header__wrap.\--category.\--entertainment .header__text:after {
+  border-left: 10px solid #00ccff;
+  border-bottom: 17px solid #00ccff;
+}
+.header__wrap.\--category.\--sport {
+  border-bottom: 5px solid #0078ff;
+}
+.header__wrap.\--category.\--sport .header__text {
+  background-color: #0078ff;
+}
+.header__wrap.\--category.\--sport .header__text:after {
+  border-left: 10px solid #0078ff;
+  border-bottom: 17px solid #0078ff;
+}
+.header__wrap.\--category.\--lifestyle {
+  border-bottom: 5px solid #0000ff;
+}
+.header__wrap.\--category.\--lifestyle .header__text {
+  background-color: #0000ff;
+}
+.header__wrap.\--category.\--lifestyle .header__text:after {
+  border-left: 10px solid #0000ff;
+  border-bottom: 17px solid #0000ff;
+}
+.header__wrap.\--category.\--economy_business {
+  border-bottom: 5px solid #7800ff;
+}
+.header__wrap.\--category.\--economy_business .header__text {
+  background-color: #7800ff;
+}
+.header__wrap.\--category.\--economy_business .header__text:after {
+  border-left: 10px solid #7800ff;
+  border-bottom: 17px solid #7800ff;
+}
+.header__wrap.\--category.\--politics {
+  border-bottom: 5px solid #ff00c0;
+}
+.header__wrap.\--category.\--politics .header__text {
+  background-color: #ff00c0;
+}
+.header__wrap.\--category.\--politics .header__text:after {
+  border-left: 10px solid #ff00c0;
+  border-bottom: 17px solid #ff00c0;
+}
+.header__wrap.\--category.\--crime {
+  border-bottom: 5px solid #ff6600;
+}
+.header__wrap.\--category.\--crime .header__text {
+  background-color: #ff6600;
+}
+.header__wrap.\--category.\--crime .header__text:after {
+  border-left: 10px solid #ff6600;
+  border-bottom: 17px solid #ff6600;
+}
+.header__wrap.\--category.\--foreign {
+  border-bottom: 5px solid #ffc000;
+}
+.header__wrap.\--category.\--foreign .header__text {
+  background-color: #ffc000;
+}
+.header__wrap.\--category.\--foreign .header__text:after {
+  border-left: 10px solid #ffc000;
+  border-bottom: 17px solid #ffc000;
+}
+.header__wrap.\--category.\--social {
+  border-bottom: 5px solid #c2d526;
+}
+.header__wrap.\--category.\--social .header__text {
+  background-color: #c2d526;
+}
+.header__wrap.\--category.\--social .header__text:after {
+  border-left: 10px solid #c2d526;
+  border-bottom: 17px solid #c2d526;
+}
+.header__wrap.\--category.\--live {
+  border-bottom: 5px solid #f6b300;
+}
+.header__wrap.\--category.\--live .header__text {
+  background-color: #f6b300;
+}
+.header__wrap.\--category.\--live .header__text:after {
+  border-left: 10px solid #f6b300;
+  border-bottom: 17px solid #f6b300;
+}
+.header__wrap.\--category.\--topstory {
+  border-bottom: 5px solid #c7b6de;
+}
+.header__wrap.\--category.\--topstory .header__text {
+  background-color: #c7b6de;
+}
+.header__wrap.\--category.\--topstory .header__text:after {
+  border-left: 10px solid #c7b6de;
+  border-bottom: 17px solid #c7b6de;
+}
+.header__wrap.\--category.\--tvprogram {
+  border-bottom: 5px solid #c7b6de;
+}
+.header__wrap.\--category.\--tvprogram .header__text {
+  background-color: #c7b6de;
+}
+.header__wrap.\--category.\--tvprogram .header__text:after {
+  border-left: 10px solid #c7b6de;
+  border-bottom: 17px solid #c7b6de;
+}
+.header__wrap.\--category.\--mostlist {
+  border-bottom: 5px solid #c7b6de;
+}
+.header__wrap.\--category.\--mostlist .header__text {
+  background-color: #c7b6de;
+}
+.header__wrap.\--category.\--mostlist .header__text:after {
+  border-left: 10px solid #c7b6de;
+  border-bottom: 17px solid #c7b6de;
+}
+.header__wrap.\--category.\--hotnews {
+  border-bottom: 5px solid #c7b6de;
+}
+.header__wrap.\--category.\--hotnews .header__text {
+  background-color: #c7b6de;
+}
+.header__wrap.\--category.\--hotnews .header__text:after {
+  border-left: 10px solid #c7b6de;
+  border-bottom: 17px solid #c7b6de;
+}
+.header__wrap.\--category.\--recommended {
+  border-bottom: 5px solid #ac93ce;
+}
+.header__wrap.\--category.\--recommended .header__text {
+  background-color: #ac93ce;
+}
+.header__wrap.\--category.\--recommended .header__text:after {
+  border-left: 10px solid #ac93ce;
+  border-bottom: 17px solid #ac93ce;
+}
+.header__wrap.\--category.\--canonlife {
+  border-bottom: 5px solid #e91f2e;
+}
+.header__wrap.\--category.\--canonlife .header__text {
+  background-color: #e91f2e;
+}
+.header__wrap.\--category.\--canonlife .header__text:after {
+  border-left: 10px solid #e91f2e;
+  border-bottom: 17px solid #e91f2e;
+}
+.header__wrap.\--category.\--primary {
+  border-bottom: 5px solid #c7b6de;
+}
+.header__wrap.\--category.\--primary .header__text {
+  background-color: #c7b6de;
+}
+.header__wrap.\--category.\--primary .header__text:after {
+  border-left: 10px solid #c7b6de;
+  border-bottom: 17px solid #c7b6de;
+}
 .brand__wrap {
   padding: 5px 15px;
 }
@@ -73,6 +1216,60 @@
 }
 .code__wrap {
   margin-top: 25px;
+}
+@media screen and (min-width: 992px) {
+  .sitemap__category.\--gallery .col-sm-6:last-child {
+    min-height: 230px;
+  }
+  .sitemap__category.\--video .col-sm-6:last-child {
+    min-height: 260px;
+  }
+  .sitemap__category.\--live {
+    margin-top: 30px;
+  }
+}
+.sitemap__link {
+  display: block;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #b3c1d5;
+  font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #333333;
+}
+@media screen and (min-width: 768px) {
+  .sitemap__link {
+    font-size: 16px;
+  }
+}
+.sitemap__link.\--sub {
+  display: list-item;
+}
+@media screen and (max-width: 768px), screen and (min-width: 992px) {
+  .col-sm-6 + .col-sm-6 .sitemap__link:last-of-type {
+    border-bottom: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .col-sm-6 .sitemap__link:last-of-type {
+    border-bottom: none;
+  }
+}
+.list__wrap {
+  padding-top: 10px;
+}
+.list__wrap:before,
+.list__wrap:after {
+  display: table;
+  content: " ";
+}
+.list__wrap:after {
+  clear: both;
+}
+#sitemap__page .header__wrap.\--category {
+  margin: 0;
 }
 input,
 textarea,
@@ -797,42 +1994,48 @@ input[type=checkbox]:checked + .input--primary:before {
 .button__link:focus {
   text-decoration: none;
 }
-.button__wrap {
+.button__wrap.\--icon {
+  border: none;
+}
+.button__icon {
+  margin-right: 5px;
+}
+.button__group.\--cube {
   display: block;
   width: 300px;
-  color: #000000;
+  color: #030303;
   background-color: #ffffff;
   position: absolute;
   bottom: 25px;
 }
-.no-csstransform .button__wrap:hover,
-.no-csstransforms3d .button__wrap:hover {
+.no-csstransform .button__group.\--cube:hover,
+.no-csstransforms3d .button__group.\--cube:hover {
   background-color: #d9d9d9;
 }
-.button--cube {
+.button__wrap.\--face {
   width: 300px;
   height: 34px;
 }
-.button--face {
-  font-family: "Ropa Sans";
+.button__face {
+  font-family: "Ropa Sans", Arial, sans-serif;
   font-size: 16px;
-  color: #000000;
-  border: 2px solid #000000;
-  padding: 5px 15px;
+  color: #030303;
+  border: 2px solid #030303;
   text-align: center;
   text-transform: capitalize;
+  padding: 5px 15px;
 }
-.button--face:first-of-type {
+.button__face:first-of-type {
   background-color: #ffffff;
 }
-.button--face:nth-of-type(2) {
-  background: #000000;
+.button__face:nth-of-type(2) {
+  background: #030303;
   color: #ffffff;
 }
-.button--face:nth-of-type(3) {
+.button__face:nth-of-type(3) {
   background: #cccccc;
 }
-.button--face:last-of-type {
+.button__face:last-of-type {
   background: #b3b3b3;
 }
 .select-hidden {
@@ -1073,7 +2276,115 @@ input[type=checkbox]:checked + .input--primary:before {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 1px 1px 2px #f2f2f2;
 }
 .cls__more {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 1px 1px 2px #f2f2f2, 1px 1px 3px #000000;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 1px 1px 2px #f2f2f2, 1px 1px 3px #030303;
+}
+.entertainment {
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #00ccff;
+}
+.sport {
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #0078ff;
+}
+.lifestyle {
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #0000ff;
+}
+.economy_business {
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #7800ff;
+}
+.politics {
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #ff00c0;
+}
+.crime {
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #ff6600;
+}
+.foreign {
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #ffc000;
+}
+.social {
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #c2d526;
+}
+.li-8 {
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
+}
+.li-7 {
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
+}
+.li-8 {
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
+}
+.li-6 {
+  background-color: #f08523;
+}
+.li-7 {
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
+}
+.li-8 {
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
+}
+.li-5 {
+  background-color: #fcd475;
+}
+.li-6 {
+  background-color: #f08523;
+}
+.li-7 {
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
+}
+.li-8 {
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
+}
+.li-4 {
+  background-color: #f5ee9e;
+}
+.li-5 {
+  background-color: #fcd475;
+}
+.li-6 {
+  background-color: #f08523;
+}
+.li-7 {
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
+}
+.li-8 {
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
+}
+.li-3 {
+  background-color: #ddf1f5;
+}
+.li-4 {
+  background-color: #f5ee9e;
+}
+.li-5 {
+  background-color: #fcd475;
+}
+.li-6 {
+  background-color: #f08523;
+}
+.li-7 {
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
+}
+.li-8 {
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
+}
+.li-2 {
+  background-color: #092042;
+}
+.li-3 {
+  background-color: #ddf1f5;
+}
+.li-4 {
+  background-color: #f5ee9e;
+}
+.li-5 {
+  background-color: #fcd475;
+}
+.li-6 {
+  background-color: #f08523;
+}
+.li-7 {
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
+}
+.li-8 {
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-1 {
   background-color: #00395d;
@@ -1455,6 +2766,9 @@ body {
   width: 200px;
   height: 50px;
 }
+.bs-color {
+  margin-bottom: 30px;
+}
 .bs-color [class^='nation-brand'] {
   width: 150px;
   height: 60px;
@@ -1462,4 +2776,46 @@ body {
   color: #ffffff;
   text-align: center;
   float: left;
+}
+.bs-rainbow-color .color-block {
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  color: #ffffff;
+  text-align: left;
+  float: left;
+}
+.bs-layout-test .bs-news-block {
+  width: 100%;
+  height: 200px;
+  float: left;
+  background: #bbb;
+  margin: 0 15px 15px;
+}
+@media screen and (min-width: 768px) {
+  .bs-layout-test .bs-news-block {
+    width: 95%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .bs-layout-test .bs-news-block {
+    width: 45%;
+  }
+}
+.bs-layout-test .problematic-ads {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background: yellow;
+}
+@media screen and (min-width: 768px) {
+  .bs-layout-test .problematic-ads {
+    top: 330px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .bs-layout-test .problematic-ads {
+    top: 0;
+  }
 }

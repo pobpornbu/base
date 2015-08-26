@@ -95,39 +95,53 @@
       text-decoration: none;
     }
   });
+
+  // Share Button - separate container and icon
+  .part(wrap{
+    .option(icon{
+      border: none;
+    });
+  });
+  
+  .part(icon{
+    margin-right: 5px;
+  });
+
+  // Button Cube Style
+  .part(group{
+    .option(cube{
+      display:block; width: 300px; color: @black; background-color:@white; position: absolute; bottom: 25px;
+      &:hover {
+        .no-csstransform &, .no-csstransforms3d & {
+          background-color: darken(@white, 15%);
+        }
+      }
+    });
+  });
+  .part(wrap{
+    .option(face{
+      width: 300px; height: 34px;
+    });
+  });
+  .part(face{
+    font-family: "Ropa Sans", Arial, sans-serif; font-size: 16px; color: @black; border: 2px solid @black; text-align: center; text-transform: capitalize;
+    padding: 5px 15px;
+
+    &:first-of-type {
+      background-color: @white;
+    }
+
+    &:nth-of-type(2) {
+      background: @black;
+      color: @white;
+    }
+
+    &:nth-of-type(3) {
+      background: darken(@white, 20%);
+    }
+
+    &:last-of-type {
+      background: darken(@white, 30%);
+    }
+  });
 });
-
-.button__wrap {
-  display:block; width: 300px; color: @black; background-color:@white; position: absolute; bottom: 25px;
-  &:hover {
-    .no-csstransform &, .no-csstransforms3d & {
-      background-color: darken(@white, 15%);
-    }
-  }
-}
-  .button--cube {
-    width: 300px; height: 34px;
-  }
-    .button--face {
-      font-family: "Ropa Sans"; font-size: 16px; color: @black; border: 2px solid @black;
-      padding: 5px 15px;
-      text-align: center; text-transform: capitalize;
-
-      &:first-of-type {
-        background-color: @white;
-      }
-
-      &:nth-of-type(2) {
-        background: @black;
-        color: @white;
-      }
-
-      &:nth-of-type(3) {
-        background: darken(@white, 20%);
-      }
-
-      &:last-of-type {
-        background: darken(@white, 30%);
-      }
-    }
-
