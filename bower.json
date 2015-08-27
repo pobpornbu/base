@@ -32,6 +32,7 @@
     "angular-route": "~1.4.0",
     "autosize": "~3.0.6",
     "moment-timezone": "~0.4.0",
-    "lightslider": "~1.1.2"
+    "lightslider": "~1.1.2",
+    "vivus": "~0.2.1"
   }
 }
