@@ -79,6 +79,31 @@
       text-decoration: none;
     }
   });
+  
+  // Share Button - separate container and icon
+  .part(wrap{
+    .option(icon{
+      border: none;
+    });
+      // A adjustfontsize & share in news article + Share btn in news article
+  
+    .option(icon-font{
+      padding: 0;
+      display: inline-block;
+      line-height: 1;
+      .border-radius(3px);
+      .input-style(@adjustfont-bg-theme, @adjustfont-color-theme, @adjustfont-border-theme);
+      
+      .button__icon.\--share {
+        padding: 5px 6px;
+        margin: 0;
+      }
+    });
+  });
+  
+  .part(icon{
+    margin-right: 5px;
+  });
 });
 
 .button__wrap {

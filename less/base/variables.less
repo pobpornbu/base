@@ -54,6 +54,87 @@
 @active 								                :    	@green-input-active;
 @disabled 							                : 		@gray-step-8;
 
+// Color of Category
+@entertainment                          :                 rgb(0, 204, 255);
+@sport                                  :                 rgb(0, 120, 255);								
+@lifestyle                              :                 rgb(0, 0, 255);
+@economy_business                       :                 rgb(120, 0, 255);
+@politics                               :                 rgb(255, 0, 192);
+@crime                                  :                 rgb(255, 102, 0);
+@foreign                          			:                 rgb(255, 192, 0);
+@social                                 :                 rgb(194, 213, 38);
+@tvprogram 															: 								@brand-primary;
+@topstory 															: 								@brand-primary;
+@mostlist 															: 								@brand-primary;
+@hotnews																: 								@brand-primary;
+@recommended 														: 								@dark-blue;
+@canonlife 															: 								rgb(233, 31, 46);
+// Live
+@live 																	: 								rgb(246, 179, 0);
+@live-hover 														: 								lighten(@live, 15%);
+@live-active 														: 								darken(@live, 10%);
+
+// Path
+@image-path 														: 								"../images-v3";
+
+// Color
+@transparent 														: 								rgba(255, 255, 255, 0);
+@white 																	: 								rgba(255, 255, 255, 1);
+@black 																	: 								rgb(3, 3, 3);
+
+@brand-primary													: 								rgb(47, 69, 144);
+@brand-secondary 												: 								rgb(204, 204, 204);
+
+@darkest-blue 													: 								darken(@brand-primary, 30%);  // rgb(9, 14, 29)
+@darker-blue   													: 								darken(@brand-primary, 20%);  // rgb(22, 32, 67)
+@dark-blue															: 								darken(@brand-primary, 10%);  // rgb(34, 51, 106)
+
+@light-blue 														: 								lighten(@brand-primary, 10%); // rgb(60, 87, 182)
+@lighter-blue 													: 								lighten(@brand-primary, 20%); // rgb(91, 116, 202)
+@ultra-light-blue 											: 								lighten(@brand-primary, 30%); // rgb(130, 149, 214)
+@ultra-light-blue-2 										: 								lighten(@brand-primary, 40%); // rgb(168, 182, 227)
+@ultra-light-blue-3 										: 								lighten(@brand-primary, 50%); // rgb(207, 214, 239)
+@ultra-light-blue-4 										: 								lighten(@brand-primary, 55%); // rgb(245, 247, 252)
+@ultra-light-blue-5 										: 								lighten(@brand-primary, 57%); // rgb(234, 237, 248)
+@ultra-light-blue-6 										: 								lighten(@brand-primary, 60%); // rgb(245, 247, 252)
+
+@gray-darkest 													: 								rgb(51, 51, 51);
+@gray-darker														: 								rgb(102, 102, 102);
+@gray-dark															: 								rgb(153, 153, 153);
+@gray 																	: 								rgb(187, 187, 187);
+@gray-light 														:									rgb(204, 204, 204);
+@gray-lighter 													: 								rgb(238, 238, 238);
+@disable 																: 								@gray;
+
+@gray-purple-light 											: 								rgb(245,247,255);
+
+@color-border-primary 									: 								rgb(47,69,143);
+
+@color-font-normal 											: 								rgba(255,255,255,0.5);
+
+@color-icon-social 											: 								rgba(247,247,247,0.5);
+
+@input-disabled 											  : 								rgb(247,91,75);
+
+@orange-step-1 													: 								rgb(254, 249, 236);
+@orange-step-2 													: 								rgb(254, 247, 231);
+@orange-darkest 												: 								rgb(249, 192, 70);
+
+@red 																		: 								rgb(255, 0, 0);
+@dark-yellow 														: 								rgb(248, 177, 25);
+
+// Live
+@live 																	: 								rgb(246, 179, 0);
+@live-hover 														: 								lighten(@live, 15%);
+@live-active 														: 								darken(@live, 10%);
+
+@advertorial 														: 								rgb(246, 179, 0);
+
+@color-breaking-news										: 								@live;
+
+@pagination 														: 								@ultra-light-blue-5;
+@pagination-last-page 									: 								@ultra-light-blue-3;
+
 //____________________Button Solid__________________
 
 // @state-color-theme-pattern: 'normal', 'hover', 'active/focus', 'disabled', 'error';
@@ -132,6 +213,16 @@
 @input-radio-color-theme: rgb(122,129,137),rgb(117,219,213),rgb(54,188,178),rgb(188,192,196),rgb(222,31,9);
 @input-dropdown-color-theme: rgba(255,255,255,0),rgb(211,213,216),rgb(54,188,178),rgba(255,255,255,0),rgb(222,31,9);
 
+// Font size button -----------------------------
+
+@adjustfont-bg-theme: @white, @white, @brand-primary, @gray-lighter;
+@adjustfont-color-theme: @gray-darker, @brand-primary, @white, @disabled;
+@adjustfont-border-theme: @gray-darker, @brand-primary, @brand-primary, @disabled;
+
+@prevnext-bg-theme : @white, @ultra-light-blue-5, @brand-primary, @disabled;
+@prevnext-color-theme : @brand-primary, @brand-primary, @white, @gray-lighter;
+
+
 //##Social
 //Facebook
 @button-facebook-bg-color-theme: rgb(59,87,157), rgb(73,111,173), rgb(45,74,132), rgb(188,192,196);
@@ -140,16 +231,26 @@
 @button-twitter-bg-color-theme: rgb(51,204,255), rgb(84,216,252), rgb(0,187,237), rgb(188,192,196);
 
 //Google +
-@google-normal 	    										:     rgb(222,77,56);
-@google-hover 	    										:     rgb(247,91,75);
-@google-active 	    										:     rgb(206,59,44);
-@google-disabled 	  										:     @disabled;
-
 @button-googleplus-bg-color-theme: rgb(222,77,56), rgb(247,91,75), rgb(206,59,44), rgb(188,192,196);
+
+// color of category
+@category : @entertainment, @sport, @lifestyle, @economy_business, @politics, @crime, @foreign, @social, @live, @topstory, @tvprogram, @mostlist, @hotnews, @recommended, @canonlife, @brand-primary;
+@category-title : entertainment, sport, lifestyle, economy_business, politics, crime, foreign, social, live, topstory, tvprogram, mostlist, hotnews, recommended, canonlife, primary;
 
 //Modal color base
 @modal-black-background 								: 		fade(@gray-step-1, 70%);
 @modal-white-background 								: 		fade(@gray-step-11, 95%);
+
+@rainbow-lighter-blue 									: 		rgb(0, 204, 255);
+@rainbow-light-blue  										: 		rgb(0, 120, 255);
+@rainbow-blue 													: 		rgb(0, 0, 255);
+@rainbow-purple 												: 		rgb(120, 0, 255);
+@rainbow-pink 													: 		rgb(255, 0, 192);
+@rainbow-red 														: 		rgb(255, 0, 0);
+@rainbow-orange 												: 		rgb(255, 102, 0);
+@rainbow-yellow 												: 		rgb(255, 192, 0);
+@rainbow-dark-yellow 										: 		rgb(248, 177, 25);
+@rainbow-light-green 										: 		rgb(194, 213, 38);
 
 
 //== Typography
@@ -186,3 +287,10 @@
 @profile-picture-top-pos 								: 		50px;
 
 @comment-picture-size  									: 		50px;
+
+@nation-brand-primary 									: 		rgb(47, 69, 144);
+
+
+
+
+

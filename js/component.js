@@ -1,4 +1,4 @@
-(function($) {
+$(function() {
 
     // Textarea
     autosize($('textarea'));
@@ -15,5 +15,13 @@
     // });//.on('click', 'li', function(){
         //$(this).removeClass('active');
     });
-    
-})(jQuery);
+
+    // Adjust Font Size
+    $(".js-btn-adjustfont").textresizer({
+        target: "#js-text-resize",
+        sizes:  [ "14px", "16px", "18px" ],
+        selectedIndex: 0
+    });
+    $('#js-text-resize font, #js-text-resize span[style]').contents().unwrap();
+ 
+})();

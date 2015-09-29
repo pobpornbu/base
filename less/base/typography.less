@@ -1,0 +1,225 @@
+.font-kanda(@font-size: 16px; @font-weight: 400; @letter-spacing: 1px) {
+	font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+	font-size: @font-size;
+	font-weight: @font-weight;
+	letter-spacing: @letter-spacing;
+}
+// <h2 class="header__wrap --category --lifestyle">
+//     <a href="" class="header__text" target="_blank">ไลฟ์สไตล์</a>
+//     <span class="button__wrap --arrow-right"><a class="button__icon --lifestyle --arrow-right" href="#"></a></span>
+// </h2>
+
+.header-category-color(@news-category) {
+  border-bottom: 5px solid @news-category;
+  .header__text {
+	  background-color: @news-category;
+		&:after {
+      border-left: 10px solid @news-category;
+      border-bottom: 17px solid @news-category;
+		}
+	}
+}
+
+.component(header{
+	position: relative;
+	overflow: hidden;
+	.font-kanda(24px, 700);
+	line-height: 1.5;
+	@media screen and (min-width: 768px) {
+		font-size: 36px;
+	}
+	@media screen and (min-width: 1000px) {
+		font-size: 48px;
+	}
+	.option(middleline{
+		text-align: center;
+		span {
+			display: inline-block;
+			position: relative;
+			padding: 0 15px;
+			vertical-align: baseline;
+			zoom: 1;
+			line-height: 1.5;
+			&:before, &:after {
+				content: '';
+				display: inline-block;
+				width: 1000px;
+				height: 3px;
+				position: absolute;
+				top: 50%;
+				.transform(translateY(-50%));
+			}
+			&:before {
+				right: 100%;
+			}
+			&:after {
+				left: 100%;
+			}
+			// must put class to add color 
+		}
+		+.header.\--highlight {
+			display: block;
+			.font-kanda(16px, 700);
+			color: @gray-darker;
+			text-align: center;
+			text-transform: uppercase;
+			margin-top: -10px;
+		}
+	});
+	
+	.option(leftline{
+		span {
+			display: inline-block;
+			position: relative;
+			padding: 0 15px 0 0;
+			vertical-align: baseline;
+			zoom: 1;
+			&:after {
+				content: '';
+				display: inline-block;
+				width: 1000px;
+				height: 35px;
+				background: url("@{image-path}/striped.png") repeat;
+				position: absolute;
+				top: 50%;
+				.transform(translateY(-50%));
+				left: 100%;
+			}
+		}
+		&.primary{
+			color: @brand-primary;
+		}
+
+		.generate-color(length(@category), color);
+
+		&.lifestyle {
+			padding-left: 10px;
+		}
+	});
+	// <h3 class="header__wrap --dotted --primary">
+  //     <span class="header__text">ข่าวแนะนำ</span>
+  // </h3>
+	.part(wrap{
+		.option(dotted{
+			display: block;
+			text-align: left;
+			.font-kanda(16px, 700);
+			position: relative;
+			overflow: hidden;
+			&:before, &:after {
+				content: '';
+				display: inline-block;
+				width: 100%;
+				height: 20px;
+				position: absolute;
+				top: 50%;
+				.transform(translateY(-50%));
+			}
+		  &:before {
+		  	background: url(../images-v3/dot.svg) repeat-x top left;
+		  	background-size: 1% 100%;
+		  	z-index: 2;
+		  }
+		  &:after {
+		  	z-index: 1;
+		  }
+
+				.header__text {
+				  position: relative;
+				  z-index: 3;
+					display: inline-block;
+					position: relative;
+					padding: 0 6px 0 0;
+					vertical-align: baseline;
+					zoom: 1;
+				}
+
+		  &.\--lifestyle {
+				&:after {
+			  	background-color: @lifestyle;
+				}	
+				.header__text {
+			  	color: @lifestyle;
+				}
+		  }	
+		  &.\--recommended {
+				&:after {
+			  	background-color: @recommended;
+				}	
+				.header__text {
+			  	color: @recommended;
+			  	text-transform: uppercase;
+				}
+		  }	
+			&.\--hotnews {
+			  &:before {
+			  	background: url(../images-v3/dot-lightblue.svg) repeat-x top left;
+			  }
+				&:after {
+			  	background-color: @brand-primary;
+				}	
+				.header__text {
+					color: @brand-primary;
+				}
+			}
+		});
+
+    // News Category
+    .option(category{
+      display: block;
+      height: 39px;
+      margin: 0 0 15px 0;
+      position: relative;
+
+			.header__text {
+		    display: inline-block;
+		    .font-kanda(15px, 700);
+		    line-height: normal;
+		    color: @white;
+		    text-transform: uppercase;
+		    min-width: 160px;
+		    padding: 5px 10px 0;
+		    margin: 0;
+		    height: 34px;
+		    position: absolute;
+		    top: 0;
+		    &:after {
+		      content: '';
+		      display: inline-block;
+		      width: 0;
+		      height: 0;
+		      border-top: 17px solid rgba(255, 255, 255, 0);
+		      border-right: 10px solid rgba(255, 255, 255, 0);
+		      position: absolute;
+		      right: -20px;
+		      bottom: 0;
+		    }
+			}      
+
+			.button__wrap.\--arrow-right {
+      	height: 34px;
+      	position: absolute;
+      	top: 0;
+      	right: 0;
+      }
+	      .button__icon.\--arrow-right {
+	      	height: 34px;
+		      &:before {
+						position: relative;
+						top: -10px;
+		      }
+		    }
+
+	    &.\--canonlife{
+	      .header-category-color(@canonlife);
+	      .header__text {
+		  		width: 140px;
+		  	}
+	    }
+    });
+  });
+});
+
+.generate-header-dotted-color(length(@category-title));
+.generate-header-middleline-color(length(@category-title));
+.generate-header-color(length(@category-title));
