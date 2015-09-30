@@ -23,5 +23,14 @@ $(function() {
         selectedIndex: 0
     });
     $('#js-text-resize font, #js-text-resize span[style]').contents().unwrap();
- 
+
 });
+
+
+
+function printImg() {
+    popup = window.open();
+    popup.document.write("<img src='images/map.png' />");
+    popup.print();
+}
+

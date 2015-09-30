@@ -55,7 +55,7 @@
 			&:after {
 				left: 100%;
 			}
-			// must put class to add color 
+			// must put class to add color
 		}
 		+.header.\--highlight {
 			display: block;
@@ -66,7 +66,7 @@
 			margin-top: -10px;
 		}
 	});
-	
+
 	.option(leftline{
 		span {
 			display: inline-block;
@@ -137,27 +137,27 @@
 		  &.\--lifestyle {
 				&:after {
 			  	background-color: @lifestyle;
-				}	
+				}
 				.header__text {
 			  	color: @lifestyle;
 				}
-		  }	
+		  }
 		  &.\--recommended {
 				&:after {
 			  	background-color: @recommended;
-				}	
+				}
 				.header__text {
 			  	color: @recommended;
 			  	text-transform: uppercase;
 				}
-		  }	
+		  }
 			&.\--hotnews {
 			  &:before {
 			  	background: url(../images-v3/dot-lightblue.svg) repeat-x top left;
 			  }
 				&:after {
 			  	background-color: @brand-primary;
-				}	
+				}
 				.header__text {
 					color: @brand-primary;
 				}
@@ -194,7 +194,7 @@
 		      right: -20px;
 		      bottom: 0;
 		    }
-			}      
+			}
 
 			.button__wrap.\--arrow-right {
       	height: 34px;
@@ -223,3 +223,23 @@
 .generate-header-dotted-color(length(@category-title));
 .generate-header-middleline-color(length(@category-title));
 .generate-header-color(length(@category-title));
+
+.underline-middle(@color: @white; @gap: 47%;) {
+    display: block;
+    position: relative;
+    padding-bottom: 30px;
+	&:after {
+		content: ""; display: block; background-color: @color; padding-top: 1px; margin-top: 15px;
+		position: absolute; left: @gap; right: @gap;
+	}
+}
+
+
+.underline(@color: @dark-gold; @width: 40%; @left: 15%; @bottom: -10px) {
+	padding: 15px 0 0; position: relative; margin-bottom: 30px;//margin: 10px 0 0;
+	&:before {
+		content:''; display: block; width: @width; height:1px; //margin-top: 10px;
+		position: absolute; left: @left; bottom: @bottom; // top: @font-size;
+		background-color: @color;
+	}
+}

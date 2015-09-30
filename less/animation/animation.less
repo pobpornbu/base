@@ -122,3 +122,106 @@
     animation-name: moveright;
   }
 }
+
+.keyframes(~'spin, 0%{ transform:rotate(0deg); } 100%{ transform:rotate(360deg); }');
+
+#loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: @white;
+  z-index: 9999;
+  text-align: center;
+}
+    .loading-outer {
+      width:150px;
+      height:150px;
+      // border-radius:35%;
+      position:relative;
+      margin:0 auto;
+      margin-top:200px;
+      overflow:hidden;
+      background-color: @black;
+      .animation(spin 2s linear infinite);
+    }
+
+    .loading-outer:hover{
+      -webkit-animation-play-state:paused;
+      -moz-animation-play-state:paused;
+      -o-animation-play-state:paused;
+      -ms-animation-play-state:paused;
+      -animation-play-state:paused;
+    }
+
+    .loading-inner {
+        content: '';
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        margin-top: 50%;
+        background: rgb(255, 255, 255);
+        // border-radius: 40%;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+      //background:linear-gradient(90deg,rgb(220,220,220),rgb(150,150,150));
+    }
+    // .loading-inner:before{
+    //  width: 50%;
+    //  height: 100%;
+    //  position: absolute;
+    //  margin-top: -50%;
+    //  background: rgb(255, 255, 255);
+    //  content:'';
+    // }
+    // .loading-inner:after{
+    //  content:'';
+    //  width:80%;
+    //  height:160%;
+    //  position:absolute;
+    //  margin-top:-40%;
+    //  margin-left:10%;
+    //  background: #FFFFFF;
+    //  border-radius:50%;
+    // }
+
+// Loading .gif image
+
+#loading-image {
+  position: absolute;
+  top: 50%;
+  left: 240px;
+  z-index: 100;
+}
+
+// Loading Logo P and B move around each other
+
+.keyframes(~'p-move, 5%{ left: 50%; transform: scale(1); } 25%{ left: 40%; transform: scale(0.9); z-index: 5; } 40% { left: 50%; transform: scale(1);} 50% { left: 50%; transform: scale(1);} 75% { left: 60%; transform: scale(0.9); z-index: 10; } 95%{ left: 50%; transform: scale(1); }');
+
+.keyframes(~'b-move, 5%{ left: 50%; transform: scale(1); } 25%{ left: 60%; transform: scale(0.9); z-index: 10; } 40% { left: 50%; transform: scale(1);} 50% { left: 50%; transform: scale(1);} 75% { left: 40%; transform: scale(0.9); z-index: 5; } 95%{ left: 50%; transform: scale(1); }');
+
+.loading__rel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.logo__pb {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+  // .transform(translate(-50%));
+}
+  .logo__p {
+    .animation(p-move 3.5s ease-out infinite);
+  }
+  .logo__b {
+    .animation(b-move 3.5s ease-out infinite);
+  }
