@@ -24,4 +24,4 @@ $(function() {
     });
     $('#js-text-resize font, #js-text-resize span[style]').contents().unwrap();
  
-})();
+});

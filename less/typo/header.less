@@ -1,0 +1,27 @@
+.header__wrap--bt1 {
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: black;
+    position: relative;
+    .header__link__wrap {
+      padding: 2px 5px;
+      background-color: black;
+    }
+    .header__link {
+      color: whitesmoke;
+      position: relative;
+      z-index: 2;
+      &:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 20px solid rgb(0, 0, 0);
+        border-right: 13px solid rgba(0, 0, 0, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left: 25%;
+      }
+    }
+}

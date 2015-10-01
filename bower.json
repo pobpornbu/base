@@ -1,10 +1,10 @@
 {
-  "name": "Ladder",
+  "name": "Baseline",
   "version": "0.0.1",
   "authors": [
     "Pobporn <pobpornbu@gmail.com>"
   ],
-  "description": "",
+  "description": "HTML5 boilerplate",
   "keywords": [
     ""
   ],
@@ -31,6 +31,8 @@
     "font-awesome": "~4.3.0",
     "angular-route": "~1.4.0",
     "autosize": "~3.0.6",
-    "moment-timezone": "~0.4.0"
+    "moment-timezone": "~0.4.0",
+    "lightslider": "~1.1.2",
+    "vivus": "~0.2.1"
   }
 }
