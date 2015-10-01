@@ -42,6 +42,9 @@ BaselineApp.config(['$routeProvider',
       when('/shape', {
         templateUrl: 'partials/shape.html'
       }).
+      when('/theme', {
+        templateUrl: 'partials/theme.html'
+      }).
       otherwise({
         redirectTo: '/'
       });
