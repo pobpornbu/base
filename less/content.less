@@ -1,0 +1,54 @@
+.list__wrap {
+  .clearfix();
+  padding: 10px 0; // Peet 22/9/58
+}
+  .list__item {
+    display: block;
+    margin: 5px 15px 0 15px;
+    padding-bottom: 5px;
+    &:last-of-type{
+    	.list__link {
+      	border-bottom: none;
+    	}
+    }
+    &.\--has-sub {
+    	padding-bottom: 0;
+    }
+  }
+
+    .list__link {
+      display: block;
+      border-bottom: 1px solid @gray-light; 
+      .font-kanda(14px, 700);
+      color: @gray-darkest;
+      @media screen and (min-width: @screen-sm-min) {
+        font-size: 16px;
+      }
+
+      &.\--sub {
+        &:before {
+          content: "\2022";
+          display: inline-block;
+          margin-right: 5px;
+          color: @gray-darkest;
+        }
+        &:hover:before {
+          color: @brand-primary;
+        }
+      }
+    }
+
+.list__sub {
+	.list__item {
+		margin: 7px 0 0;
+	  &:last-of-type{
+	  	.list__link {
+  			border-bottom: 1px solid @gray-light;	
+	  	}
+	  }
+ 	}
+	.list__link {
+		padding-left: 25px;
+	}
+}
+
