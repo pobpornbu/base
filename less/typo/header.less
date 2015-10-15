@@ -25,3 +25,16 @@
       }
     }
 }
+
+// Logo designer+dev v.portDisplay
+.brand__img__wrap {
+  padding-left: 130px; margin: 0 0 0 105px; position: relative; display: inline-block;
+  &:before {
+    content: ""; display: block; border-top: 2px solid @color-primary; width: 120px;
+    position: absolute; top: 15px; left: 0;
+    @media screen and (min-width: @screen-sm-min){
+      border-top: 3px solid @color-primary;
+    }
+  }
+}
+  .brand__img { width: 3em; max-width: 100%; z-index: 5; display: block; }
