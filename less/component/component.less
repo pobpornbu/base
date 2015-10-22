@@ -229,6 +229,17 @@ input[type=checkbox]:checked + .input--primary:before {
   }
 }
 
+.change-bullet-color {
+  + .lSSlideOuter .lSPager.lSpg>li 
+  {
+    a {
+      background-color: @brand-secondary;
+    }
+    &.active a, &:hover a {
+      background-color: @brand-primary;
+    }
+  }
+}
 // Breadcrumb
 // ------------------------------------------------------
 
