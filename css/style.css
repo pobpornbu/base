@@ -1667,11 +1667,11 @@ input[type=checkbox]:checked + .input--primary:before {
 .change-gallery-arrow > li {
   position: relative;
 }
-.change-bullet-color + .lSSlideOuter .lSPager.lSpg > li a {
+.change-bullet-color .lSSlideOuter .lSPager.lSpg > li a {
   background-color: #92a6c2;
 }
-.change-bullet-color + .lSSlideOuter .lSPager.lSpg > li.active a,
-.change-bullet-color + .lSSlideOuter .lSPager.lSpg > li:hover a {
+.change-bullet-color .lSSlideOuter .lSPager.lSpg > li.active a,
+.change-bullet-color .lSSlideOuter .lSPager.lSpg > li:hover a {
   background-color: #000000;
 }
 .breadcrumb {
