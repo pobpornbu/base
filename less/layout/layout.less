@@ -89,3 +89,22 @@
     margin: 0;
   }
 }
+
+// Equal Height
+@media screen and (min-width: @screen-sm-min) {
+  .section-equal-bg {
+    background-color: @brand-primary;
+    position: relative;
+    &:before {
+      content: "";
+      display: block !important;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 58.33333333%;
+      width: 41.66666667%;
+      height: 100%;
+      background-color: @gray-dark;
+    }
+  }
+}

@@ -1261,6 +1261,21 @@ a[rel="nofollow"] {
   border-left: 10px solid #000000;
   border-bottom: 17px solid #000000;
 }
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after {
+  clear: both;
+}
+.expand-absolute {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 .code__wrap {
   margin-top: 25px;
 }
@@ -1317,6 +1332,23 @@ a[rel="nofollow"] {
 }
 #sitemap__page .header__wrap.\--category {
   margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .section-equal-bg {
+    background-color: #000000;
+    position: relative;
+  }
+  .section-equal-bg:before {
+    content: "";
+    display: block !important;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 58.33333333%;
+    width: 41.66666667%;
+    height: 100%;
+    background-color: #718bb0;
+  }
 }
 input,
 textarea,
