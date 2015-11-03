@@ -48,6 +48,9 @@ BaselineApp.config(['$routeProvider',
       when('/layout', {
         templateUrl: 'partials/layout.html'
       }).
+      when('/menu', {
+        templateUrl: 'partials/menu.html'
+      }).      
       otherwise({
         redirectTo: '/'
       });
