@@ -1413,6 +1413,13 @@ input[type="search"]::-webkit-search-results-decoration {
   color: #92a6c2;
   line-height: 30px;
 }
+.input-font {
+  font-family: 'psl_kanda', Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #718bb0;
+}
 .text__label {
   padding: 4px 10px;
   line-height: 26px;
@@ -1471,6 +1478,7 @@ input[type="search"]::-webkit-search-results-decoration {
   position: relative;
 }
 .input__text {
+  height: 34px;
   width: 100%;
   -webkit-border-radius: 3px;
   -webkit-background-clip: padding-box;
@@ -1478,8 +1486,14 @@ input[type="search"]::-webkit-search-results-decoration {
   -moz-background-clip: padding;
   border-radius: 3px;
   background-clip: padding-box;
+  font-family: 'psl_kanda', Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #718bb0;
 }
 .input__textarea {
+  height: 80px;
   width: 100%;
   -webkit-border-radius: 3px;
   -webkit-background-clip: padding-box;
@@ -1487,6 +1501,11 @@ input[type="search"]::-webkit-search-results-decoration {
   -moz-background-clip: padding;
   border-radius: 3px;
   background-clip: padding-box;
+  font-family: 'psl_kanda', Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #718bb0;
 }
 .input__icon {
   position: absolute;
@@ -1499,7 +1518,6 @@ input[type="search"]::-webkit-search-results-decoration {
   text-align: center;
 }
 .input.\--primary {
-  height: 34px;
   padding: 4px 10px;
   margin: 0;
   border: 1px solid #d3d5d8;
@@ -1677,6 +1695,21 @@ input[type=checkbox]:checked + .input__checkbox:before {
 input[type=radio]:checked + .input--primary:before,
 input[type=checkbox]:checked + .input--primary:before {
   color: #52d2ca;
+}
+.label-wrap,
+.input-wrap {
+  display: block;
+  float: left;
+}
+.label-wrap {
+  width: 26%;
+}
+.input-wrap {
+  width: 74%;
+}
+.button-wrap {
+  display: block;
+  padding-left: 26%;
 }
 .change-gallery-arrow + .lSAction > a {
   background: none;

@@ -62,6 +62,14 @@ input[type="search"]::-webkit-search-results-decoration {
   @padding-horizontal: 10px
 }
 
+.input-font {
+  font-family: @font-family-kandapro;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 400;
+  color: @color-font-content;
+}
+
 .text__label {
   .input-text-height();
   padding: @padding-vertical @padding-horizontal;
@@ -85,13 +93,17 @@ input[type="search"]::-webkit-search-results-decoration {
     });
   });
   .part(text{
+    .input-text-height();
+    height: @height;
     width: 100%;
     .radius;
+    .input-font;
   });
   .part(textarea {
+    height: 80px;
     width: 100%;
     .radius;
-    // line-height: 34px !important;
+    .input-font;
   });
   .part(icon {
     position: absolute;
@@ -107,8 +119,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
   .option(primary{
     .input-text-height();
-    height: @height;
-    // line-height: @height;
     padding: @padding-vertical @padding-horizontal;
     margin: 0;
     // Set margin-bottom at .form-group
@@ -190,6 +200,32 @@ input[type=radio]:checked + .input--primary:before,
 input[type=checkbox]:checked + .input--primary:before {
   color: @color-primary;
 }
+
+// Form layout
+// ------------------------------------------------------
+.form-layout-label() {
+  @width: 26%;
+}
+
+.label-wrap, .input-wrap {
+  display: block;
+  float: left;
+}
+
+.label-wrap {
+  .form-layout-label();
+  width: @width;
+}
+.input-wrap {
+  .form-layout-label();
+  width: 100% - @width;
+}
+.button-wrap {
+  .form-layout-label();
+  display: block;
+  padding-left: @width;
+}
+
 // lightSlider
 // ------------------------------------------------------
 .change-gallery-arrow {
