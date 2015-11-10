@@ -213,7 +213,15 @@
   text-align: center;
 }
 a[rel="nofollow"] {
-  text-decoration: none !important;
+  text-decoration: none;
+}
+i,
+cite,
+em,
+var,
+address,
+dfn {
+  font-style: normal;
 }
 .header {
   position: relative;
@@ -3165,7 +3173,8 @@ input[type=checkbox]:checked + .input--primary:before {
 .select.\--outline-secondary .select__selected.disabled {
   color: #92a6c2;
 }
-.select.\--outline-secondary .select__selected.active {
+.select.\--outline-secondary .select__selected.active,
+.select.\--outline-secondary .select__selected:active {
   -webkit-border-radius: 8px 8px 0 0;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 8px 8px 0 0;
@@ -3173,11 +3182,12 @@ input[type=checkbox]:checked + .input--primary:before {
   border-radius: 8px 8px 0 0;
   background-clip: padding-box;
 }
+.select.\--outline-secondary .select__selected.active:after,
+.select.\--outline-secondary .select__selected:active:after {
+  top: 10px;
+}
 .select.\--outline-secondary .select__selected:after {
   top: 14px;
-}
-.select.\--outline-secondary .select__selected:after:active {
-  top: 10px;
 }
 .select.\--outline-secondary .select__selected + .select__options {
   border-left: 1px solid #000000;
