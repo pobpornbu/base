@@ -82,6 +82,12 @@ input[type="search"]::-webkit-search-results-decoration {
 .theme-input-primary {
   .input-style(@input-primary-bg-color-theme, @input-primary-font-color-theme, @input-primary-border-color-theme);
 }
+.theme-outline-primary, .input-outline-primary {
+  // Set margin-bottom at .form-group
+  .input-style(@input-primary-bg-color-theme, @input-primary-font-color-theme, @input-primary-border-color-theme);
+  .radius;
+  .input-font;
+}
 
 .component(input{
   display: inline-block;
@@ -96,14 +102,10 @@ input[type="search"]::-webkit-search-results-decoration {
     .input-text-height();
     height: @height;
     width: 100%;
-    .radius;
-    .input-font;
   });
   .part(textarea {
     height: 80px;
     width: 100%;
-    .radius;
-    .input-font;
   });
   .part(icon {
     position: absolute;
@@ -116,13 +118,11 @@ input[type="search"]::-webkit-search-results-decoration {
     height: @height;
     text-align: center;
   });
-
   .option(primary{
     .input-text-height();
     padding: @padding-vertical @padding-horizontal;
     margin: 0;
-    // Set margin-bottom at .form-group
-    .input-style(@input-primary-bg-color-theme, @input-primary-font-color-theme, @input-primary-border-color-theme);
+    .theme-outline-primary;
   });
 });
 
