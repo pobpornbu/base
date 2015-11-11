@@ -24,6 +24,30 @@ $(function() {
     });
     $('#js-text-resize font, #js-text-resize span[style]').contents().unwrap();
 
+    // Tooltips
+    $(".js-share-btn").each(function(){
+        // if(!$(this).data('tooltipsterNs')){
+        $(this).tooltipster({
+        interactive: true,
+        position: 'bottom',
+        trigger: 'click',
+        theme: 'tooltipster-shadow',
+        content: $(this).parents('.js-share').find('.js-share-dialog'),
+        // functionInit: function($button,$dialog){
+        //  //bind social share button
+        //  Apps.social.bindShareButton($dialog,$button);
+        // },
+        functionReady: function(){
+          $(this).addClass('active');
+        },
+        functionAfter: function(){
+          $(this).removeClass('active');
+        },
+        minWidth: 0
+        }).click(function(e){e.preventDefault();});
+    // }
+  });
+
 });
 
 

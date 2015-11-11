@@ -2554,6 +2554,18 @@ input[type=checkbox]:checked + .input--primary:before {
 .button.\--googleplus.disabled {
   color: #ffffff;
 }
+.button.\--social {
+  -webkit-border-radius: 1000px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1000px;
+  -moz-background-clip: padding;
+  border-radius: 1000px;
+  background-clip: padding-box;
+}
+.button.\--social .button__icon {
+  font-size: 20px;
+  margin-right: 5px;
+}
 .button__link:hover,
 .button__link:active,
 .button__link:focus {
@@ -2656,6 +2668,48 @@ input[type=checkbox]:checked + .input--primary:before {
 }
 .button__face:last-of-type {
   background: #b3b3b3;
+}
+.share-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  padding: 4px 7px;
+  background-color: #92a6c2;
+  text-align: center;
+  position: relative;
+  top: -3px;
+}
+.share-icon i {
+  color: #ffffff;
+}
+.share-value {
+  position: relative;
+  top: -3px;
+}
+.tooltipster-content {
+  min-width: 220px;
+}
+.pagination-wrap {
+  width: 250px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none none outside;
+}
+.pagination-wrap li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.pagination-wrap a {
+  font-size: 16px;
+  color: #b3c1d5;
+  margin-right: 5px;
+}
+.pagination-wrap a:hover,
+.pagination-wrap a:active,
+.pagination-wrap a:focus {
+  text-decoration: none;
+  color: #000000;
 }
 .select-hidden {
   display: none;

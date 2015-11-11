@@ -74,6 +74,19 @@
             <i class="button__icon fa fa-facebook"></i>99+
           </button>
           <button class="button round --outline-primary --icon --readmore">read more <i class="fa fa-arrow-right"></i></button>
+          
+          <div class="js-share archive__share">
+            <div class="archive__button">
+              <span class="head --share">769</span><span class="head --host">แชร์</span><a class="share-icon js-share-btn"><i class="fa fa-share"></i></a>
+            </div>
+            <div class="hide">
+              <div class="js-share-dialog">
+                <button class="button --social --facebook js-btn-share-facebook"><i class="button__icon fa fa-facebook"></i><span class="share-value">44</span></button>
+                <button class="button --social --twitter js-btn-share-twitter"><i class="button__icon fa fa-twitter"></i><span class="share-value">0</span></button>
+                <button class="button --social --googleplus js-btn-share-googleplus"><i class="button__icon fa fa-google-plus"></i><span class="share-value">9</span></button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -95,5 +108,28 @@
     trigger: 'click',
     theme: 'tooltipster-shadow',
     content: $('<div class="social__dialog"><button class="button round --icon-left --facebook ion-social-facebook js-tooltip">99+</button><button class="button round --icon-left --twitter ion-social-twitter js-tooltip">99+</button><button class="button round --icon-left --googleplus ion-social-googleplus js-tooltip">99+</button></div>')
+  });
+    // Tooltips
+  $(".js-share-btn").each(function(){
+    // if(!$(this).data('tooltipsterNs')){
+      $(this).tooltipster({
+        interactive: true,
+        position: 'bottom',
+        trigger: 'click',
+        theme: 'tooltipster-shadow',
+        content: $(this).parents('.js-share').find('.js-share-dialog'),
+        // functionInit: function($button,$dialog){
+        //  //bind social share button
+        //  Apps.social.bindShareButton($dialog,$button);
+        // },
+        functionReady: function(){
+          $(this).addClass('active');
+        },
+        functionAfter: function(){
+          $(this).removeClass('active');
+        },
+        minWidth: 0
+      }).click(function(e){e.preventDefault();});
+    // }
   });
 </script>
