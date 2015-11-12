@@ -48,6 +48,19 @@ $(function() {
     // }
   });
 
+    // Example Malihu Scroll
+    $(".js-nav-scroll-news, .js-nav-scroll-program").mCustomScrollbar({
+        setHeight: 300,
+        theme: 'minimal-dark',
+        mouseWheel:{ enable: true, preventDefault: true}
+    });
+
+    $(".js-nav-scroll-gallery").mCustomScrollbar({
+        setHeight: 300,
+        theme: 'minimal-dark',
+        mouseWheel:{ enable: true, preventDefault: true, scrollAmount: 600, deltaFactor: 600}
+    });
+
 });
 
 
