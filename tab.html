@@ -81,7 +81,7 @@
   <meta name="twitter:creator" content="">
   <meta name="twitter:image:src" content="">
 </head>
-<body>
+<body class="js-menu-side">
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -91,6 +91,21 @@
       <a class="navbar-brand" href="#">
         <img alt="Brand" src="/images/favicon.png">
       </a>
+      <div class="menu__icon --cross menu-btn-offset js-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+    </div>
+    <div class="js-menu-list menu-sidebar-container">
+      <ul class="menu-list">
+        <li><a href="#">Menu List</a></li>
+        <li><a href="#">Menu List</a></li>
+        <li><a href="#">Menu List</a></li>
+        <li><a href="#">Menu List</a></li>
+        <li><a href="#">Menu List</a></li>
+      </ul>
     </div>
     <form class="navbar-form navbar-right" role="search">
       <div class="form-group input__wrap --icon">
@@ -101,39 +116,41 @@
   </div>
 </nav>
 <div class="container">
-<div class="row">
-  <ul class="nav nav-tabs [ tab__wrap --primary ]" role="tablist" id="myTab">
-    <li role="presentation" class=" [ tab__head ] active">
-      <a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="[ tab__link ]">Home</a>
-    </li>
-    <li role="presentation" class="tab__head">
-      <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="[ tab__link ]">Profile</a>
-    </li>
-    <li role="presentation" class="tab__head">
-      <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" class="[ tab__link ]">Messages</a>
-    </li>
-    <li role="presentation" class="tab__head">
-      <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab" class="[ tab__link ]">Settings</a>
-    </li>
-  </ul>
+  <div class="row">
+    <ul class="nav nav-tabs [ tab__wrap --primary ]" role="tablist" id="myTab">
+      <li role="presentation" class=" [ tab__head ] active">
+        <a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="[ tab__link ]">Home</a>
+      </li>
+      <li role="presentation" class="tab__head">
+        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="[ tab__link ]">Profile</a>
+      </li>
+      <li role="presentation" class="tab__head">
+        <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" class="[ tab__link ]">Messages</a>
+      </li>
+      <li role="presentation" class="tab__head">
+        <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab" class="[ tab__link ]">Settings</a>
+      </li>
+    </ul>
 
-  <div class="tab-content">
-    <div role="tabpanel" class="[ tab-pane active ]" id="home">
-      <h2>Home</h2>
-      This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a></div>
-    <div role="tabpanel" class="[ tab-pane ]" id="profile">
-      <h2>profile</h2>
-      This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a></div>
-    <div role="tabpanel" class="[ tab-pane ]" id="messages">
-      <h2>Message</h2>
-      This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a></div>
-    <div role="tabpanel" class="[ tab-pane ]" id="settings">
-      <h2>Settings</h2>
-      This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a></div>
+    <div class="tab-content">
+      <div role="tabpanel" class="[ tab-pane active ]" id="home">
+        <h2>Home</h2>
+        This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a></div>
+      <div role="tabpanel" class="[ tab-pane ]" id="profile">
+        <h2>profile</h2>
+        This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a></div>
+      <div role="tabpanel" class="[ tab-pane ]" id="messages">
+        <h2>Message</h2>
+        This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a></div>
+      <div role="tabpanel" class="[ tab-pane ]" id="settings">
+        <h2>Settings</h2>
+        This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a></div>
+    </div>
   </div>
 </div>
-</div>
 
+<div class="js-overlay overlay"></div>
+</body>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
@@ -147,8 +164,8 @@
   <script src="bower_components/detectizr/dist/detectizr.min.js"></script>
   <script src="bower_components/autosize/dist/autosize.min.js"></script>
   <script src="app/app.js"></script>
-  <script src="js/component.js"></script>
   <script src="js/select.js"></script>
+  <script src="js/toggle.js"></script>
 <!--  <script>$("#myTab").css('background','red');</script>
  <script src="js/clock.js"></script>
 <script src="bower_components/moment/moment.js"></script>
