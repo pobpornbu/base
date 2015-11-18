@@ -5,7 +5,7 @@ a[rel="nofollow"] {
 }
 i, cite, em, var, address, dfn  { font-style: normal; }
 mark { background: none; }
-blockquote { border-left: 0; margin: 0; }
+.blockquote { border-left: 0; margin: 0; } // reset bootstrap default
 
 .font-kanda(@font-size: 16px; @font-weight: 400; @letter-spacing: 1px) {
 	font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
@@ -17,7 +17,7 @@ blockquote { border-left: 0; margin: 0; }
 // <header class="head__header">
 // 	<p class="head --host">โดย <a class="head --link-primary" href="">สุทธิชัย หยุ่น</a> | <a class="head --link-primary" href="">เทพชัย หย่อง</a></p>
 // 	<p class="head --static">
-//		<span class="no-wrap">FM 90.5 MHz</span> 
+//		<span class="no-wrap">FM 90.5 MHz</span>
 //		<span class="no-wrap">จันทร์ - ศุกร์ เวลา 09:30 - 10:00 น.</span>
 //	</p>
 // </header>
@@ -46,7 +46,7 @@ blockquote { border-left: 0; margin: 0; }
 		mark {
 			text-decoration: underline;
 			color: @brand-primary;
-		}	
+		}
 	}
 }
 .\--link-secondary {
@@ -57,7 +57,7 @@ blockquote { border-left: 0; margin: 0; }
 		mark {
 			text-decoration: underline;
 			color: @brand-hilight;
-		}	
+		}
 	}
 }
 

@@ -4,6 +4,13 @@ input, textarea, button, select {
     outline: none;
   }
 }
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
 // Placeholder
 // ---------------------------------------
 ::-webkit-input-placeholder {color: @gray-step-4;}
@@ -337,7 +344,7 @@ input[type=checkbox]:checked + .input--primary:before {
     &.disabled>span {
       color: #999;
       &:hover {
-        background-color: #e6e6e6; 
+        background-color: #e6e6e6;
       }
     }
     &.active {
@@ -345,7 +352,7 @@ input[type=checkbox]:checked + .input--primary:before {
         &, &:focus, &:hover, &:active {
           color: @brand-primary;
           background-color: @pagination;
-          border: 1px solid @pagination;  
+          border: 1px solid @pagination;
         }
       }
     }
@@ -545,7 +552,7 @@ input[type=checkbox]:checked + .input--primary:before {
   }
 }
 
-@media screen and (min-width: @screen-sm-min) {    
+@media screen and (min-width: @screen-sm-min) {
   .prevnext__section {
     .tab-content>.tab-pane {
       display: block;
