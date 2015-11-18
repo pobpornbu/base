@@ -51,6 +51,9 @@ BaselineApp.config(['$routeProvider',
       when('/menu', {
         templateUrl: 'partials/menu.html'
       }).      
+      when('/result', {
+        templateUrl: 'partials/result.html'
+      }).      
       otherwise({
         redirectTo: '/'
       });

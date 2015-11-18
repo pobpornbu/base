@@ -4,6 +4,8 @@ a[rel="nofollow"] {
 	text-decoration: none;
 }
 i, cite, em, var, address, dfn  { font-style: normal; }
+mark { background: none; }
+blockquote { border-left: 0; margin: 0; }
 
 .font-kanda(@font-size: 16px; @font-weight: 400; @letter-spacing: 1px) {
 	font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
@@ -11,6 +13,54 @@ i, cite, em, var, address, dfn  { font-style: normal; }
 	font-weight: @font-weight;
 	letter-spacing: @letter-spacing;
 }
+
+// <header class="head__header">
+// 	<p class="head --host">โดย <a class="head --link-primary" href="">สุทธิชัย หยุ่น</a> | <a class="head --link-primary" href="">เทพชัย หย่อง</a></p>
+// 	<p class="head --static">
+//		<span class="no-wrap">FM 90.5 MHz</span> 
+//		<span class="no-wrap">จันทร์ - ศุกร์ เวลา 09:30 - 10:00 น.</span>
+//	</p>
+// </header>
+
+.head {
+	font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+	letter-spacing: 1px;
+	&.\--section {
+		font-size: 24px;
+		font-weight: 700;
+    color: @brand-primary;
+    margin-top: 13px;
+	}
+	&.\--header {
+    font-size: 12px;
+    font-weight: 700;
+    color: @text-header-color;
+	}
+}
+
+.\--link-primary {
+	color: inherit;
+	&:hover, &:active, &:focus {
+		text-decoration: underline;
+		color: @brand-primary;
+		mark {
+			text-decoration: underline;
+			color: @brand-primary;
+		}	
+	}
+}
+.\--link-secondary {
+	color: inherit;
+	&:hover, &:active, &:focus {
+		text-decoration: underline;
+		color: @brand-hilight;
+		mark {
+			text-decoration: underline;
+			color: @brand-hilight;
+		}	
+	}
+}
+
 // <h2 class="header__wrap --category --lifestyle">
 //     <a href="" class="header__text" target="_blank">ไลฟ์สไตล์</a>
 //     <span class="button__wrap --arrow-right"><a class="button__icon --lifestyle --arrow-right" href="#"></a></span>
@@ -230,6 +280,13 @@ i, cite, em, var, address, dfn  { font-style: normal; }
 .generate-header-dotted-color(length(@category-title));
 .generate-header-middleline-color(length(@category-title));
 .generate-header-color(length(@category-title));
+
+// <h2 class="head --section border-section">จับชีพจรโลก</h2>
+.border-section {
+    border-top: 4px solid @brand-primary;
+    display: block;
+    padding-top: 15px;
+}
 
 .underline-middle(@color: @white; @gap: 47%;) {
     display: block;

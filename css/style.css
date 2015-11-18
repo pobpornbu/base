@@ -223,6 +223,58 @@ address,
 dfn {
   font-style: normal;
 }
+mark {
+  background: none;
+}
+blockquote {
+  border-left: 0;
+  margin: 0;
+}
+.head {
+  font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+  letter-spacing: 1px;
+}
+.head.\--section {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 13px;
+}
+.head.\--header {
+  font-size: 12px;
+  font-weight: 700;
+  color: #7a8189;
+}
+.\--link-primary {
+  color: inherit;
+}
+.\--link-primary:hover,
+.\--link-primary:active,
+.\--link-primary:focus {
+  text-decoration: underline;
+  color: #000000;
+}
+.\--link-primary:hover mark,
+.\--link-primary:active mark,
+.\--link-primary:focus mark {
+  text-decoration: underline;
+  color: #000000;
+}
+.\--link-secondary {
+  color: inherit;
+}
+.\--link-secondary:hover,
+.\--link-secondary:active,
+.\--link-secondary:focus {
+  text-decoration: underline;
+  color: #36bcb2;
+}
+.\--link-secondary:hover mark,
+.\--link-secondary:active mark,
+.\--link-secondary:focus mark {
+  text-decoration: underline;
+  color: #36bcb2;
+}
 .header {
   position: relative;
   overflow: hidden;
@@ -1272,6 +1324,11 @@ dfn {
 .header__wrap.\--category.\--primary .header__text:after {
   border-left: 10px solid #000000;
   border-bottom: 17px solid #000000;
+}
+.border-section {
+  border-top: 4px solid #000000;
+  display: block;
+  padding-top: 15px;
 }
 .clearfix:before,
 .clearfix:after {
@@ -4554,6 +4611,58 @@ lesshat-selector {
 }
 .list__sub .list__link {
   padding-left: 25px;
+}
+.item-list__wrap {
+  margin-bottom: 15px;
+}
+.item-list__wrap:before,
+.item-list__wrap:after {
+  display: table;
+  content: " ";
+}
+.item-list__wrap:after {
+  clear: both;
+}
+@media screen and (min-width: 992px) {
+  .item-list__wrap {
+    margin-bottom: 30px;
+  }
+}
+.item-list__image {
+  width: 100px;
+  height: 65px;
+  margin-right: 10px;
+  float: left;
+}
+.item-list__content {
+  -lh-property: 0;
+width:-webkit-calc(100% - 110px);
+width:-moz-calc(100% - 110px);
+width:calc(100% - 110px);
+;
+  float: left;
+}
+.content.\--head {
+  font-weight: 700;
+  font-size: 14px;
+  color: #2f4590;
+}
+.item-list__wrap .content.\--head {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.content.\--headline {
+  font-size: 12px;
+  color: #404041;
+  max-height: 40px;
+  overflow: hidden;
+  margin: 5px 0;
+}
+.content.\--date {
+  display: block;
+  font-size: 12px;
+  color: #a7a8aa;
+  margin: 0;
 }
 .baseline .nav__container {
   border-bottom: 1px solid;
