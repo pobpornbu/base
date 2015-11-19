@@ -213,3 +213,77 @@
   	border-bottom: none;
   }
 }
+
+.gap(@dir: top; @level: xs) {
+	.checkdir(@dir);
+	.dir();
+}	
+	.checkdir(@dir) {
+		.dir() when (@dir = h) {
+			.mg-h(@level);
+			.level-h();
+		}
+		.dir() when (@dir = v) {
+			.mg-v(@level);
+			.level-v();
+		}
+		.dir() when (default()) {
+			.mg(@level);
+			.level();
+		}
+	}
+
+		.mg-h(@level) {
+			.level-h() when (@level = xs) {
+				margin: 0 5px;
+			}
+			.level-h() when (@level = sm) {
+				margin: 0 10px;
+			}		
+			.level-h() when (@level = md) {
+				margin: 0 15px;
+			}
+			.level-h() when (@level = lg) {
+				margin: 0 20px;
+			}
+			.level-h() when (@level = row) {
+				margin: 0 30px;
+			}
+		}
+
+		.mg-v(@level) {
+			.level-v() when (@level = xs) {
+				margin: 5px 0;
+			}
+			.level-v() when (@level = sm) {
+				margin: 10px 0;
+			}		
+			.level-v() when (@level = md) {
+				margin: 15px 0;
+			}
+			.level-v() when (@level = lg) {
+				margin: 20px 0;
+			}
+			.level-v() when (@level = row) {
+				margin: 30px 0;
+			}
+		}
+
+		.mg(@level) {
+			.level() when (@level = xs) {
+				margin-@{dir}: 5px;
+			}
+			.level() when (@level = sm) {
+				margin-@{dir}: 10px;
+			}		
+			.level() when (@level = md) {
+				margin-@{dir}: 15px;
+			}
+			.level() when (@level = lg) {
+				margin-@{dir}: 20px;
+			}
+			.level() when (@level = row) {
+				margin-@{dir}: 30px;
+			}
+		}
+
