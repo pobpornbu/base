@@ -304,9 +304,18 @@ input[type=checkbox]:checked + .input--primary:before {
     }
   }
   li+li:before {
-    .icon-iconicon("\f3d3");
     font-size: 13px;
     color: @gray-darker;
+  }
+  &.\--arrow-light {
+    li+li:before {
+      .icon-iconicon("\f3d3");      
+    }
+  }
+  &.\--arrow-strong {
+    li+li:before {
+      .icon-iconicon("\f125");      
+    }
   }
 }
 

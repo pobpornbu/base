@@ -207,10 +207,10 @@
   margin-right: 10px;
 }
 .gap-top-xs {
-  margin-top: 15px;
+  margin-top: 5px;
 }
 .gap-top-sm {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .gap-top-md {
   margin-top: 15px;
@@ -232,6 +232,9 @@
 }
 .gap-bottom-lg {
   margin-bottom: 20px;
+}
+.gap-bottom-row {
+  margin-bottom: 30px;
 }
 .gap-v-xs {
   margin: 5px 0;
@@ -277,7 +280,7 @@ dfn {
 mark {
   background: none;
 }
-blockquote {
+.blockquote {
   border-left: 0;
   margin: 0;
 }
@@ -1482,6 +1485,11 @@ button:focus,
 select:focus {
   outline: none;
 }
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
 ::-webkit-input-placeholder {
   color: #4e5761;
 }
@@ -1937,6 +1945,10 @@ input[type=checkbox]:checked + .input--primary:before {
   color: #000000;
 }
 .breadcrumb li + li:before {
+  font-size: 13px;
+  color: #435979;
+}
+.breadcrumb.\--arrow-light li + li:before {
   content: "\f3d3";
   display: inline-block;
   font-family: "Ionicons", Tahoma, sans-serif;
@@ -1948,8 +1960,19 @@ input[type=checkbox]:checked + .input--primary:before {
   text-rendering: auto;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  font-size: 13px;
-  color: #435979;
+}
+.breadcrumb.\--arrow-strong li + li:before {
+  content: "\f125";
+  display: inline-block;
+  font-family: "Ionicons", Tahoma, sans-serif;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 .pagination {
   margin: 0;

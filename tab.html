@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/tab.min.css">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -148,7 +149,19 @@
     </div>
   </div>
 </div>
-
+<div class="ui tabular menu">
+  <div class="item" data-tab="tab-name">Tab Name</div>
+  <div class="item" data-tab="tab-name2">Tab Name 2</div>
+</div>
+<div class="ui tab" data-tab="tab-name">
+  <!-- Tab Content !-->
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ducimus recusandae natus, qui facilis, laboriosam explicabo eaque blanditiis labore doloremque? Facere modi accusantium aspernatur, voluptate ab enim blanditiis sint repellendus.</p>
+  <p>Honestly, I am impress with what you are doing and hope to be part of this successful time. Now, I am working as a front-end web developer and looking forward to working with the high potential product. Finally, I discover takemetour could give me this meaningful opportunity. My speciality is  ...... </p>
+</div>
+<div class="ui tab" data-tab="tab-name2">
+  <!-- Tab Content !-->
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ducimus recusandae natus, qui facilis, laboriosam explicabo eaque blanditiis labore doloremque? Facere modi accusantium aspernatur, voluptate ab enim blanditiis sint repellendus.</p>
+</div>
 <div class="js-overlay overlay"></div>
 </body>
 <!-- End Document
@@ -166,9 +179,14 @@
   <script src="app/app.js"></script>
   <script src="js/select.js"></script>
   <script src="js/toggle.js"></script>
+  <script src="js/tab.min.js"></script>
 <!--  <script>$("#myTab").css('background','red');</script>
  <script src="js/clock.js"></script>
 <script src="bower_components/moment/moment.js"></script>
 <script src="bower_components/moment-timezone/moment-timezone.js"></script>
 <script src="bower_components/moment-timezone/moment-timezone-utils.js"></script></body>
- --></html>
+ -->
+  <script>
+  $('.tabular.menu .item').tab();
+  </script>
+ </html>
