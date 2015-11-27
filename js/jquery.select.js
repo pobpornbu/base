@@ -6,17 +6,17 @@
         var settings = $.extend({
             list         : text,
             theme        : null,
-            callback     : null
+            complete     : null
         }, options);
 
         return this.each( function() {
 
-            var $this = $(this), 
+            var $this = $(this),
                 numberOfOptions = $(this).children('option').length,
                 $selectWrap = $(this).wrap('<div class="select__wrap"></div>');
-          
-            $(this).addClass('select-hidden'); 
-            
+
+            $(this).addClass('select-hidden');
+
             $(this).after('<div class="select__selected"></div>');
 
             if( settings.theme ){
@@ -25,11 +25,11 @@
 
             var $styledSelect = $this.next('div.select__selected');
             $styledSelect.text($this.children('option').eq(0).text());
-          
+
             var $list = $('<ul />', {
                 'class': 'select__options'
             }).insertAfter($styledSelect);
-          
+
             for (var i = 0; i < numberOfOptions; i++) {
                 $('<li />', {
                     text: $this.children('option').eq(i).text(),
@@ -37,7 +37,7 @@
                     class: $this.children('option').eq(i).attr('class')
                 }).appendTo($list);
             }
-          
+
             var $listItems = $list.children('li').addClass('select__option');
 
             $styledSelect.on("click", function(e){
@@ -64,14 +64,14 @@
                 $styledSelect.text($(this).text());
 
                 if(settings.list === 'int-link'){
-                    window.location.href= $(this).attr('rel'); 
+                    window.location.href= $(this).attr('rel');
                 }else if(settings.list === 'ext-link'){
-                    window.open($(this).attr('rel'), '_blank');            
+                    window.open($(this).attr('rel'), '_blank');
                 }else{
                     $this.val($(this).attr('rel')).trigger('change');
                 }
             });
-          
+
             $(document).click(function() {
                 $styledSelect.removeClass('active');
                 $list.hide();

@@ -5,11 +5,15 @@ input, textarea, button, select {
   }
 }
 
-button::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  .appearance(none);
   margin: 0;
 }
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 
 // Placeholder
 // ---------------------------------------
@@ -309,12 +313,12 @@ input[type=checkbox]:checked + .input--primary:before {
   }
   &.\--arrow-light {
     li+li:before {
-      .icon-iconicon("\f3d3");      
+      .icon-iconicon("\f3d3");
     }
   }
   &.\--arrow-strong {
     li+li:before {
-      .icon-iconicon("\f125");      
+      .icon-iconicon("\f125");
     }
   }
 }
@@ -456,7 +460,7 @@ input[type=checkbox]:checked + .input--primary:before {
   margin-bottom: 15px;
   @media screen and (min-width: @screen-sm-min) {
     text-align: right;
-    width: 245px;
+    width: 246px;
     float: right;
   }
 }
@@ -579,5 +583,27 @@ input[type=checkbox]:checked + .input--primary:before {
     .news__link__wrap {
       text-align: right;
     }
+  }
+}
+
+.social-label {
+  .font-kanda(16px);
+  color: @gray-darkest;
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+.social-icon {
+  font-size: 24px;
+  color: @gray;
+  display: inline-block;
+  margin-right: 5px;
+  &.\--f {
+    .link-state(@facebook);
+  }
+  &.\--t {
+    .link-state(@twitter);
+  }
+  &.\--g {
+    .link-state(@googleplus);
   }
 }

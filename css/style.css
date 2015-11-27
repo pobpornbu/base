@@ -2119,7 +2119,7 @@ input[type=checkbox]:checked + .input--primary:before {
 @media screen and (min-width: 768px) {
   .adjustfontsize__container {
     text-align: right;
-    width: 245px;
+    width: 246px;
     float: right;
   }
 }
@@ -2307,6 +2307,66 @@ input[type=checkbox]:checked + .input--primary:before {
   #prevnews .news__link__wrap {
     text-align: right;
   }
+}
+.social-label {
+  font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #333333;
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+.social-icon {
+  font-size: 24px;
+  color: #92a6c2;
+  display: inline-block;
+  margin-right: 5px;
+}
+.social-icon.\--f {
+  color: inherit;
+}
+.social-icon.\--f:hover {
+  color: #4e6ebd;
+}
+.social-icon.\--f:focus,
+.social-icon.\--f:active,
+.social-icon.\--f.active {
+  color: #2d4278;
+}
+.social-icon.\--f:disabled,
+.social-icon.\--f.disabled {
+  color: #bcc0c4;
+}
+.social-icon.\--t {
+  color: inherit;
+}
+.social-icon.\--t:hover {
+  color: #66d9ff;
+}
+.social-icon.\--t:focus,
+.social-icon.\--t:active,
+.social-icon.\--t.active {
+  color: #00bfff;
+}
+.social-icon.\--t:disabled,
+.social-icon.\--t.disabled {
+  color: #bcc0c4;
+}
+.social-icon.\--g {
+  color: inherit;
+}
+.social-icon.\--g:hover {
+  color: #e57464;
+}
+.social-icon.\--g:focus,
+.social-icon.\--g:active,
+.social-icon.\--g.active {
+  color: #c33520;
+}
+.social-icon.\--g:disabled,
+.social-icon.\--g.disabled {
+  color: #bcc0c4;
 }
 .no-button-default {
   outline: none;
@@ -2604,28 +2664,28 @@ input[type=checkbox]:checked + .input--primary:before {
   color: #ffffff;
 }
 .button.\--facebook:hover {
-  border: 1px solid #496fad;
+  border: 1px solid #4e6ebd;
 }
 .button.\--facebook:focus,
 .button.\--facebook:active,
 .button.\--facebook.active {
-  border: 1px solid #2d4a84;
+  border: 1px solid #263865;
 }
 .button.\--facebook:disabled,
 .button.\--facebook.disabled {
-  border: 1px solid #bcc0c4;
+  border: 1px solid extract(#3b579d, #4e6ebd, #263865, 4);
 }
 .button.\--facebook:hover {
-  background-color: #496fad;
+  background-color: #4e6ebd;
 }
 .button.\--facebook:focus,
 .button.\--facebook:active,
 .button.\--facebook.active {
-  background-color: #2d4a84;
+  background-color: #263865;
 }
 .button.\--facebook:disabled,
 .button.\--facebook.disabled {
-  background-color: #bcc0c4;
+  background-color: extract(#3b579d, #4e6ebd, #263865, 4);
 }
 .button.\--facebook:hover,
 .button.\--facebook:focus,
@@ -2641,28 +2701,28 @@ input[type=checkbox]:checked + .input--primary:before {
   color: #ffffff;
 }
 .button.\--twitter:hover {
-  border: 1px solid #54d8fc;
+  border: 1px solid #66d9ff;
 }
 .button.\--twitter:focus,
 .button.\--twitter:active,
 .button.\--twitter.active {
-  border: 1px solid #00bbed;
+  border: 1px solid #00ace5;
 }
 .button.\--twitter:disabled,
 .button.\--twitter.disabled {
-  border: 1px solid #bcc0c4;
+  border: 1px solid extract(#33ccff, #66d9ff, #00ace5, 4);
 }
 .button.\--twitter:hover {
-  background-color: #54d8fc;
+  background-color: #66d9ff;
 }
 .button.\--twitter:focus,
 .button.\--twitter:active,
 .button.\--twitter.active {
-  background-color: #00bbed;
+  background-color: #00ace5;
 }
 .button.\--twitter:disabled,
 .button.\--twitter.disabled {
-  background-color: #bcc0c4;
+  background-color: extract(#33ccff, #66d9ff, #00ace5, 4);
 }
 .button.\--twitter:hover,
 .button.\--twitter:focus,
@@ -2678,28 +2738,28 @@ input[type=checkbox]:checked + .input--primary:before {
   color: #ffffff;
 }
 .button.\--googleplus:hover {
-  border: 1px solid #f75b4b;
+  border: 1px solid #e57464;
 }
 .button.\--googleplus:focus,
 .button.\--googleplus:active,
 .button.\--googleplus.active {
-  border: 1px solid #ce3b2c;
+  border: 1px solid #ad2f1d;
 }
 .button.\--googleplus:disabled,
 .button.\--googleplus.disabled {
-  border: 1px solid #bcc0c4;
+  border: 1px solid extract(#de4d38, #e57464, #ad2f1d, 4);
 }
 .button.\--googleplus:hover {
-  background-color: #f75b4b;
+  background-color: #e57464;
 }
 .button.\--googleplus:focus,
 .button.\--googleplus:active,
 .button.\--googleplus.active {
-  background-color: #ce3b2c;
+  background-color: #ad2f1d;
 }
 .button.\--googleplus:disabled,
 .button.\--googleplus.disabled {
-  background-color: #bcc0c4;
+  background-color: extract(#de4d38, #e57464, #ad2f1d, 4);
 }
 .button.\--googleplus:hover,
 .button.\--googleplus:focus,
@@ -3953,91 +4013,91 @@ input[type=checkbox]:checked + .input--primary:before {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 1px 1px 2px #f2f2f2, 1px 1px 3px #030303;
 }
 .entertainment {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #00ccff;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #00ccff;
 }
 .sport {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #0078ff;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #0078ff;
 }
 .lifestyle {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #0000ff;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #0000ff;
 }
 .economy_business {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #7800ff;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #7800ff;
 }
 .politics {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #ff00c0;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #ff00c0;
 }
 .crime {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #ff6600;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #ff6600;
 }
 .foreign {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #ffc000;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #ffc000;
 }
 .social {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #c2d526;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #c2d526;
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-5 {
-  background-color: #FCD475;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-4 {
-  background-color: #F5EE9E;
+  background-color: #f5ee9e;
 }
 .li-5 {
-  background-color: #FCD475;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-3 {
   background-color: #ddf1f5;
 }
 .li-4 {
-  background-color: #F5EE9E;
+  background-color: #f5ee9e;
 }
 .li-5 {
-  background-color: #FCD475;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-2 {
   background-color: #092042;
@@ -4046,19 +4106,19 @@ input[type=checkbox]:checked + .input--primary:before {
   background-color: #ddf1f5;
 }
 .li-4 {
-  background-color: #F5EE9E;
+  background-color: #f5ee9e;
 }
 .li-5 {
-  background-color: #FCD475;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-1 {
   background-color: #00395d;
@@ -4070,19 +4130,19 @@ input[type=checkbox]:checked + .input--primary:before {
   background-color: #ddf1f5;
 }
 .li-4 {
-  background-color: #F5EE9E;
+  background-color: #f5ee9e;
 }
 .li-5 {
-  background-color: #FCD475;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 body {
   margin: 0;
@@ -4096,7 +4156,7 @@ body {
 }
 .clock {
   border-radius: 50%;
-  background: radial-gradient(#000, #000 0.1em, #fff 0.1em, #fff), #fff;
+  background: radial-gradient(#000000, #000000 0.1em, #ffffff 0.1em, #ffffff), #ffffff;
   display: inline-block;
   margin: 1%;
   padding-bottom: 31%;
@@ -4218,7 +4278,7 @@ body {
   width: 500%;
 }
 .clock.ios7 {
-  background: #fff url(../images/ios_clock.svg) no-repeat center;
+  background: #ffffff url(../images/ios_clock.svg) no-repeat center;
   background-size: 88%;
 }
 .clock.ios7:before {
@@ -4262,7 +4322,7 @@ body {
   transform-origin: 50% 100%;
 }
 .clock.simple {
-  background: #fff url(/images/ios_clock.svg) no-repeat center;
+  background: #ffffff url(/images/ios_clock.svg) no-repeat center;
   background-size: 88%;
 }
 .clock.simple:after {

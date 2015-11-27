@@ -157,7 +157,7 @@
 	.header__wrap.\--dotted.\--@{title} {
 		&:after {
 	  	background-color: extract(@category, @i);
-		}	
+		}
 		.header__text {
 			color: extract(@category, @i);
 		}
@@ -165,6 +165,18 @@
 	.generate-header-dotted-color(@n, @i + 1);
 }
 
+.link-state(@color) when (iscolor(@color)) {
+    color: inherit;
+    &:hover {
+        color: lighten(@color, 10%);
+    }
+    &:focus, &:active, &.active {
+        color: darken(@color, 10%);
+    }
+    &:disabled, &.disabled {
+        color: @disabled;
+    }
+}
 //__________________Icon____________________
 
 .icon-iconicon(@icon){
@@ -217,7 +229,7 @@
 .gap(@dir: top; @level: xs) {
 	.checkdir(@dir);
 	.dir();
-}	
+}
 	.checkdir(@dir) {
 		.dir() when (@dir = h) {
 			.mg-h(@level);
@@ -239,7 +251,7 @@
 			}
 			.level-h() when (@level = sm) {
 				margin: 0 10px;
-			}		
+			}
 			.level-h() when (@level = md) {
 				margin: 0 15px;
 			}
@@ -257,7 +269,7 @@
 			}
 			.level-v() when (@level = sm) {
 				margin: 10px 0;
-			}		
+			}
 			.level-v() when (@level = md) {
 				margin: 15px 0;
 			}
@@ -275,7 +287,7 @@
 			}
 			.level() when (@level = sm) {
 				margin-@{dir}: 10px;
-			}		
+			}
 			.level() when (@level = md) {
 				margin-@{dir}: 15px;
 			}
@@ -287,3 +299,9 @@
 			}
 		}
 
+.tablet-up(@rules) {
+  @media screen and (min-width: 768px) { @rules(); }
+}
+.desktop-up(@rules) {
+  @media screen and (min-width: 992px) { @rules(); }
+}

@@ -56,7 +56,7 @@
 
 // Color of Category
 @entertainment                          :                 rgb(0, 204, 255);
-@sport                                  :                 rgb(0, 120, 255);								
+@sport                                  :                 rgb(0, 120, 255);
 @lifestyle                              :                 rgb(0, 0, 255);
 @economy_business                       :                 rgb(120, 0, 255);
 @politics                               :                 rgb(255, 0, 192);
@@ -228,14 +228,13 @@
 
 //##Social
 //Facebook
-@button-facebook-bg-color-theme: rgb(59,87,157), rgb(73,111,173), rgb(45,74,132), rgb(188,192,196);
+@facebook:                                    rgb(59, 87, 157);
+@twitter:                                     rgb(51, 204, 255);
+@googleplus:                                  rgb(222, 77, 56);
 
-//Twitter
-@button-twitter-bg-color-theme: rgb(51,204,255), rgb(84,216,252), rgb(0,187,237), rgb(188,192,196);
-
-//Google +
-@button-googleplus-bg-color-theme: rgb(222,77,56), rgb(247,91,75), rgb(206,59,44), rgb(188,192,196);
-
+@button-facebook-bg-color-theme:              @facebook, lighten(@facebook, 10%), darken(@facebook, 15%);
+@button-twitter-bg-color-theme:               @twitter, lighten(@twitter, 10%), darken(@twitter, 15%);
+@button-googleplus-bg-color-theme:            @googleplus, lighten(@googleplus, 10%), darken(@googleplus, 15%);
 // color of category
 @category : @entertainment, @sport, @lifestyle, @economy_business, @politics, @crime, @foreign, @social, @live, @topstory, @tvprogram, @mostlist, @hotnews, @recommended, @canonlife, @brand-primary;
 @category-title : entertainment, sport, lifestyle, economy_business, politics, crime, foreign, social, live, topstory, tvprogram, mostlist, hotnews, recommended, canonlife, primary;
