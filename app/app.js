@@ -39,6 +39,9 @@ BaselineApp.config(['$routeProvider',
       when('/content', {
         templateUrl: 'partials/content.html'
       }).
+      when('/list', {
+        templateUrl: 'partials/list.html'
+      }).
       when('/shape', {
         templateUrl: 'partials/shape.html'
       }).
@@ -50,13 +53,13 @@ BaselineApp.config(['$routeProvider',
       }).
       when('/menu', {
         templateUrl: 'partials/menu.html'
-      }).      
+      }).
       when('/result', {
         templateUrl: 'partials/result.html'
-      }).      
+      }).
       when('/sitemap', {
         templateUrl: 'partials/sitemap.html'
-      }).      
+      }).
       otherwise({
         redirectTo: '/'
       });
