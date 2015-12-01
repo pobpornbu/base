@@ -54,6 +54,9 @@ BaselineApp.config(['$routeProvider',
       when('/result', {
         templateUrl: 'partials/result.html'
       }).      
+      when('/sitemap', {
+        templateUrl: 'partials/sitemap.html'
+      }).      
       otherwise({
         redirectTo: '/'
       });
