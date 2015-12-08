@@ -150,3 +150,57 @@
     -o-clip-path: url("#absolute_path");
     clip-path: url("#absolute_path");
 }
+
+.tree {
+  display:block;
+  position: relative;
+  width: 126px;
+  height: 180px;
+  background-color: green;
+  .border-top-left-radius(50% 60%);
+  .border-top-right-radius(50% 60%);
+  .border-bottom-right-radius(50% 35%);
+  .border-bottom-left-radius(50% 35%);
+  border-left: 40px solid darkgreen;
+  &:after {
+    content: '';
+    display: inline-block;
+    background-color: brown;
+    height: 20px;
+    width: 15px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -30px;
+  }
+}
+
+.sign {
+  display: inline-block;
+  padding: 10px 15px;
+  color: white;
+  background-color: brown;
+  position: relative;
+  &:before {
+    content: '';
+    display: inline-block;
+    border-left: 10px solid brown;
+    border-top: 20px solid transparent; 
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    left: 100%;
+    top: 0;
+  }
+  &:after {
+    content: '';
+    display: block;
+    border-left: 5px solid rgb(119, 32, 32);
+    border-right: 5px solid rgb(119, 32, 32);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 20px;
+    margin: 0 5px;
+  }
+}

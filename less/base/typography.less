@@ -71,6 +71,21 @@ mark { background: none; }
 	}
 }
 
+.\--no-link {
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+.link__icon{
+  display: inline-block;
+  color: @gray;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+
 // <h2 class="header__wrap --category --lifestyle">
 //     <a href="" class="header__text" target="_blank">ไลฟ์สไตล์</a>
 //     <span class="button__wrap --arrow-right"><a class="button__icon --lifestyle --arrow-right" href="#"></a></span>

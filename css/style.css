@@ -339,6 +339,18 @@ mark {
   text-decoration: underline;
   color: #36bcb2;
 }
+.\--no-link:hover,
+.\--no-link:active,
+.\--no-link:focus {
+  text-decoration: none;
+  color: inherit;
+}
+.link__icon {
+  display: inline-block;
+  color: #92a6c2;
+  font-size: 20px;
+  margin-right: 5px;
+}
 .header {
   position: relative;
   overflow: hidden;
@@ -4041,91 +4053,91 @@ button::-moz-focus-inner {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 1px 1px 2px #f2f2f2, 1px 1px 3px #030303;
 }
 .entertainment {
-  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #00ccff;
+  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #00ccff;
 }
 .sport {
-  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #0078ff;
+  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #0078ff;
 }
 .lifestyle {
-  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #0000ff;
+  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #0000ff;
 }
 .economy_business {
-  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #7800ff;
+  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #7800ff;
 }
 .politics {
-  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #ff00c0;
+  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #ff00c0;
 }
 .crime {
-  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #ff6600;
+  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #ff6600;
 }
 .foreign {
-  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #ffc000;
+  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #ffc000;
 }
 .social {
-  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #c2d526;
+  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #c2d526;
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
 }
 .li-6 {
-  background-color: #f08523;
+  background-color: #F08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
 }
 .li-5 {
-  background-color: #fcd475;
+  background-color: #FCD475;
 }
 .li-6 {
-  background-color: #f08523;
+  background-color: #F08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
 }
 .li-4 {
-  background-color: #f5ee9e;
+  background-color: #F5EE9E;
 }
 .li-5 {
-  background-color: #fcd475;
+  background-color: #FCD475;
 }
 .li-6 {
-  background-color: #f08523;
+  background-color: #F08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
 }
 .li-3 {
   background-color: #ddf1f5;
 }
 .li-4 {
-  background-color: #f5ee9e;
+  background-color: #F5EE9E;
 }
 .li-5 {
-  background-color: #fcd475;
+  background-color: #FCD475;
 }
 .li-6 {
-  background-color: #f08523;
+  background-color: #F08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
 }
 .li-2 {
   background-color: #092042;
@@ -4134,19 +4146,19 @@ button::-moz-focus-inner {
   background-color: #ddf1f5;
 }
 .li-4 {
-  background-color: #f5ee9e;
+  background-color: #F5EE9E;
 }
 .li-5 {
-  background-color: #fcd475;
+  background-color: #FCD475;
 }
 .li-6 {
-  background-color: #f08523;
+  background-color: #F08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
 }
 .li-1 {
   background-color: #00395d;
@@ -4158,19 +4170,19 @@ button::-moz-focus-inner {
   background-color: #ddf1f5;
 }
 .li-4 {
-  background-color: #f5ee9e;
+  background-color: #F5EE9E;
 }
 .li-5 {
-  background-color: #fcd475;
+  background-color: #FCD475;
 }
 .li-6 {
-  background-color: #f08523;
+  background-color: #F08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
 }
 body {
   margin: 0;
@@ -4184,7 +4196,7 @@ body {
 }
 .clock {
   border-radius: 50%;
-  background: radial-gradient(#000000, #000000 0.1em, #ffffff 0.1em, #ffffff), #ffffff;
+  background: radial-gradient(#000, #000 0.1em, #fff 0.1em, #fff), #fff;
   display: inline-block;
   margin: 1%;
   padding-bottom: 31%;
@@ -4306,7 +4318,7 @@ body {
   width: 500%;
 }
 .clock.ios7 {
-  background: #ffffff url(../images/ios_clock.svg) no-repeat center;
+  background: #fff url(../images/ios_clock.svg) no-repeat center;
   background-size: 88%;
 }
 .clock.ios7:before {
@@ -4350,7 +4362,7 @@ body {
   transform-origin: 50% 100%;
 }
 .clock.simple {
-  background: #ffffff url(/images/ios_clock.svg) no-repeat center;
+  background: #fff url(/images/ios_clock.svg) no-repeat center;
   background-size: 88%;
 }
 .clock.simple:after {
@@ -4719,6 +4731,69 @@ lesshat-selector {
   -moz-clip-path: url("#absolute_path");
   -o-clip-path: url("#absolute_path");
   clip-path: url("#absolute_path");
+}
+.tree {
+  display: block;
+  position: relative;
+  width: 126px;
+  height: 180px;
+  background-color: green;
+  -webkit-border-top-left-radius: 50% 60%;
+  -moz-border-radius-topleft: 50% 60%;
+  border-top-left-radius: 50% 60%;
+  -webkit-border-top-right-radius: 50% 60%;
+  -moz-border-radius-topright: 50% 60%;
+  border-top-right-radius: 50% 60%;
+  -webkit-border-bottom-right-radius: 50% 35%;
+  -moz-border-radius-bottomright: 50% 35%;
+  border-bottom-right-radius: 50% 35%;
+  -webkit-border-bottom-left-radius: 50% 35%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius-bottomleft: 50% 35%;
+  -moz-background-clip: padding;
+  border-bottom-left-radius: 50% 35%;
+  background-clip: padding-box;
+  border-left: 40px solid darkgreen;
+}
+.tree:after {
+  content: '';
+  display: inline-block;
+  background-color: brown;
+  height: 20px;
+  width: 15px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -30px;
+}
+.sign {
+  display: inline-block;
+  padding: 10px 15px;
+  color: white;
+  background-color: brown;
+  position: relative;
+}
+.sign:before {
+  content: '';
+  display: inline-block;
+  border-left: 10px solid brown;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+.sign:after {
+  content: '';
+  display: block;
+  border-left: 5px solid #772020;
+  border-right: 5px solid #772020;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 20px;
+  margin: 0 5px;
 }
 .list__wrap {
   padding: 10px 0;
