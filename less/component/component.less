@@ -607,3 +607,23 @@ input[type=checkbox]:checked + .input--primary:before {
     .link-state(@googleplus);
   }
 }
+
+
+.mx-frame-circle(@size: 150px; @border-color: @brand-hilight) {
+  display: block;
+  width: @size;
+  height: @size;
+  margin: 0 auto;
+  border: 1px solid @border-color;
+  .border-radius(50%);
+  overflow: hidden;
+  text-align: center;
+  img {
+    display: inline-block;
+    max-width: none;
+  }
+}
+
+.img-frame-circle {
+  .mx-frame-circle();
+}
