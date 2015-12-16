@@ -4707,6 +4707,50 @@ lesshat-selector {
     top: 0;
   }
 }
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-top: 12.5px solid #36bcb2;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+}
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-bottom: 12.5px solid #36bcb2;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+}
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-right: 12.5px solid #36bcb2;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+}
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-left: 12.5px solid #36bcb2;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+}
+.trian-res-down {
+  width: 25%;
+  height: 0;
+  padding-left: 25%;
+  padding-top: 25%;
+  overflow: hidden;
+}
+.trian-res-down div {
+  width: 0;
+  height: 0;
+  border-top: 50px solid #000000;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  margin-top: -100px;
+  margin-left: -200px;
+}
 /* Chrome solution, will display as a square in Firefox */
 .gon {
   width: 126px;
@@ -4795,6 +4839,8 @@ lesshat-selector {
 .sign:before {
   content: '';
   display: inline-block;
+  width: 0;
+  height: 0;
   border-left: 10px solid brown;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;

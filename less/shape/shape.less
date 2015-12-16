@@ -88,7 +88,64 @@
 //   top: 24px;
 //   left: -48px;
 // }
+.triangle-arrow-mx(@color: @brand-hilight; @dir: down; @size: 25px;) {
+  width: 0;
+  height: 0;
+  .checktriandir(@dir);
+  .trian();
+}
+  .checktriandir(@dir) {
+    .trian() when (@dir = down){
+      border-top: (@size / 2) solid @color;
+      border-left: @size solid transparent;
+      border-right: @size solid transparent;
+    }
+    .trian() when (@dir = up){
+      border-bottom: (@size / 2) solid @color;
+      border-left: @size solid transparent;
+      border-right: @size solid transparent;
+    }
+    .trian() when (@dir = right){
+      border-left: (@size / 2) solid @color;
+      border-top: @size solid transparent;
+      border-bottom: @size solid transparent;
+    }
+    .trian() when (@dir = left){
+      border-right: (@size / 2) solid @color;
+      border-top: @size  solid transparent;
+      border-bottom: @size solid transparent;
+    }
+  }
 
+.arrow-down {
+  .triangle-arrow-mx(@dir: down);
+}
+.arrow-up {
+  .triangle-arrow-mx(@dir: up);
+}
+.arrow-left {
+  .triangle-arrow-mx(@dir: left);
+}
+.arrow-right {
+  .triangle-arrow-mx(@dir: right);
+}
+
+.trian-res-down {
+  // along as proportion of arrow
+  width: 50%;
+  height: 0;
+  padding-left: 25%;
+  // border-top
+  padding-top: 25%;
+  overflow: hidden;
+
+  // max-size
+  div {
+    .triangle-arrow-mx(@brand-primary; down; 100px);
+    margin-top: -100px;
+    margin-left: -100px;
+  }
+}
 
 /* Chrome solution, will display as a square in Firefox */
 
@@ -184,9 +241,7 @@
   &:before {
     content: '';
     display: inline-block;
-    border-left: 10px solid brown;
-    border-top: 20px solid transparent; 
-    border-bottom: 20px solid transparent;
+    .triangle-arrow-mx(brown; right; 20px);
     position: absolute;
     left: 100%;
     top: 0;
