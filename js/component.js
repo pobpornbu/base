@@ -63,6 +63,7 @@ $(function() {
     $('.menu__icon').click(function(){
         $(this).toggleClass('open');
     });
+      
 });
 
     $('.js-tab-list').each(function(){

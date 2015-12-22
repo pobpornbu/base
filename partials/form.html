@@ -76,14 +76,15 @@
     </fieldset>
 
   </form>
-  <form class="col-xs-12">
+
+  <form class="col-xs-12" name="register_form" id="register_form" novalidate>
     <fieldset class="form-group">
       <div class="label-wrap">
         <label for="name" class="head --static">ชื่อ</label>
       </div>
       <div class="input-wrap">
       <div class="validate__container">
-          <input id="name" type="text" class="input input__text --primary" name="name" required/>
+        <input id="name" type="text" class="input input__text --primary" name="name" required/>
       </div>
     </div>
     </fieldset>
@@ -92,7 +93,7 @@
         <label for="email" class="head --static">อีเมล์</label>
       </div>
       <div class="input-wrap">
-          <input id="email" type="email" class="input input__text --primary" name="email" required/>
+        <input id="email" type="email" class="input input__text --primary" name="email" required/>
       </div>
     </fieldset>
     <fieldset class="form-group">
@@ -101,7 +102,7 @@
       </div>
       <div class="input-wrap">
         <div class="select --outline-secondary">
-          <select id="year">
+          <select id="year" name="subject">
               <option value="hide">เลือกรายการ</option>
               <option value="aaaaa">aaaaa</option>
               <option value="bbbbb">bbbbb</option>
@@ -123,10 +124,12 @@
     </fieldset>
     <fieldset class="form-group">
       <div class="button-wrap">
-        <input type="submit" value="ส่ง" class="button --solid-primary"></input>
+        <!-- <input type="submit" value="ส่ง" class="button --solid-primary"></input> -->
+        <input type="submit" value="ส่ง" class="button --solid-primary disabled" disabled></input>
       </div>
     </fieldset>
   </form>
 
 </div>
 <script src="js/select.js"></script>
+

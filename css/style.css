@@ -345,6 +345,13 @@ mark {
   text-decoration: none;
   color: inherit;
 }
+.text-error {
+  font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #de1f09;
+}
 .link__icon {
   display: inline-block;
   color: #92a6c2;
@@ -1524,6 +1531,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 input[type="number"] {
   -moz-appearance: textfield;
+}
+fieldset {
+  border: none;
 }
 ::-webkit-input-placeholder {
   color: #4e5761;
@@ -4736,7 +4746,7 @@ lesshat-selector {
   border-bottom: 25px solid transparent;
 }
 .trian-res-down {
-  width: 25%;
+  width: 50%;
   height: 0;
   padding-left: 25%;
   padding-top: 25%;
@@ -4749,7 +4759,7 @@ lesshat-selector {
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
   margin-top: -100px;
-  margin-left: -200px;
+  margin-left: -100px;
 }
 /* Chrome solution, will display as a square in Firefox */
 .gon {
