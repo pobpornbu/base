@@ -1,0 +1,214 @@
+select {
+  display: none;
+}
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select__wrap {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 36px;
+}
+.select__selected {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #223266;
+  padding: 8px 10px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.select__selected:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.select__selected:focus,
+.select__selected:active,
+.select__selected.active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.select__selected:disabled,
+.select__selected.disabled {
+  background-color: extract(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5), 4);
+}
+.select__selected:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  border: 5px solid transparent;
+  border-color: #223266 transparent transparent transparent;
+}
+.select__selected:active:after,
+.select__selected.active:after {
+  top: 9px;
+  border-color: transparent transparent #223266 transparent;
+}
+.select__selected:active + .select__options,
+.select__selected.active + .select__options {
+  border-color: #223266 transparent transparent transparent;
+}
+.select__options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: -1px 0 0 0;
+  padding: 0;
+  list-style: none;
+  background-color: #ffffff;
+  max-height: 205px;
+  overflow: hidden;
+}
+.select__option {
+  margin: 0;
+  padding: 8px 10px;
+  -webkit-transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+.select__option:hover {
+  color: #ffffff;
+  background: #223266;
+}
+.select__option[rel="hide"] {
+  display: none;
+}
+.i-footer .select__options {
+  top: auto;
+  bottom: 100%;
+  -webkit-box-shadow: 0 0 3px rgba(34, 50, 102, 0.5);
+  -moz-box-shadow: 0 0 3px rgba(34, 50, 102, 0.5);
+  box-shadow: 0 0 3px rgba(34, 50, 102, 0.5);
+  background-color: #e6e9f2;
+  color: #223266;
+}
+.select.\--sm .select__wrap {
+  width: 100px;
+}
+.select.\--md .select__wrap {
+  width: 200px;
+}
+.select.\--outline-primary .select__wrap {
+  font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #404041;
+  -webkit-border-radius: 1000px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1000px;
+  -moz-background-clip: padding;
+  border-radius: 1000px;
+  background-clip: padding-box;
+}
+.select.\--outline-primary .select__selected {
+  -webkit-border-radius: 1000px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1000px;
+  -moz-background-clip: padding;
+  border-radius: 1000px;
+  background-clip: padding-box;
+  padding: 5px 10px;
+  -webkit-transition: initial;
+  -moz-transition: initial;
+  -o-transition: initial;
+  transition: initial;
+  border: 1px solid #bbbbbb;
+  background-color: rgba(255, 255, 255, 0);
+  color: #666666;
+}
+.select.\--outline-primary .select__selected:hover {
+  border: 1px solid #2f4590;
+}
+.select.\--outline-primary .select__selected:focus,
+.select.\--outline-primary .select__selected:active,
+.select.\--outline-primary .select__selected.active {
+  border: 1px solid #2f4590;
+}
+.select.\--outline-primary .select__selected:disabled,
+.select.\--outline-primary .select__selected.disabled {
+  border: 1px solid #bbbbbb;
+}
+.select.\--outline-primary .select__selected:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+.select.\--outline-primary .select__selected:focus,
+.select.\--outline-primary .select__selected:active,
+.select.\--outline-primary .select__selected.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+.select.\--outline-primary .select__selected:disabled,
+.select.\--outline-primary .select__selected.disabled {
+  background-color: #eeeeee;
+}
+.select.\--outline-primary .select__selected:hover {
+  color: #666666;
+}
+.select.\--outline-primary .select__selected:focus,
+.select.\--outline-primary .select__selected:active,
+.select.\--outline-primary .select__selected.active {
+  color: #666666;
+}
+.select.\--outline-primary .select__selected:disabled,
+.select.\--outline-primary .select__selected.disabled {
+  color: #bbbbbb;
+}
+.select.\--outline-primary .select__selected.active,
+.select.\--outline-primary .select__selected:active {
+  -webkit-border-radius: 17px 17px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 17px 17px 0 0;
+  -moz-background-clip: padding;
+  border-radius: 17px 17px 0 0;
+  background-clip: padding-box;
+}
+.select.\--outline-primary .select__selected.active:after,
+.select.\--outline-primary .select__selected:active:after {
+  top: 10px;
+}
+.select.\--outline-primary .select__selected:after {
+  top: 14px;
+}
+.select.\--outline-primary .select__selected + .select__options {
+  border-left: 1px solid #2f4590;
+  border-right: 1px solid #2f4590;
+  border-bottom: 1px solid #2f4590;
+}
+.select.\--outline-primary .select__options {
+  background-color: rgba(255, 255, 255, 1);
+  -webkit-border-radius: 0 0 17px 17px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0 17px 17px;
+  -moz-background-clip: padding;
+  border-radius: 0 0 17px 17px;
+  background-clip: padding-box;
+}
+.select.\--outline-primary .select__option {
+  padding: 6px 10px;
+}
+.select.\--outline-primary .select__option:hover {
+  background: #2f4590;
+  color: #ffffff;
+}
+.select.\--outline-primary .select__option:last-child:hover {
+  -webkit-border-radius: 0 0 17px 17px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0 17px 17px;
+  -moz-background-clip: padding;
+  border-radius: 0 0 17px 17px;
+  background-clip: padding-box;
+}

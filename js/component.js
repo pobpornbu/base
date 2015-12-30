@@ -47,7 +47,10 @@ $(function() {
         }).click(function(e){e.preventDefault();});
         // }
     });
-
+    
+    $(".js-content-scroll").mCustomScrollbar({
+      theme:"minimal-dark"
+    });
     // Example Malihu Scroll
     // $(".js-nav-scroll-news, .js-nav-scroll-program").mCustomScrollbar({
     //     setHeight: 300,
