@@ -69,4 +69,26 @@
   </defs>
   <polygon points="58.263,0.056 100,41.85 58.263,83.641 30.662,83.641 62.438,51.866 0,51.866 0,31.611 62.213,31.611 30.605,0 58.263,0.056" fill="#EEEEEE" filter="url(#dropshadow)"/>
 </svg>
+
+<canvas id="canvas" width="200" height="300" ></canvas>
 </div>
+
+<script>
+var triangle = function() {
+  var canvas = document.getElementById("canvas");
+  if(canvas.getContext) {
+    var ctx = canvas.getContext("2d");
+    // Draw triangle
+    ctx.fillStyle="#A2322E";
+    ctx.beginPath();
+    // Draw a triangle location for each corner from x:y 100,110 -> 200,10 -> 300,110 (it will return to first point)
+    ctx.moveTo(0,0);
+    ctx.lineTo(200,0);
+    ctx.lineTo(100,150);
+    // ctx.lineTo(200,300);
+    ctx.closePath();
+    ctx.fill();
+  }
+}
+triangle();
+</script>
