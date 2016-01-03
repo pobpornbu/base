@@ -2974,6 +2974,67 @@ button::-moz-focus-inner {
 .tooltipster-content {
   min-width: 220px;
 }
+.tgl {
+  display: none;
+}
+.tgl,
+.tgl:after,
+.tgl:before,
+.tgl *,
+.tgl *:after,
+.tgl *:before,
+.tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.tgl::selection,
+.tgl:after::selection,
+.tgl:before::selection,
+.tgl *::selection,
+.tgl *:after::selection,
+.tgl *:before::selection,
+.tgl + .tgl-btn::selection {
+  background: none;
+}
+.tgl + .tgl-btn {
+  outline: 0;
+  display: inline-block;
+  width: 4em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.tgl + .tgl-btn:after,
+.tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.tgl + .tgl-btn:after {
+  left: 0;
+}
+.tgl + .tgl-btn:before {
+  display: none;
+}
+.tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+.tgl-light + .tgl-btn {
+  background: #00395d;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all .4s ease;
+}
+.tgl-light + .tgl-btn:after {
+  border-radius: 50%;
+  background: #fff;
+  transition: all .2s ease;
+}
+.tgl-light:checked + .tgl-btn {
+  background: #FCD475;
+}
 .select-hidden {
   display: none;
   visibility: hidden;
@@ -4082,91 +4143,91 @@ button::-moz-focus-inner {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 1px 1px 2px #f2f2f2, 1px 1px 3px #030303;
 }
 .entertainment {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #00ccff;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #00ccff;
 }
 .sport {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #0078ff;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #0078ff;
 }
 .lifestyle {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #0000ff;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #0000ff;
 }
 .economy_business {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #7800ff;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #7800ff;
 }
 .politics {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #ff00c0;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #ff00c0;
 }
 .crime {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #ff6600;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #ff6600;
 }
 .foreign {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #ffc000;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #ffc000;
 }
 .social {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #c2d526;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #c2d526;
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-5 {
-  background-color: #FCD475;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-4 {
-  background-color: #F5EE9E;
+  background-color: #f5ee9e;
 }
 .li-5 {
-  background-color: #FCD475;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-3 {
   background-color: #ddf1f5;
 }
 .li-4 {
-  background-color: #F5EE9E;
+  background-color: #f5ee9e;
 }
 .li-5 {
-  background-color: #FCD475;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-2 {
   background-color: #092042;
@@ -4175,19 +4236,19 @@ button::-moz-focus-inner {
   background-color: #ddf1f5;
 }
 .li-4 {
-  background-color: #F5EE9E;
+  background-color: #f5ee9e;
 }
 .li-5 {
-  background-color: #FCD475;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-1 {
   background-color: #00395d;
@@ -4199,19 +4260,19 @@ button::-moz-focus-inner {
   background-color: #ddf1f5;
 }
 .li-4 {
-  background-color: #F5EE9E;
+  background-color: #f5ee9e;
 }
 .li-5 {
-  background-color: #FCD475;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 body {
   margin: 0;
@@ -4225,7 +4286,7 @@ body {
 }
 .clock {
   border-radius: 50%;
-  background: radial-gradient(#000, #000 0.1em, #fff 0.1em, #fff), #fff;
+  background: radial-gradient(#000000, #000000 0.1em, #ffffff 0.1em, #ffffff), #ffffff;
   display: inline-block;
   margin: 1%;
   padding-bottom: 31%;
@@ -4347,7 +4408,7 @@ body {
   width: 500%;
 }
 .clock.ios7 {
-  background: #fff url(../images/ios_clock.svg) no-repeat center;
+  background: #ffffff url(../images/ios_clock.svg) no-repeat center;
   background-size: 88%;
 }
 .clock.ios7:before {
@@ -4391,7 +4452,7 @@ body {
   transform-origin: 50% 100%;
 }
 .clock.simple {
-  background: #fff url(/images/ios_clock.svg) no-repeat center;
+  background: #ffffff url(/images/ios_clock.svg) no-repeat center;
   background-size: 88%;
 }
 .clock.simple:after {
