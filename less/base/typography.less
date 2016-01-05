@@ -304,6 +304,7 @@ mark { background: none; }
 		  	}
 	    }
     });
+
   });
 });
 
@@ -336,4 +337,10 @@ mark { background: none; }
 		position: absolute; left: @left; bottom: @bottom; // top: @font-size;
 		background-color: @color;
 	}
+}
+
+.text-stroke {
+	.font-kanda(49px, 700);
+	text-shadow: 2px 0 1px @white, -2px 0 1px @white, 0 2px 1px @white, 0 -2px 1px @white, 2px 1px @white, -2px -2px 1px @white, 2px -2px 1px @white, -2px 2px 1px @white, 0 0 55px rgb(60, 60, 60);
+	color: @brand-primary;
 }

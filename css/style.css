@@ -1413,6 +1413,14 @@ mark {
   display: block;
   padding-top: 15px;
 }
+.text-stroke {
+  font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+  font-size: 49px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 0 1px #ffffff, -2px 0 1px #ffffff, 0 2px 1px #ffffff, 0 -2px 1px #ffffff, 2px 1px #ffffff, -2px -2px 1px #ffffff, 2px -2px 1px #ffffff, -2px 2px 1px #ffffff, 0 0 55px #3c3c3c;
+  color: #000000;
+}
 .clearfix:before,
 .clearfix:after {
   display: table;
@@ -1509,6 +1517,29 @@ mark {
     height: 100%;
     background-color: #718bb0;
   }
+}
+.sponser__container {
+  background: #ffffff;
+}
+.sponser__section {
+  display: table;
+  height: 100%;
+  padding: 25px 0;
+  margin: auto;
+}
+.sponser__text {
+  font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #92a6c2;
+}
+.sponser__item {
+  vertical-align: middle;
+  margin-right: 30px;
+}
+@media print {
+  -webkit-print-color-adjust: exact;
 }
 input,
 textarea,
