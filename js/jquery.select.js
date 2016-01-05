@@ -1,86 +1,103 @@
-(function($) {
+;(function($, window, document, undefined) {
 
-    $.fn.select = function( options ) {
+    var pluginName = 'select',
+        defaults = {
+            propertyName: "value"
+        };
 
-        // Establish our default settings
-        var settings = $.extend({
+    function Plugin(element, options){
+        this.element = element;
+        this.options = $.extend( {
             list         : text,
             theme        : null,
             complete     : null
-        }, options);
+        }, defaults, options);
 
-        return this.each( function() {
+        this._defaults = defaults;
+        this._name = pluginName;
 
-            var $this = $(this),
-                numberOfOptions = $(this).children('option').length,
-                $selectWrap = $(this).wrap('<div class="select__wrap"></div>');
+        this.init();
+    }
 
-            $(this).addClass('select-hidden');
+    Plugin.prototype.init = function(){
+        var numberOfOptions = this.element.children('option').length,
+            $selectWrap = this.element.wrap('<div class="select__wrap"></div>');
 
-            $(this).after('<div class="select__selected"></div>');
+        this.element.addClass('select-hidden');
 
-            if( settings.theme ){
-                $selectWrap.addClass( settings.theme );
-            }
+        this.element.after('<div class="select__selected"></div>');
 
-            var $styledSelect = $this.next('div.select__selected');
-            $styledSelect.text($this.children('option').eq(0).text());
+        if( settings.theme ){
+            $selectWrap.addClass( settings.theme );
+        }
 
-            var $list = $('<ul />', {
-                'class': 'select__options'
-            }).insertAfter($styledSelect);
+        var $styledSelect = $this.next('div.select__selected');
+        $styledSelect.text($this.children('option').eq(0).text());
 
-            for (var i = 0; i < numberOfOptions; i++) {
-                $('<li />', {
-                    text: $this.children('option').eq(i).text(),
-                    rel: $this.children('option').eq(i).val(),
-                    class: $this.children('option').eq(i).attr('class')
-                }).appendTo($list);
-            }
+        var $list = $('<ul />', {
+            'class': 'select__options'
+        }).insertAfter($styledSelect);
 
-            var $listItems = $list.children('li').addClass('select__option');
+        for (var i = 0; i < numberOfOptions; i++) {
+            $('<li />', {
+                text: $this.children('option').eq(i).text(),
+                rel: $this.children('option').eq(i).val(),
+                class: $this.children('option').eq(i).attr('class')
+            }).appendTo($list);
+        }
 
-            $styledSelect.on("click", function(e){
-                e.stopPropagation();
-                if($styledSelect.hasClass('active')){
-                    $styledSelect.removeClass('active');
-                    $list.hide();
-                }else{
-                    $('.select__selected.active').each(function(){
-                        $(this).removeClass('active').next('ul.select__options').hide();
-                    });
-                    $(this).toggleClass('active').next('ul.select__options').toggle();
-                }
-            });
+        var $listItems = $list.children('li').addClass('select__option');
 
-            $listItems.click(function(e) {
-                e.stopPropagation();
-                //close
-                $list.hide();
-                $styledSelect.removeClass('active');
-                //break
-                if($(this).text() == $styledSelect.text()) return;
-                //set value
-                $styledSelect.text($(this).text());
-
-                if(settings.list === 'int-link'){
-                    window.location.href= $(this).attr('rel');
-                }else if(settings.list === 'ext-link'){
-                    window.open($(this).attr('rel'), '_blank');
-                }else{
-                    $this.val($(this).attr('rel')).trigger('change');
-                }
-            });
-
-            $(document).click(function() {
+        $styledSelect.on("click", function(e){
+            e.stopPropagation();
+            if($styledSelect.hasClass('active')){
                 $styledSelect.removeClass('active');
                 $list.hide();
-            });
+            }else{
+                $('.select__selected.active').each(function(){
+                    this.element.removeClass('active').next('ul.select__options').hide();
+                });
+                this.element.toggleClass('active').next('ul.select__options').toggle();
+            }
+        });
 
-            if ( $.isFunction( settings.complete ) ) {
-                settings.complete.call( this );
+        $listItems.click(function(e) {
+            e.stopPropagation();
+            //close
+            $list.hide();
+            $styledSelect.removeClass('active');
+            //break
+            if(this.element.text() == $styledSelect.text()) return;
+            //set value
+            $styledSelect.text(this.element.text());
+
+            if(this.options.list === 'int-link'){
+                window.location.href= this.element.attr('rel');
+            }else if(this.options.list === 'ext-link'){
+                window.open(this.element.attr('rel'), '_blank');
+            }else{
+                $this.val(this.element.attr('rel')).trigger('change');
+            }
+        });
+
+        $(document).click(function() {
+            $styledSelect.removeClass('active');
+            $list.hide();
+        });
+
+        if ( $.isFunction( settings.complete ) ) {
+            settings.complete.call( this );
+        }
+
+    };
+
+    $.fn[pluginName] = function ( options ) {
+        return this.each(function () {
+            if (!$.data(this, 'plugin_' + pluginName)) {
+                $.data(this, 'plugin_' + pluginName, 
+                new Plugin( this, options ));
             }
         });
     }
 
-}(jQuery));
+}(jQuery, window, document));

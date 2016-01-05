@@ -13,12 +13,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'> -->
-  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'><!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <link rel="icon" type="image/png" href="images/favicon.png" /> -->
   <style>
     .hidden { display: none; }
   </style>
@@ -81,9 +75,10 @@
     </fieldset>
   </form>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="js/select.js"></script>
+  <script src="js/jquery.select.js"></script>
   <script src="js/parsley.min.js"></script>  
   <script>
+    $('#subject').select();
     $('#register_form').parsley()
     .on('field:validated', function() {
       var ok = $('.parsley-error').length === 0;
