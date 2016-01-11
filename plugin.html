@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- <div id='item' data-plugin-options='{"message":"Happy World!", "person": "Pizza"}'></div> -->
+  <div id='item' data-myplugin-message="Happy World!" data-myplugin-person="Pizza"></div>
+  
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="js/jquery.message.js"></script>
+  <script>
+    //Set the message per instance:
+    $('#item').plugin({
+      mypluginMessage: 'Goodbye World!',
+      mypluginPerson: 'Peter'
+    });
+
+    // var p = new Plugin(document.getElementById('item'), {
+    //   message: 'Goodbye World!'
+    // }).init();
+
+    //Or, set the global default message:
+    //Plugin.defaults.message = 'Goodbye World!';
+  </script>
+</body>
