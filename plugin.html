@@ -19,11 +19,28 @@
 </head>
 <body>
   <!-- <div id='item' data-plugin-options='{"message":"Happy World!", "person": "Pizza"}'></div> -->
-  <div id='item' data-myplugin-message="Happy World!" data-myplugin-person="Pizza"></div>
+  <div id='item' data-myplugin-message="Happy World!" data-myplugin-person="Jean"></div>
   
+  <!-- <input id="helloWorld" type="text" class="{text: 'Watermark Provided Here Instead of Plugin Argument', class: 'specialWatermarkClass'}" /> -->
+  <select id="month">
+    <option value="hide">Month</option>
+    <option value="january" rel="icon-temperature">January</option>
+    <option value="february">February</option>
+    <option value="march">March</option>
+    <option value="april">April</option>
+    <option value="may">May</option>
+    <option value="june">June</option>
+    <option value="july">July</option>
+    <option value="august">August</option>
+    <option value="september">September</option>
+    <option value="october">October</option>
+    <option value="november">November</option>
+    <option value="december">December</option>
+  </select>
 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="js/jquery.message.js"></script>
+  <script src="js/jquery.selectp.js"></script>
   <script>
     //Set the message per instance:
     $('#item').plugin({
@@ -31,6 +48,12 @@
       mypluginPerson: 'Peter'
     });
 
+    $("#month").select({
+      list: 'text'
+    });
+    // $('#helloWorld').watermark({text: 'Last Name'}).css({
+    //    'border-color': 'red'
+    // });
     // var p = new Plugin(document.getElementById('item'), {
     //   message: 'Goodbye World!'
     // }).init();

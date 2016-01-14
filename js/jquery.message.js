@@ -17,12 +17,13 @@
       this.elem = elem;
       this.$elem = $(elem);
       this.options = options;
+      this.color = '#ff0000';
 
       // This next line takes advantage of HTML5 data attributes
       // to support customization of the plugin on a per-element
       // basis. For example,
       // <div class=item' data-plugin-options='{"message":"Goodbye World!"}'></div>
-      this.metadata = this.$elem.html5data( 'myplugin' );
+      this.metadata = this.$elem.data( 'myplugin' );
     };
 
   // the plugin prototype
@@ -53,7 +54,7 @@
     displayMessage: function() {
       // eg. show the currently configured message
       console.log(this.config.message+this.config.person);
-      // this.$elem.textContent(this.config.message+this.config.person);
+      this.$elem.text(this.config.message+this.config.person).css('background', this.color);
     }
   };
 
