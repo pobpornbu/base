@@ -35,24 +35,24 @@
     },
 
     init: function() {
-      // Introduce defaults that can be extended either 
-      // globally or using an object literal. 
+      // Introduce defaults that can be extended either
+      // globally or using an object literal.
       this.config = $.extend({}, this.defaults, this.options, this.metadata);
 
       // Sample usage:
       // Set the message per instance:
       // $('#elem').plugin({ message: 'Goodbye World!'});
       // or
-      // var p = new Plugin(document.getElementById('elem'), 
+      // var p = new Plugin(document.getElementById('elem'),
       // { message: 'Goodbye World!'}).init()
       // or, set the global default message:
       // Plugin.defaults.message = 'Goodbye World!'
 
-      this.displayMessage();
+      this.appendEl();
       return this;
     },
 
-    displayMessage: function() {
+    appendEl: function() {
       // eg. show the currently configured message
       // console.log(this.config.message+this.config.person);
       // this.$elem.text(this.config.message+this.config.person).css('background', this.color);
@@ -82,6 +82,9 @@
               class: this.$elem.children('option').eq(i).attr('class')
           }).appendTo($list);
       }
+    // },
+
+    // open: function(){
       var $listItems = $list.children('li').addClass('select__option');
 
       $styledSelect.on("click", function(e){
@@ -91,31 +94,31 @@
               $list.hide();
           }else{
               $('.select__selected.active').each(function(){
-                  this.$elem.removeClass('active').next('ul.select__options').hide();
+                  $(this).removeClass('active').next('ul.select__options').hide();
               });
-                  console.log('active');
-              this.$elem.css('background','#ff0000');
+              console.log('active');
+              $(this).toggleClass('active').next('ul.select__options').toggle();
           }
       });
 
-      $listItems.click(function(e) {
+      $listItems.on('click', function(e) {
           e.stopPropagation();
           //close
           $list.hide();
           $styledSelect.removeClass('active');
           //break
-          if(this.$elem.text() == $styledSelect.text()) return;
+          if($(this).text() == $styledSelect.text()) return;
           //set value
-          $styledSelect.text(this.$elem.text());
+          $styledSelect.text($(this).text());
 
-          if(this.config.list === 'int-link'){
+          if(this.config.list == 'int-link'){
               window.location.href= this.$elem.attr('rel');
-          }else if(this.config.list === 'ext-link'){
+          }else if(this.config.list == 'ext-link'){
               window.open(this.$elem.attr('rel'), '_blank');
-          }else if(this.config.list === 'text'){
+          }else if(this.config.list == 'text'){
               $this.val(this.$elem.attr('rel')).trigger('change');
           }
-      });    
+      });
     }
   };
 

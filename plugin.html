@@ -20,7 +20,7 @@
 <body>
   <!-- <div id='item' data-plugin-options='{"message":"Happy World!", "person": "Pizza"}'></div> -->
   <div id='item' data-myplugin-message="Happy World!" data-myplugin-person="Jean"></div>
-  
+
   <!-- <input id="helloWorld" type="text" class="{text: 'Watermark Provided Here Instead of Plugin Argument', class: 'specialWatermarkClass'}" /> -->
   <select id="month">
     <option value="hide">Month</option>
@@ -42,6 +42,7 @@
   <script src="js/jquery.message.js"></script>
   <script src="js/jquery.selectp.js"></script>
   <script>
+  $(function(){
     //Set the message per instance:
     $('#item').plugin({
       mypluginMessage: 'Goodbye World!',
@@ -60,5 +61,6 @@
 
     //Or, set the global default message:
     //Plugin.defaults.message = 'Goodbye World!';
+  });
   </script>
 </body>
