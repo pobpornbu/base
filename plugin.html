@@ -40,18 +40,16 @@
 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="js/jquery.message.js"></script>
-  <script src="js/jquery.selectp.js"></script>
+  <script src="js/jquery.selectx.js"></script>
   <script>
-  $(function(){
+  $(document).ready(function(){
     //Set the message per instance:
     $('#item').plugin({
       mypluginMessage: 'Goodbye World!',
       mypluginPerson: 'Peter'
     });
 
-    $("#month").select({
-      list: 'text'
-    });
+    $("#month").defaultPluginName();
     // $('#helloWorld').watermark({text: 'Last Name'}).css({
     //    'border-color': 'red'
     // });
