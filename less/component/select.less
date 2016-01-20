@@ -16,6 +16,19 @@
   width: @dropdown-width;
   height: @dropdown-height;
 }
+.select-arrow {
+  &:after {
+    content:"";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    // _arrow
+    border: 5px solid transparent;
+    border-color: @dark-blue transparent transparent transparent;
+  }
+}
 
 .select__selected {
 
@@ -29,17 +42,8 @@
   padding: (@padding-vertical+2) @padding-horizontal;
 
   // .transition(all 0.2s ease-in);
-  &:after {
-    content:"";
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 16px;
-    right: 10px;
-    // _arrow
-    border: 5px solid transparent;
-    border-color: @dark-blue transparent transparent transparent;
-  }
+  .select-arrow;
+
   // &:hover {
   //   // background-color: darken(@color-secondary, 2);
   // }
@@ -161,6 +165,54 @@
 @select-outline-primary-border-theme: @gray,        @brand-primary, @brand-primary, @gray;
 @select-outline-primary-bg-theme:     @white,       @white,         @white,         @gray-lighter;
 @select-outline-primary-color-theme:  @gray-darker, @gray-darker,   @gray-darker,   @gray;
+
+.select.\--outline-primary.\--mask {
+  position: relative;
+  select {
+    .appearance(none);
+    .font-kanda(14px, 700);
+    .round;
+    padding: 4px 10px;
+    .input-style(@select-outline-primary-bg-theme; @select-outline-primary-color-theme; @select-outline-primary-border-theme);
+    .select-arrow;
+  //   border: 1px solid #bbbbbb;
+  //   background-color: rgba(255, 255, 255, 0);
+  //   color: #666666;
+  //   &:hover {
+  //     border: 1px solid #2f4590;
+  //     background-color: rgba(255, 255, 255, 1);
+  //     color: #666666;
+  //   }
+  //   &:focus,
+  //   &:active,
+  //   &.active {
+  //     border: 1px solid #2f4590;
+  //     background-color: rgba(255, 255, 255, 1);
+  //     color: #666666;
+  //   }
+  //   &:disabled,
+  //   &.disabled {
+  //     border: 1px solid #bbbbbb;
+  //     background-color: #eeeeee;
+  //     color: #bbbbbb;
+  //   }
+  // }
+  // &:after {
+  //   content: "";
+  //   width: 0;
+  //   height: 0;
+  //   position: absolute;
+  //   top: 14px;
+  //   right: 10px;
+  //   border: 5px solid transparent;
+  //   border-color: #223266 transparent transparent transparent;
+  // }
+  // &.active:after,
+  // &:active:after {
+  //   top: 10px;
+  // }
+  }
+}
 
 .select.\--outline-primary {
   .select__wrap {

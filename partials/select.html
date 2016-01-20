@@ -1,12 +1,12 @@
 
   <div class="row">
     <div class="col-xs-12">
-      <select id="month">
+      <select id="month" class="select">
         <option value="hide">Month</option>
         <option class="link" value="index">Index</option>
         <option class="link" value="button">Button</option>
       </select>
-      <select id="year">
+      <select id="year" class="select">
         <option value="hide">Year</option>
         <option value="2010">2010</option>
         <option value="2011">2011</option>
@@ -20,7 +20,7 @@
       <div class="filter__wrap--gallery">
         <label class="content__text --label" for="video-category__select">เรียงตาม</label>
         <div class="select --outline-primary video-category__select">
-          <select name="order" id="js-order" class="select-hidden">
+          <select name="order" id="js-order" class="select select-hidden">
             <option value="date">วันที่</option>
             <option value="alphabet">ตัวอักษร</option>
           </select>
@@ -29,17 +29,26 @@
     </div>
     <div class="col-xs-12 gap-row-top">
       <div class="subcategory__select lifestyle">
-        <select>
+        <select class="select">
           <option value="hide">ทั้งหมด</option>
           <option value="all">ทั้งหมด</option>
           <option value="eat">กิน</option>
           <option value="travel">เที่ยว</option>
         </select>
       </div>
+      <!-- Not styling options -->
+      <!-- <label for="gender" class="select --outline-primary --mask">
+        <select name="gender" class="select--sm" id="gender">
+          <option value="" selected="selected">เพศ</option>
+          <option value="M">ชาย</option>
+          <option value="F">หญิง</option>
+        </select>                 
+      </label> -->
     </div>
   </div>
+
 <!-- Custom css select -->
-<script src="js/select.js"></script>
+<script src="js/select.js"></script> <!-- fallback: might not use this style for all -->
 
 <!-- Select2 -->
 <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
