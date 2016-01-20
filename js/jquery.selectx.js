@@ -9,7 +9,8 @@
 ;(function ( $, window, document, undefined ) {
 
     // Create the defaults once
-    var pluginName = "defaultPluginName",
+    var pluginName = "dropdown",
+        name = 'dropdown-',
         defaults = {
             list         : 'text',
             theme        : null,
@@ -39,6 +40,8 @@
         // this.$body   = this.$el.find('.body');
 
         this.$selected = this.$elem.next('.select__selected');
+        // a unique namespace per instance, for easy selective unbinding
+        this.namespace = 'dropdown-'+ Math.round(Math.random()*100000);
 
         var numberOfOptions = this.$elem.children('option').length,
             $selectWrap = this.$elem.wrap('<div class="select__wrap"></div>');
@@ -86,13 +89,16 @@
         // });
         // this.$selected = this.$elem.next('.select__selected');
 
-        this.$selected.on("click", function(e){
+        self.$selected.on("click." + self.namespace, function(e){
           e.stopPropagation();
+          console.log('click select');
 
-            if($selected.hasClass('active')){
-                self.closeSelect();
+            if(this.$selected.hasClass('active')){
+                console.log('close');
+                // self.closeSelect();
             }else{
-                self.openSelect();
+                console.log('open');
+                // self.openSelect();
             }
         });
 
