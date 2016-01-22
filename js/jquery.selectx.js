@@ -10,7 +10,6 @@
 
     // Create the defaults once
     var pluginName = "dropdown",
-        name = 'dropdown-',
         defaults = {
             list         : 'text',
             theme        : null,
@@ -36,11 +35,11 @@
 
         // this.$el.data(name, this);
 
-        // this.$header = this.$el.find('.header');
+        // this.$header = this.$elem.find('.header');
         // this.$body   = this.$el.find('.body');
 
-        this.$selected = this.$elem.next('.select__selected');
         // a unique namespace per instance, for easy selective unbinding
+        // safeguard our plugin from breaking in the event that another script
         this.namespace = 'dropdown-'+ Math.round(Math.random()*100000);
 
         var numberOfOptions = this.$elem.children('option').length,
@@ -69,6 +68,10 @@
             }).appendTo($list);
         }
 
+        // place in right position : after created
+        this.$selected = this.$elem.next('.select__selected');
+        this.$lists = this.$elem.siblings('.select__options');
+        this.$list = this.$lists.children();
         this.init();
     }
 
@@ -79,29 +82,15 @@
         // and this.options
 
         var self = this;
-        console.log(self);
-        // console.log(self.children.length);
+        console.log(self.$list);
+        console.log(self.$list.length);
 
-        // this.$header.on('click.' + name, '.title', function(e) {
+        // this.$header.on('click.' + self._name, function(e) {
         //   e.preventDefault();
 
         //   self.editTitle();
         // });
-        // this.$selected = this.$elem.next('.select__selected');
-
-        self.$selected.on("click." + self.namespace, function(e){
-          e.stopPropagation();
-          console.log('click select');
-
-            if(this.$selected.hasClass('active')){
-                console.log('close');
-                // self.closeSelect();
-            }else{
-                console.log('open');
-                // self.openSelect();
-            }
-        });
-
+        self.bindEvents();
       // $listItems.on('click', function(e) {
       //     e.stopPropagation();
       //     //close
@@ -122,22 +111,53 @@
       // });
     };
 
-    Plugin.prototype.closeSelect = function() {
-        // this.$header.addClass('editing');
-        this.$selected.removeClass('active');
-        $list.hide();
+    // Plugin.prototype.editTitle = function() {
+    //     console.log('edit'); 
+    //     this.$selected.addClass('editing'); 
+    // };
+
+    Plugin.prototype.bindEvents = function() { 
+        var self = this;
+        this.$selected.on("click." + self._name, function(e){
+            e.stopPropagation();
+            self.openSelect();           
+        });        
+        this.$list.each(function(index, value){
+            this.on("click." + self._name, function(e){
+                e.stopPropagation();
+                self.replaceSelected();
+                // self.closeSelect();
+            });
+        });
     };
+
 
     Plugin.prototype.openSelect = function() {
-        // var val = this.$header.find('.title').val();
-        // this.$header.removeClass('editing');
-
-        // $('.select__selected.active').each(function(){
-        //     $(this).removeClass('active').next('ul.select__options').hide();
-        // });
-        this.$selected.toggleClass('active').next('ul.select__options').toggle();
-        console.log('open');
+        if(this.$selected.hasClass('active')){
+            console.log('close');
+            this.$selected.removeClass('active').next('ul.select__options').hide();
+        }else{
+            // this.$selected.each(function(){
+            //     console.log('active');
+            //     this.$selected.removeClass('active');//.next('ul.select__options').hide();
+            //     this.$list.hide();
+            // });
+            this.$selected.toggleClass('active').next('ul.select__options').toggle();
+        }
     };
+
+    Plugin.prototype.replaceSelected = function() { 
+        console.log('replace');
+        var opted = this.$list[i].text();
+        this.$selected.text(opted).removeClass('active');
+    };
+
+    // Plugin.prototype.closeSelect = function() { 
+    //     console.log('close');
+    //     // this.$header.addClass('editing');
+    //     this.$selected.removeClass('active');
+    //     this.$list.hide();
+    // };
 
     // A really lightweight plugin wrapper around the constructor,
     // preventing against multiple instantiations
