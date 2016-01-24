@@ -122,12 +122,18 @@
             event.stopPropagation();
             self.openSelect();
         });
-        this.$list.each(function(i, el){
-            var $this = $(this);
-            $this.on("click." + self._name, function(event){
-                event.stopPropagation();
-                self.replaceSelected();
-                // self.closeSelect();
+        // this.$list.each(function(i, el){
+        //     var $this = $(this);
+        //     $this.on("click." + self._name, function(event){
+        //         event.stopPropagation();
+        //         self.replaceSelected();
+        //         // self.closeSelect();
+        //     });
+        // });
+        this.$list.on('click.' + self._name, function(event){
+            event.stopPropagation();
+            $.each(function(index){
+                self.replaceSelected;
             });
         });
     };
