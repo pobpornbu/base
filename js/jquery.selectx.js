@@ -112,19 +112,20 @@
     };
 
     // Plugin.prototype.editTitle = function() {
-    //     console.log('edit'); 
-    //     this.$selected.addClass('editing'); 
+    //     console.log('edit');
+    //     this.$selected.addClass('editing');
     // };
 
-    Plugin.prototype.bindEvents = function() { 
+    Plugin.prototype.bindEvents = function() {
         var self = this;
-        this.$selected.on("click." + self._name, function(e){
-            e.stopPropagation();
-            self.openSelect();           
-        });        
-        this.$list.each(function(index, value){
-            this.on("click." + self._name, function(e){
-                e.stopPropagation();
+        this.$selected.on("click." + self._name, function(event){
+            event.stopPropagation();
+            self.openSelect();
+        });
+        this.$list.each(function(i, el){
+            var $this = $(this);
+            $this.on("click." + self._name, function(event){
+                event.stopPropagation();
                 self.replaceSelected();
                 // self.closeSelect();
             });
@@ -146,13 +147,13 @@
         }
     };
 
-    Plugin.prototype.replaceSelected = function() { 
-        console.log('replace');
-        var opted = this.$list[i].text();
+    Plugin.prototype.replaceSelected = function(i, el) {
+        var $el = $(el), opted = $el.attr('rel');
+        console.log(opted);
         this.$selected.text(opted).removeClass('active');
     };
 
-    // Plugin.prototype.closeSelect = function() { 
+    // Plugin.prototype.closeSelect = function() {
     //     console.log('close');
     //     // this.$header.addClass('editing');
     //     this.$selected.removeClass('active');
