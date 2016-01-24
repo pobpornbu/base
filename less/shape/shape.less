@@ -88,6 +88,142 @@
 //   top: 24px;
 //   left: -48px;
 // }
+.triangle-cornor(@dir; @w; @h; @color: @brand-primary) {
+  &:before {
+    content: "";
+    display: block;
+    background-color: @color;
+    width: 100%;
+    height: @h;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+  }
+  .get-dir(@dir);
+  .dir();
+}
+
+.get-dir(@dir){
+  .dir() when (@dir = right-down){
+    &:after {
+      border-bottom: (@h / 2) solid @transparent;
+      border-top: (@h / 2) solid @color;
+      border-right: (@w / 2) solid @transparent;
+      border-left: (@w / 2) solid @color;
+      right: -(@w - 1);
+    }
+  }
+  .dir() when (@dir = right-up){
+    &:after {
+      border-top: (@h / 2) solid @transparent;
+      border-left: (@w / 2) solid @color;
+      border-bottom: (@h / 2) solid @color;
+      border-right: (@w / 2) solid @transparent;
+      right: -(@w - 1);
+    }
+  }
+  .dir() when (@dir = left-up){
+    &:after {
+      border-bottom: (@h / 2) solid @color;
+      border-top: (@h / 2) solid @transparent;
+      border-right: (@w / 2) solid @color;
+      border-left: (@w / 2) solid @transparent;
+      left: -(@w - 1);
+    }
+  }
+  .dir() when (@dir = left-down){
+    &:after {
+      border-bottom: (@h / 2) solid @transparent;
+      border-top: (@h / 2) solid @color;
+      border-right: (@w / 2) solid @color;
+      border-left: (@w / 2) solid @transparent;
+      left: -(@w - 1);
+    }
+  }
+}
+// .triangle-left-up(@w; @h; @color: @brand-primary){
+//   &:before {
+//     content: "";
+//     display: block;
+//     background-color: @color;
+//     width: 100%;
+//     height: @h;
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     z-index: -1;
+//   }
+//   &:after {
+//     content: "";
+//     display: block;
+//     width: 0;
+//     height: 0;
+//     border-top: (@w / 2) solid @transparent;
+//     border-left: (@h / 2) solid @color;
+//     border-bottom: (@w / 2) solid @color;
+//     border-right: (@h / 2) solid @transparent;
+//     position: absolute;
+//     top: 0;
+//     right: -(@w - 1);
+//   }
+// }
+
+// .triangle-right-down(@w; @h; @color: @brand-primary){
+//   &:before {
+//     content: "";
+//     display: block;
+//     background-color: @color;
+//     width: 100%;
+//     height: (@h - 1);
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     z-index: -1;
+//   }
+//   &:after {
+//     content: "";
+//     display: block;
+//     width: 0;
+//     height: 0;
+//     border-bottom: (@w / 2) solid @transparent;
+//     border-top: (@w / 2) solid @color;
+//     border-right: (@h / 2) solid @color;
+//     border-left: (@h / 2) solid @transparent;
+//     position: absolute;
+//     top: 0;
+//     left: -(@w - 1);
+//   }
+// }
+
+.tri-left-up {
+  position: relative;
+  .triangle-cornor(left-up; 25px; 30px);
+}
+.tri-left-down {
+  position: relative;
+  .triangle-cornor(left-down; 25px; 26px);
+}
+.tri-right-up {
+  position: relative;
+  .triangle-cornor(right-up; 25px; 26px);
+}
+.tri-right-down {
+  position: relative;
+  .triangle-cornor(right-down; 25px; 26px);
+}
+
 .triangle-arrow-mx(@color: @brand-hilight; @dir: down; @size: 25px;) {
   width: 0;
   height: 0;
