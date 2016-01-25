@@ -37,10 +37,11 @@
     <option value="november">November</option>
     <option value="december">December</option>
   </select>
-
+  
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="js/jquery.message.js"></script>
-  <script src="js/jquery.selectx.js"></script>
+  <!--<script src="js/jquery.selectx.js"></script>-->
+  <script src="js/jquery.selectq.js"></script>
   <script>
   $(document).ready(function(){
     //Set the message per instance:
@@ -49,7 +50,8 @@
       mypluginPerson: 'Peter'
     });
 
-    $("#month").dropdown();
+    $("#month").Dropdown();
+
     // $('#helloWorld').watermark({text: 'Last Name'}).css({
     //    'border-color': 'red'
     // });

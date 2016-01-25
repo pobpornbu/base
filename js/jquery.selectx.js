@@ -85,30 +85,7 @@
         console.log(self.$list);
         console.log(self.$list.length);
 
-        // this.$header.on('click.' + self._name, function(e) {
-        //   e.preventDefault();
-
-        //   self.editTitle();
-        // });
         self.bindEvents();
-      // $listItems.on('click', function(e) {
-      //     e.stopPropagation();
-      //     //close
-      //     $list.hide();
-      //     $styledSelect.removeClass('active');
-      //     //break
-      //     if($(this).text() == $styledSelect.text()) return;
-      //     //set value
-      //     $styledSelect.text($(this).text());
-
-      //     if(this.options.list == 'int-link'){
-      //         window.location.href= $(this).attr('rel');
-      //     }else if(this.options.list == 'ext-link'){
-      //         window.open($(this).attr('rel'), '_blank');
-      //     }else if(this.options.list == 'text'){
-      //         $this.val($(this).attr('rel')).trigger('change');
-      //     }
-      // });
     };
 
     // Plugin.prototype.editTitle = function() {
@@ -122,49 +99,67 @@
             event.stopPropagation();
             self.openSelect();
         });
-        // this.$list.each(function(i, el){
-        //     var $this = $(this);
-        //     $this.on("click." + self._name, function(event){
-        //         event.stopPropagation();
-        //         self.replaceSelected();
-        //         // self.closeSelect();
-        //     });
+        
+        // ****** Try to access text of clicked item
+
+        // normally
+        // $('.select__options').children().each(function(){
+        //  $(this).on('click',function(){
+        //    console.log($(this).text());
+        //  });
         // });
-        this.$list.on('click.' + self._name, function(event){
-            event.stopPropagation();
-            $.each(function(index){
-                self.replaceSelected;
+
+        // return null;
+        // this.$list.on('click.' + self._name, function(event){
+        //     event.stopPropagation();
+        //     self.replaceSelected();
+        // }); 
+
+        this.$list.each(function(i, el){
+            var $this = $(this);
+            $this.on("click." + self._name, function(event){
+                event.stopPropagation();
+                self.replaceSelected();
+                self.closeSelect();
             });
         });
+
+
+        // this.$list.on('click.' + self._name, function(event){
+        //     event.stopPropagation();
+        //     $.each(function(index){
+        //         console.log('this');
+        //         self.replaceSelected();
+        //     });
+        // });
+
     };
 
 
     Plugin.prototype.openSelect = function() {
-        if(this.$selected.hasClass('active')){
-            console.log('close');
-            this.$selected.removeClass('active').next('ul.select__options').hide();
-        }else{
-            // this.$selected.each(function(){
-            //     console.log('active');
-            //     this.$selected.removeClass('active');//.next('ul.select__options').hide();
-            //     this.$list.hide();
-            // });
-            this.$selected.toggleClass('active').next('ul.select__options').toggle();
-        }
+        // if(this.$selected.hasClass('active')){
+        //     console.log('close');
+        //     this.$selected.removeClass('active').next('ul.select__options').hide();
+        // }else{
+        //     console.log('toggle');
+        //     $('.select__selected.active').each(function(){
+        //         $(this).removeClass('active').next('ul.select__options').hide();
+        //     });
+        //     this.$selected.toggleClass('active').next('.select__options').toggle();
+            this.$selected.addClass('active').next('.select__options').show();
+        // }
     };
 
-    Plugin.prototype.replaceSelected = function(i, el) {
-        var $el = $(el), opted = $el.attr('rel');
+    Plugin.prototype.replaceSelected = function() {
+        var $this = $(this), opted = $this.text();
         console.log(opted);
-        this.$selected.text(opted).removeClass('active');
-    };
+        this.$selected.text(opted);
+    };  // ****** Cannot access text of clicked li
 
-    // Plugin.prototype.closeSelect = function() {
-    //     console.log('close');
-    //     // this.$header.addClass('editing');
-    //     this.$selected.removeClass('active');
-    //     this.$list.hide();
-    // };
+    Plugin.prototype.closeSelect = function() {
+        console.log('close');
+        this.$selected.removeClass('active').next('.select__options').hide();
+    }; // ****** Cannot open again after closing
 
     // A really lightweight plugin wrapper around the constructor,
     // preventing against multiple instantiations
