@@ -64,6 +64,7 @@
             each instance can inherit the methods from the constructor
             function's prototype.
         */
+        // this.$elem.children is not a function
         var numberOfOptions = this.$elem.children('option').length,
             $selectWrap = this.$elem.wrap('<div class="select__wrap"></div>');
 
