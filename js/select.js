@@ -46,9 +46,7 @@ $('select').each(function(){
         }else{
             $this.val($(this).attr('rel'));
             $list.hide();
-            console.log($(this).attr('rel'));
         }
-
     });
   
     $(document).click(function() {

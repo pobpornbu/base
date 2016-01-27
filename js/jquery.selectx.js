@@ -11,7 +11,7 @@
     // Create the defaults once
     var pluginName = "dropdown",
         defaults = {
-            list         : 'text',
+            item         : 'text',
             theme        : null,
             complete     : null
         };
@@ -63,7 +63,7 @@
         for (var i = 0; i < numberOfOptions; i++) {
             $('<li />', {
                 text: this.$elem.children('option').eq(i).text(),
-                rel: this.$elem.children('option').eq(i).val(),
+                'data-value': this.$elem.children('option').eq(i).val(),
                 class: this.$elem.children('option').eq(i).attr('class')
             }).appendTo($list);
         }
@@ -88,11 +88,6 @@
         self.bindEvents();
     };
 
-    // Plugin.prototype.editTitle = function() {
-    //     console.log('edit');
-    //     this.$selected.addClass('editing');
-    // };
-
     Plugin.prototype.bindEvents = function() {
         var self = this;
         this.$selected.on("click." + self._name, function(event){
@@ -100,41 +95,20 @@
             self.openSelect();
         });
         
-        // ****** Try to access text of clicked item
-
-        // normally
-        // $('.select__options').children().each(function(){
-        //  $(this).on('click',function(){
-        //    console.log($(this).text());
-        //  });
-        // });
-
-        // return null;
-        // this.$list.on('click.' + self._name, function(event){
-        //     event.stopPropagation();
-        //     self.replaceSelected();
-        // }); 
-
-        this.$list.each(function(i, el){
-            var $this = $(this);
-            $this.on("click." + self._name, function(event){
-                event.stopPropagation();
-                self.replaceSelected();
-                self.closeSelect();
+        this.$list.on('click.' + self._name, function(event){
+            event.stopPropagation();
+            $(this).each(function(index, element){
+                console.log('this');
+                self.replaceSelected(index, element);
+                self.toggleSelect();
             });
         });
 
-
-        // this.$list.on('click.' + self._name, function(event){
-        //     event.stopPropagation();
-        //     $.each(function(index){
-        //         console.log('this');
-        //         self.replaceSelected();
-        //     });
-        // });
-
     };
 
+    Plugin.prototype.toggleSelect = function() {
+        this.$selected.toggleClass('active').next('.select__options').toggle();
+    };
 
     Plugin.prototype.openSelect = function() {
         // if(this.$selected.hasClass('active')){
@@ -150,10 +124,27 @@
         // }
     };
 
-    Plugin.prototype.replaceSelected = function() {
-        var $this = $(this), opted = $this.text();
-        console.log(opted);
-        this.$selected.text(opted);
+    Plugin.prototype.replaceSelected = function(index, element) {
+        var self = this, 
+            $element = $(element), 
+            opted = $element.text(),
+            link = $element.data('value').toLowerCase();
+
+        if(opted == self.$list.text()) return;
+
+        if(self.options.item == 'internal-link'){
+
+            window.location.href= link;
+
+        }else if(self.options.item == 'external-link'){
+            window.open( link, '_blank');
+
+        }else if(self.options.item == 'text'){
+            
+            self.$selected.text(opted);
+            // $this.val($element.attr('rel')).trigger('change');
+        
+        }
     };  // ****** Cannot access text of clicked li
 
     Plugin.prototype.closeSelect = function() {
