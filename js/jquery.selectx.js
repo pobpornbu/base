@@ -17,9 +17,8 @@
         };
 
     // The actual plugin constructor
-    function Plugin( element, options ) {
+    function Plugin( element, options, document ) {
         this.$elem = $(element);
-
         // jQuery has an extend method that merges the
         // contents of two or more objects, storing the
         // result in the first object. The first object
@@ -42,20 +41,21 @@
         // safeguard our plugin from breaking in the event that another script
         this.namespace = 'dropdown-'+ Math.round(Math.random()*100000);
 
-        var numberOfOptions = this.$elem.children('option').length,
-            $selectWrap = this.$elem.wrap('<div class="select__wrap"></div>');
-
         this.$elem.hide();
+        this.$elem.wrap('<div class="select__wrap"></div>');
 
-        this.$elem.after('<div class="select__selected"></div>');
-
+        var numberOfOptions = this.$elem.children('option').length,
+            $selectWrap = this.$elem.parent();
+        
         if( this.options.theme ){
             $selectWrap.addClass( this.options.theme );
         }
 
+        this.$elem.after('<div class="select__selected"></div>');
+
         var $styledSelect = this.$elem.next('div.select__selected'),
-            $list = $('<ul />', {'class': 'select__options'}).insertAfter($styledSelect),
-            $listItems = $list.children('li').addClass('select__option');
+            $list = $('<ul />', {'class': 'select__options'}).insertAfter($styledSelect);
+            // $listItems = $list.children('li');
 
         $styledSelect.text(this.$elem.children('option').eq(0).text());
 
@@ -68,7 +68,10 @@
             }).appendTo($list);
         }
 
+        $list.children('li').first().hide();
+        
         // place in right position : after created
+        this.$select = this.$elem.parent('.select__wrap');
         this.$selected = this.$elem.next('.select__selected');
         this.$lists = this.$elem.siblings('.select__options');
         this.$list = this.$lists.children();
@@ -82,7 +85,7 @@
         // and this.options
 
         var self = this;
-        console.log(self.$list);
+        console.log(self.$select);
         console.log(self.$list.length);
 
         self.bindEvents();
@@ -90,20 +93,47 @@
 
     Plugin.prototype.bindEvents = function() {
         var self = this;
+
         this.$selected.on("click." + self._name, function(event){
             event.stopPropagation();
-            self.openSelect();
+            self.toggleSelect();
+            
+            // $('document').one('click', function(event) {
+                // if(!$(event.target).closest('.select__wrap').length){
+                // if(!$(event.target).is(this.$select)){
+                // if (this.$selected.hasClass("active") && !this.$select.is(e.target) && !this.$select.has(e.target).length){
+                //     if(this.$selected.hasClass("active")) {
+                // if ($(event.target).parents('.select__wrap').length==0) {
+                //         console.log('You clicked outside.');
+                //         self.closeSelect();
+                //         // $(this).off(function(){
+                //         //     self.openSelect();
+                //         // });
+                // }
+                //     }
+                // }
+                // event.stopPropagation();
+            // });
         });
         
         this.$list.on('click.' + self._name, function(event){
             event.stopPropagation();
             $(this).each(function(index, element){
-                console.log('this');
                 self.replaceSelected(index, element);
                 self.toggleSelect();
             });
         });
+        // $('document').one('clickoutside', function(callback) {
+        //     console.log('this');
+        //     self.clickOutside(callback);
+        // });    
+        // var q = function() { alert('clicked outside of the element') }; 
 
+        // this.$select.clickoutside(q);
+        // this.$select.on("clickoutside", function() { alert('clicked outside of the element')});
+        this.$select.on('click.'+self._name, function(){
+            self.clickoutside();
+        });
     };
 
     Plugin.prototype.toggleSelect = function() {
@@ -137,20 +167,50 @@
             window.location.href= link;
 
         }else if(self.options.item == 'external-link'){
+            
             window.open( link, '_blank');
 
         }else if(self.options.item == 'text'){
             
             self.$selected.text(opted);
-            // $this.val($element.attr('rel')).trigger('change');
-        
+            // $this.val($element.attr('rel')).trigger('change');        
         }
     };  // ****** Cannot access text of clicked li
 
     Plugin.prototype.closeSelect = function() {
-        console.log('close');
-        this.$selected.removeClass('active').next('.select__options').hide();
+        // if (this.$selected.hasClass("active") && !this.$select.is(e.target) && !this.$select.has(e.target).length){
+            // if(this.$selected.hasClass("active")) {
+                console.log('close');
+                this.$selected.removeClass('active').next('.select__options').hide();
+            // }
+        // }
     }; // ****** Cannot open again after closing
+
+    // Plugin.prototype.clickoutside = function(callback) {
+    //     var outside = 1, self = this;
+    //     self.cb = callback;
+    //     self.click(function() {
+    //         outside = 0;
+    //     });
+    //     $(document).click(function() {
+    //         outside && self.cb();
+    //         outside = 1;
+    //     });
+    //     return this;
+    // };
+
+    $.fn.clickoutside = function(callback) {
+        var outside = 1, self = $(this);
+        self.cb = callback;
+        this.click(function() {
+            outside = 0;
+        });
+        $(document).click(function() {
+            outside && self.cb();
+            outside = 1;
+        });
+        return $(this);
+    };
 
     // A really lightweight plugin wrapper around the constructor,
     // preventing against multiple instantiations

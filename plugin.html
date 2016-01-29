@@ -24,7 +24,7 @@
   <!-- <input id="helloWorld" type="text" class="{text: 'Watermark Provided Here Instead of Plugin Argument', class: 'specialWatermarkClass'}" /> -->
   <select id="month">
     <option value="hide">Month</option>
-    <option value="google.com">January</option>
+    <option value="http://www.google.com">January</option>
     <option value="february">February</option>
     <option value="march">March</option>
     <option value="april">April</option>
@@ -51,8 +51,8 @@
     });
 
     $("#month").dropdown({
-      item: 'external-link',
-      theme: 'select --outline-primary'
+      item: 'text',
+      theme: 'select --outline-secondary'
     });
 
     // $('#helloWorld').watermark({text: 'Last Name'}).css({

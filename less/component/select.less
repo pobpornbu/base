@@ -1,6 +1,12 @@
 @dropdown-width       :       250px;
 @dropdown-height      :       34px;
 
+.select-size{
+  @padding-vertical     :       6px;
+  @padding-horizontal   :       10px;
+  padding: @padding-vertical @padding-horizontal;
+}
+
 .select-hidden {
   display: none;
   visibility: hidden;
@@ -26,8 +32,7 @@
 
   // _size
   .input-text-height();
-  padding: (@padding-vertical+2) @padding-horizontal;
-
+  .select-size();
   // .transition(all 0.2s ease-in);
   &:after {
     content:"";
@@ -72,11 +77,9 @@
   // background-color: lighten(@light-blue, 5%);
   // color: @dark-blue;
   // .theme-input-primary();
-}
-  .select__option {
-    .input-text-height();
+  li {
     margin: 0;
-    padding: @padding-vertical  @padding-horizontal;
+    .select-size();
     // border-top: 1px solid darken(@color-secondary, 10);
     // .transition(all 0.15s ease-in);
     &:hover {
@@ -86,6 +89,7 @@
       display: none;
     }
   }
+}
 
 .select-color(@n, @property, @i: 1) when (@i =< @n) {
   @title : extract(@category-title, @i);
@@ -146,11 +150,11 @@
     width: 200px;
     left: -35px;
     right: auto;
-  }
-  .select__option {
-    padding: 10px 10px;
-    color: @white;
-    border-bottom: 1px solid fade(@white, 40%);
+    li {
+      padding: 10px 10px;
+      color: @white;
+      border-bottom: 1px solid fade(@white, 40%);
+    }
   }
 }
 
@@ -190,17 +194,18 @@
   .select__options {
     background-color: @white;
     .border-radius(0 0 14px 14px);
+    li {
+      padding: @select-sm-padding;
+      &:hover {
+        background: @brand-primary;
+        color: @white;
+      }
+      &:last-child:hover {
+        .border-radius(0 0 14px 14px);      
+      }
+    }  
   }
-  .select__option {
-    padding: @select-sm-padding;
-    &:hover {
-      background: @brand-primary;
-      color: @white;
-    }
-    &:last-child:hover {
-      .border-radius(0 0 14px 14px);      
-    }
-  }
+
 }
 
 .i-select-primary {
@@ -224,14 +229,11 @@
   .select__selected {
     .radius;
     color: @gray-darker;
-    padding: @select-md-padding;
+    .select-size();
     .transition(initial);
     .input-style(@select-outline-primary-bg-theme; @select-outline-primary-color-theme; @select-outline-primary-border-theme);
     &.active, &:active {
       .border-radius(8px 8px 0 0);
-      &:after {
-        top: 10px;
-      }
     }
 
     &:after {
@@ -246,15 +248,16 @@
   .select__options {
     background-color: @white;
     .border-radius(0 0 8px 8px);
-  }
-  .select__option {
-    padding: @select-sm-padding;
-    &:hover {
-      background: @brand-primary;
-      color: @white;
-    }
-    &:last-child:hover {
-      .border-radius(0 0 8px 8px);      
+    margin: -3px 0 0 0;
+    li {
+      .select-size();
+      &:hover {
+        background: @brand-primary;
+        color: @white;
+      }
+      &:last-child:hover {
+        .border-radius(0 0 8px 8px);      
+      }
     }
   }
 }
