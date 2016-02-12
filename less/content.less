@@ -18,7 +18,7 @@
 
     .list__link {
       display: block;
-      border-bottom: 1px solid @gray-light; 
+      border-bottom: 1px solid @gray-light;
       .font-kanda(14px, 700);
       color: @gray-darkest;
       @media screen and (min-width: @screen-sm-min) {
@@ -43,7 +43,7 @@
 		margin: 7px 0 0;
 	  &:last-of-type{
 	  	.list__link {
-  			border-bottom: 1px solid @gray-light;	
+  			border-bottom: 1px solid @gray-light;
 	  	}
 	  }
  	}
@@ -74,7 +74,8 @@
     float: left;
 }
 
-.content.\--head {
+.content {
+  &.\--head {
     font-weight: 700;
     font-size: 14px;
     color: rgb(47, 69, 144);
@@ -82,19 +83,25 @@
       margin-top: 0;
       margin-bottom: 5px;
     }
-}
-.content.\--headline {
+  }
+  &.\--headline {
     font-size: 12px;
     color: rgb(64, 64, 65);
     max-height: 40px;
     overflow: hidden;
     margin: 5px 0;
-}
-.content.\--date {
-  display: block;
-  font-size: 12px;
-  color: rgb(167, 168, 170);
-  margin: 0;
+  }
+  &.\--date {
+    display: block;
+    font-size: 12px;
+    color: rgb(167, 168, 170);
+    margin: 0;
+  }
+  &.\--text {
+    font-size: 14px;
+    font-weight: 400;
+    color: @color-font-content;
+  }
 }
 
 .content__scroll {
@@ -129,7 +136,7 @@
     top: -5px;
     right: 100%;
     .transform(rotate(-15deg));
-    
+
     .tablet-up({
       top: -25px;
       margin-right: 15px;

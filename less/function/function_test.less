@@ -22,3 +22,16 @@
   .generate-color(@n, @color, (@row + 1), @darken-percent + 10);
 }
 
+.lighten-color(@name, @i, @n, @color, @weight, @property) when (@n > @i) {
+  .@{name}-@{n} {
+    @{property}: lighten(@color, @weight);
+  }
+  .lighten-color(@name, @i, (@n - 1), @color, @weight + 10, @property);
+}
+.darken-color(@name, @i, @n, @color, @weight, @property) when (@i <= @n) {
+  .@{name}-@{i} {
+    @{property}: darken(@color, @weight);
+  }
+  .darken-color(@name, (@i + 1), @n, @color, @weight + 10, @property);
+}
+
