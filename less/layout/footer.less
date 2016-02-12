@@ -1,0 +1,18 @@
+@footer-height: 40px;
+
+html, body { height: 100%; overflow: hidden; }
+
+.content-container {
+  min-height: 100%;
+  margin-bottom: -@footer-height;
+}
+.content-container:after {
+  content: '';
+  display: block;
+  height: @footer-height;
+}
+
+.footer {
+  width: 100%; padding: 10px; .gray-4; text-align: center;
+  p { margin: 0; }
+}

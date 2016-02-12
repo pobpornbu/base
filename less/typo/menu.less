@@ -1,0 +1,36 @@
+.menu {
+	&__wrap {
+		border-top: 1px solid @gray-step-6; position: relative; padding: 0; margin: 0;
+	}
+	&__list {
+		list-style: none none outside; display: inline-block;
+		&.\--link {
+    	.tablet-up ({
+				width: 24%;
+				padding-top: 15px;
+				&:nth-child(2):hover ~ .menu--line { left: 24%; }
+				&:nth-child(3):hover ~ .menu--line { left: 49%; }
+				&:nth-child(4):hover ~ .menu--line { left: 74%; }
+			});
+   //  	.desktop-up ({
+			// 	width: 28%;
+			// 	&:nth-child(2):hover ~ .menu--line { left: 28%; }
+			// 	&:nth-child(3):hover ~ .menu--line { left: 56%; }
+			// });
+		}
+	}
+	&--line {
+  	position: relative;
+  	overflow: hidden;
+		width: 85px;
+		height: 2px;
+		background-color: @brand-hilight;
+		position: absolute;
+		top: 0;
+		left:0;
+		.transition(left 0.7s ease-out);
+	}
+	&.\--link {
+		&:extend(.font-normal);
+	}	
+}

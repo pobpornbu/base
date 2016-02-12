@@ -1,158 +1,51 @@
-.nation-brand-color { 
-	background-color: @nation-brand-primary; 
-}
+.nation-brand-primary { background-color: @nation-brand-primary; }
+.lighten-color(nation-brand, 1, 5, @nation-brand-primary, 10, background-color);
+.darken-color(nation-brand, 6, 10, @nation-brand-primary, 10, background-color);
 
-.nation-brand-0 { 
-	background-color: darken(@nation-brand-primary, 60%); 
-}
-.nation-brand-1 { 
-	background-color: darken(@nation-brand-primary, 50%); 
-}
-.nation-brand-2 { 
-	background-color: darken(@nation-brand-primary, 40%); 
-}
-.nation-brand-3 { 
-	background-color: darken(@nation-brand-primary, 30%); 
-}
-.nation-brand-4 { 
-	background-color: darken(@nation-brand-primary, 20%);
-}
-.nation-brand-5 { 
-	background-color: darken(@nation-brand-primary, 10%);
-}
+.gray-base { background-color: @brand-secondary; }
+.lighten-color(gray, 1, 5, @brand-secondary, 10, background-color);
+.darken-color(gray, 6, 10, @brand-secondary, 10, background-color);
 
-.nation-brand-6 { 
-	background-color: lighten(@nation-brand-primary, 10%);
-}
-.nation-brand-7 { 
-	background-color: lighten(@nation-brand-primary, 20%);
-}
-.nation-brand-8 { 
-	background-color: lighten(@nation-brand-primary, 30%);
-}
-.nation-brand-9 { 
-	background-color: lighten(@nation-brand-primary, 40%);
-}
-.nation-brand-10 { 
-	background-color: lighten(@nation-brand-primary, 50%);
-}
-.nation-brand-11 { 
-	background-color: lighten(@nation-brand-primary, 55%); 
-}
-.nation-brand-12 { 
-	background-color: lighten(@nation-brand-primary, 57%); 
-}
-.nation-brand-13 { 
-	background-color: lighten(@nation-brand-primary, 60%); 
+// Color Action Stage
+
+.color-stage-mixin(@color, @property, @i: 1, @n: 3, @weight: 10) when (@i <= @n){
+  @{property}: @color;
+  &:hover {
+    @{property}: lighten(@color, @weight);
+  }
+  &:active, &:focus, &.active {
+    @{property}: darken(@color, @weight);
+  }
+  .color-stage-mixin(@color, @property, @i + 1, @n, @weight);
 }
 
 .rainbow-lighter-blue {
-	.active {
-		background-color: darken(@rainbow-lighter-blue, 10%);
-	}
-	.normal {
-		background-color: @rainbow-lighter-blue;
-	}
-	.hover {
-		background-color: lighten(@rainbow-lighter-blue, 15%);
-	}
-}			
+	.color-stage-mixin(@rainbow-lighter-blue, background-color);
+}
 .rainbow-light-blue  {
-	.active {
-		background-color: darken(@rainbow-light-blue, 10%);
-	}
-	.normal {
-		background-color: @rainbow-light-blue;
-	}
-	.hover {
-		background-color: lighten(@rainbow-light-blue, 15%);
-	}
+	.color-stage-mixin(@rainbow-light-blue, background-color);
 }
 .rainbow-blue {
-	.active {
-		background-color: darken(@rainbow-blue, 10%);
-	}
-	.normal {
-		background-color: @rainbow-blue;
-	}
-	.hover {
-		background-color: lighten(@rainbow-blue, 15%);
-	}
+	.color-stage-mixin(@rainbow-blue, background-color);
 }
 .rainbow-purple {
-	.active {
-		background-color: darken(@rainbow-purple, 10%);
-	}
-	.normal {
-		background-color: @rainbow-purple;
-	}
-	.hover {
-		background-color: lighten(@rainbow-purple, 15%);
-	}
+	.color-stage-mixin(@rainbow-purple, background-color);
 }
 .rainbow-pink {
-	.active {
-		background-color: darken(@rainbow-pink, 10%);
-	}
-	.normal {
-		background-color: @rainbow-pink;
-	}
-	.hover {
-		background-color: lighten(@rainbow-pink, 15%);
-	}
+	.color-stage-mixin(@rainbow-pink, background-color);
 }
 .rainbow-red {
-	.active {
-		background-color: darken(@rainbow-red, 10%);
-	}
-	.normal {
-		background-color: @rainbow-red;
-	}
-	.hover {
-		background-color: lighten(@rainbow-red, 15%);
-	}
+	.color-stage-mixin(@rainbow-red, background-color);
 }
 .rainbow-orange {
-	.active {
-		background-color: darken(@rainbow-orange, 10%);
-	}
-	.normal {
-		background-color: @rainbow-orange;
-	}
-	.hover {
-		background-color: lighten(@rainbow-orange, 15%);
-	}
+	.color-stage-mixin(@rainbow-orange, background-color);
 }
 .rainbow-yellow {
-	.active {
-		background-color: darken(@rainbow-yellow, 10%);
-	}
-	.normal {
-		background-color: @rainbow-yellow;
-	}
-	.hover {
-		background-color: lighten(@rainbow-yellow, 15%);
-	}
+	.color-stage-mixin(@rainbow-yellow, background-color);
 }
 .rainbow-dark-yellow {
-	.active {
-		background-color: darken(@rainbow-dark-yellow, 10%);
-	}
-	.normal {
-		background-color: @rainbow-dark-yellow;
-	}
-	.hover {
-		background-color: lighten(@rainbow-dark-yellow, 15%);
-	}
+	.color-stage-mixin(@rainbow-dark-yellow, background-color);
 }
 .rainbow-light-green {
-	.active {
-		background-color: darken(@rainbow-light-green, 10%);
-	}
-	.normal {
-		background-color: @rainbow-light-green;
-	}
-	.hover {
-		background-color: lighten(@rainbow-light-green, 15%);
-	}
+	.color-stage-mixin(@rainbow-light-green, background-color);
 }

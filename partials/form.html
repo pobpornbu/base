@@ -78,58 +78,70 @@
   </form>
 
   <form class="col-xs-12" name="register_form" id="register_form" novalidate>
-    <fieldset class="form-group">
-      <div class="label-wrap">
-        <label for="name" class="head --static">ชื่อ</label>
-      </div>
-      <div class="input-wrap">
-      <div class="validate__container">
-        <input id="name" type="text" class="input input__text --primary" name="name" required/>
-      </div>
-    </div>
-    </fieldset>
-    <fieldset class="form-group">
-      <div class="label-wrap">
-        <label for="email" class="head --static">อีเมล์</label>
-      </div>
-      <div class="input-wrap">
-        <input id="email" type="email" class="input input__text --primary" name="email" required/>
-      </div>
-    </fieldset>
-    <fieldset class="form-group">
-      <div class="label-wrap">
-        <label for="channel" class="head --static">ชื่อรายการ</label>
-      </div>
-      <div class="input-wrap">
-        <div class="select --outline-secondary">
-          <select id="subject" name="subject">
-              <option value="hide">เลือกรายการ</option>
-              <option value="aaaaa">aaaaa</option>
-              <option value="bbbbb">bbbbb</option>
-              <option value="ccccc">ccccc</option>
-              <option value="ddddd">ddddd</option>
-              <option value="eeeee">eeeee</option>
-              <option value="fffff">fffff</option>
-          </select>
+    <div class="row">
+      <div class="col-xs-12 col-sm-3">
+        <div class="input-file__group">
+          <div id="showfile" class="input-file__wrap"><img src="images/avatar-default.png" width="200" height="200" id="avatar" class="input-file__img"></div>
+          <span class="input-file__btn">เปลี่ยนรูปของคุณ<input id="imagefile" type="file" multiple="multiple" class="input-file__input" name="photo"></span>
         </div>
       </div>
-    </fieldset>
-    <fieldset class="form-group">
-      <div class="label-wrap">
-        <label for="comment" class="head --static">แสดงความคิดเห็น</label>
+      <div class="col-xs-12 col-sm-9">
+        <fieldset class="form-group">
+          <div class="label-wrap">
+            <label for="name" class="head --static">ชื่อ</label>
+          </div>
+          <div class="input-wrap">
+          <div class="validate__container">
+            <input id="name" type="text" class="input input__text --primary" name="name" required/>
+          </div>
+        </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="label-wrap">
+            <label for="email" class="head --static">อีเมล์</label>
+          </div>
+          <div class="input-wrap">
+            <input id="email" type="email" class="input input__text --primary" name="email" required/>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="label-wrap">
+            <label for="channel" class="head --static">ชื่อรายการ</label>
+          </div>
+          <div class="input-wrap">
+            <div class="select --outline-secondary">
+              <select id="subject" name="subject">
+                  <option value="hide">เลือกรายการ</option>
+                  <option value="aaaaa">aaaaa</option>
+                  <option value="bbbbb">bbbbb</option>
+                  <option value="ccccc">ccccc</option>
+                  <option value="ddddd">ddddd</option>
+                  <option value="eeeee">eeeee</option>
+                  <option value="fffff">fffff</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="label-wrap">
+            <label for="comment" class="head --static">แสดงความคิดเห็น</label>
+          </div>
+          <div class="input-wrap">
+            <textarea name="comment" id="comment" class="input input__textarea --primary"></textarea>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="button-wrap">
+            <!-- <input type="submit" value="ส่ง" class="button --solid-primary"></input> -->
+            <input type="submit" value="ส่ง" class="button --solid-primary disabled" disabled></input>
+          </div>
+        </fieldset>
+           
       </div>
-      <div class="input-wrap">
-        <textarea name="comment" id="comment" class="input input__textarea --primary"></textarea>
-      </div>
-    </fieldset>
-    <fieldset class="form-group">
-      <div class="button-wrap">
-        <!-- <input type="submit" value="ส่ง" class="button --solid-primary"></input> -->
-        <input type="submit" value="ส่ง" class="button --solid-primary disabled" disabled></input>
-      </div>
-    </fieldset>
-  </form>
+    </div>
+ </form>
 
 </div>
 <script src="js/select.js"></script>
+<script src="js/preview-image.js"></script>
 

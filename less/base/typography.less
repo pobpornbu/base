@@ -13,7 +13,10 @@ mark { background: none; }
 	font-weight: @font-weight;
 	letter-spacing: @letter-spacing;
 }
-
+.font-normal{
+	.font-kanda(16px);
+	color: @text-centent-color;
+}
 // <header class="head__header">
 // 	<p class="head --host">โดย <a class="head --link-primary" href="">สุทธิชัย หยุ่น</a> | <a class="head --link-primary" href="">เทพชัย หย่อง</a></p>
 // 	<p class="head --static">
@@ -25,6 +28,12 @@ mark { background: none; }
 .head {
 	font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
 	letter-spacing: 1px;
+	&.\--special {
+		font-size: 72px;
+		font-weight: 700;
+		line-height: 1;
+		color: @brand-hilight;
+	}
 	&.\--section {
 		font-size: 24px;
 		font-weight: 700;
@@ -344,3 +353,6 @@ mark { background: none; }
 	text-shadow: 2px 0 1px @white, -2px 0 1px @white, 0 2px 1px @white, 0 -2px 1px @white, 2px 1px @white, -2px -2px 1px @white, 2px -2px 1px @white, -2px 2px 1px @white, 0 0 55px rgb(60, 60, 60);
 	color: @brand-primary;
 }
+
+@import "../typo/header";
+@import "../typo/menu";
