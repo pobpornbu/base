@@ -9,18 +9,35 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+  <link rel="stylesheet" href="css/slicknav.css" />
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
   <style>
     .hidden { display: none; }
+
+    #menu li {
+      display:none;
+    }
+
+    @media screen and (max-width: 40em) {
+
+      .js .slicknav_menu {
+        display:block;
+      }
+    }
   </style>
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <ul id="menu">
+    <li><a href="#">item 1</a></li>
+    <li><a href="#">item 2</a></li>
+    <li><a href="#">item 3</a></li>
+    <li><a href="#">item 4</a></li>
+  </ul>
   <form class="col-xs-12" name="register_form" id="register_form"  data-parsley-validate>
     <fieldset class="form-group">
       <div class="label-wrap">
@@ -75,9 +92,12 @@
     </fieldset>
   </form>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="js/jquery.slicknav.min.js"></script>
   <script src="js/jquery.select.js"></script>
-  <script src="js/parsley.min.js"></script>  
+  <script src="js/parsley.min.js"></script>
   <script>
+  $(function(){
+    $('#menu').slicknav({closeOnClick: true});
     $('#subject').select();
     $('#register_form').parsley()
     .on('field:validated', function() {
@@ -88,5 +108,6 @@
     .on('form:submit', function() {
       return false;
     });
+  });
   </script>
 </body>
