@@ -60,6 +60,9 @@ BaselineApp.config(['$routeProvider',
       when('/sitemap', {
         templateUrl: 'partials/sitemap.html'
       }).
+      when('/error404', {
+        templateUrl: 'partials/error404.html'
+      }).
       otherwise({
         redirectTo: '/'
       });
