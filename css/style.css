@@ -3448,9 +3448,6 @@ button::-moz-focus-inner {
 .tgl-light:checked + .tgl-btn {
   background: #FCD475;
 }
-.select-size {
-  padding: 6px 10px;
-}
 .select-hidden {
   display: none;
   visibility: hidden;
@@ -3461,7 +3458,7 @@ button::-moz-focus-inner {
   display: inline-block;
   position: relative;
   width: 250px;
-  height: 34px;
+  height: 28px;
 }
 .select-arrow:after {
   content: "";
@@ -3476,7 +3473,7 @@ button::-moz-focus-inner {
 .select__selected {
   background-color: rgba(255, 255, 255, 0.2);
   color: #000000;
-  padding: 6px 10px;
+  padding: 4px 10px;
 }
 .select__selected:hover {
   background-color: rgba(255, 255, 255, 0.5);
@@ -4581,91 +4578,91 @@ button::-moz-focus-inner {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 1px 1px 2px #f2f2f2, 1px 1px 3px #030303;
 }
 .entertainment {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #00ccff;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #00ccff;
 }
 .sport {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #0078ff;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #0078ff;
 }
 .lifestyle {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #0000ff;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #0000ff;
 }
 .economy_business {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #7800ff;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #7800ff;
 }
 .politics {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #ff00c0;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #ff00c0;
 }
 .crime {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #ff6600;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #ff6600;
 }
 .foreign {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #ffc000;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #ffc000;
 }
 .social {
-  #00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523: #c2d526;
+  #00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523: #c2d526;
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-5 {
-  background-color: #FCD475;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-4 {
-  background-color: #F5EE9E;
+  background-color: #f5ee9e;
 }
 .li-5 {
-  background-color: #FCD475;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-3 {
   background-color: #ddf1f5;
 }
 .li-4 {
-  background-color: #F5EE9E;
+  background-color: #f5ee9e;
 }
 .li-5 {
-  background-color: #FCD475;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-2 {
   background-color: #092042;
@@ -4674,19 +4671,19 @@ button::-moz-focus-inner {
   background-color: #ddf1f5;
 }
 .li-4 {
-  background-color: #F5EE9E;
+  background-color: #f5ee9e;
 }
 .li-5 {
-  background-color: #FCD475;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 .li-1 {
   background-color: #00395d;
@@ -4698,19 +4695,19 @@ button::-moz-focus-inner {
   background-color: #ddf1f5;
 }
 .li-4 {
-  background-color: #F5EE9E;
+  background-color: #f5ee9e;
 }
 .li-5 {
-  background-color: #FCD475;
+  background-color: #fcd475;
 }
 .li-6 {
-  background-color: #F08523;
+  background-color: #f08523;
 }
 .li-7 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 7);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 7);
 }
 .li-8 {
-  background-color: extract(#00395d, #092042, #ddf1f5, #F5EE9E, #FCD475, #F08523, 8);
+  background-color: extract(#00395d, #092042, #ddf1f5, #f5ee9e, #fcd475, #f08523, 8);
 }
 body {
   margin: 0;
@@ -4724,7 +4721,7 @@ body {
 }
 .clock {
   border-radius: 50%;
-  background: radial-gradient(#000, #000 0.1em, #fff 0.1em, #fff), #fff;
+  background: radial-gradient(#000000, #000000 0.1em, #ffffff 0.1em, #ffffff), #ffffff;
   display: inline-block;
   margin: 1%;
   padding-bottom: 31%;
@@ -4846,7 +4843,7 @@ body {
   width: 500%;
 }
 .clock.ios7 {
-  background: #fff url(../images/ios_clock.svg) no-repeat center;
+  background: #ffffff url(../images/ios_clock.svg) no-repeat center;
   background-size: 88%;
 }
 .clock.ios7:before {
@@ -4890,7 +4887,7 @@ body {
   transform-origin: 50% 100%;
 }
 .clock.simple {
-  background: #fff url(/images/ios_clock.svg) no-repeat center;
+  background: #ffffff url(/images/ios_clock.svg) no-repeat center;
   background-size: 88%;
 }
 .clock.simple:after {

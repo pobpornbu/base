@@ -24,7 +24,7 @@
   <!-- <input id="helloWorld" type="text" class="{text: 'Watermark Provided Here Instead of Plugin Argument', class: 'specialWatermarkClass'}" /> -->
   <select id="month">
     <option value="hide">Month</option>
-    <option value="http://www.google.com">January</option>
+    <option value="january">January</option>
     <option value="february">February</option>
     <option value="march">March</option>
     <option value="april">April</option>
@@ -37,7 +37,21 @@
     <option value="november">November</option>
     <option value="december">December</option>
   </select>
-  
+
+  <select id="footer">
+    <option value="hide">Link</option>
+    <option value="http://www.google.com">Google</option>
+    <option value="http://www.youtube.com">Youtube</option>
+    <option value="http://www.pinterest.com">Pinterest</option>
+  </select>
+
+  <select class="select --outline-secondary">
+    <option value="">Link</option>
+    <option value="http://www.google.com">Google</option>
+    <option value="http://www.youtube.com">Youtube</option>
+    <option value="http://www.pinterest.com">Pinterest</option>
+  </select>
+
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="js/jquery.message.js"></script>
   <!--<script src="js/jquery.selectx.js"></script>-->
@@ -54,6 +68,11 @@
       item: 'text',
       theme: 'select --outline-secondary'
     });
+
+    $("#footer").dropdown({
+      item: 'external-link',
+      theme: 'select --outline-primary'
+    })
 
     // $('#helloWorld').watermark({text: 'Last Name'}).css({
     //    'border-color': 'red'

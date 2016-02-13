@@ -4,7 +4,7 @@
 .select-size{
   @padding-vertical     :       6px;
   @padding-horizontal   :       10px;
-  padding: @padding-vertical @padding-horizontal;
+  @font-size            :       16px;
 }
 
 .select-hidden {
@@ -19,8 +19,9 @@
   position: relative;
 
   // _size
+  .select-size();
   width: @dropdown-width;
-  height: @dropdown-height;
+  height: (@padding-vertical * 2) + @font-size;
 }
 .select-arrow {
   &:after {
@@ -46,6 +47,8 @@
   // _size
   .input-text-height();
   .select-size();
+  padding: @padding-vertical @padding-horizontal;
+
   // .transition(all 0.2s ease-in);
   .select-arrow;
 
@@ -66,17 +69,17 @@
 }
 
 .select__options {
-  display: none; 
+  display: none;
   position: absolute;
   top: 100%;
-  right: 0; 
-  left: 0; 
+  right: 0;
+  left: 0;
   z-index: 999;
   margin: -1px 0 0 0; // overlapp with border-width
   padding: 0;
   list-style: none;
 
-  // _theme  
+  // _theme
   // .box-shadow(0 0 3px fade(@dark-blue,50%));
   // background-color: lighten(@light-blue, 5%);
   // color: @dark-blue;
@@ -84,6 +87,8 @@
   li {
     margin: 0;
     .select-size();
+    padding: @padding-vertical @padding-horizontal;
+
     // border-top: 1px solid darken(@color-secondary, 10);
     // .transition(all 0.15s ease-in);
     &:hover {
@@ -110,7 +115,7 @@
     .select__option{
       &:hover {
         @{property}: lighten(extract(@category, @i), 10%);
-      }  
+      }
     }
   }
   .select-color(@n, @property, @i + 1);
@@ -127,7 +132,7 @@
   }
   .select__selected {
     color: @white;
-    &:before {  
+    &:before {
       content: "";
       display: block;
       width: 35px;
@@ -253,9 +258,9 @@
         color: @white;
       }
       &:last-child:hover {
-        .border-radius(0 0 14px 14px);      
+        .border-radius(0 0 14px 14px);
       }
-    }  
+    }
   }
 
 }
@@ -282,6 +287,8 @@
     .radius;
     color: @gray-darker;
     .select-size();
+    padding: @padding-vertical @padding-horizontal;
+
     .transition(initial);
     .input-style(@select-outline-primary-bg-theme; @select-outline-primary-color-theme; @select-outline-primary-border-theme);
     &.active, &:active {
@@ -303,12 +310,14 @@
     margin: -3px 0 0 0;
     li {
       .select-size();
+      padding: @padding-vertical @padding-horizontal;
+
       &:hover {
         background: @brand-primary;
         color: @white;
       }
       &:last-child:hover {
-        .border-radius(0 0 8px 8px);      
+        .border-radius(0 0 8px 8px);
       }
     }
   }
