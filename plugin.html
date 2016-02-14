@@ -45,12 +45,20 @@
     <option value="http://www.pinterest.com">Pinterest</option>
   </select>
 
-  <select class="select --outline-secondary">
-    <option value="">Link</option>
-    <option value="http://www.google.com">Google</option>
-    <option value="http://www.youtube.com">Youtube</option>
-    <option value="http://www.pinterest.com">Pinterest</option>
+  <select id="gender">
+    <option value="hide">Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
   </select>
+
+  <div class="select --outline-primary --mask">
+    <select>
+      <option value="">Link</option>
+      <option value="http://www.google.com">Google</option>
+      <option value="http://www.youtube.com">Youtube</option>
+      <option value="http://www.pinterest.com">Pinterest</option>
+    </select>
+  </div>
 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="js/jquery.message.js"></script>
@@ -66,14 +74,18 @@
 
     $("#month").dropdown({
       item: 'text',
-      theme: 'select --outline-secondary'
+      theme: 'select --outline-secondary --select-radius'
     });
 
     $("#footer").dropdown({
       item: 'external-link',
-      theme: 'select --outline-primary'
+      theme: 'select --outline-primary --select-round'
     })
 
+    $("#gender").dropdown({
+      item: 'text',
+      theme: 'select --solid-primary'
+    });
     // $('#helloWorld').watermark({text: 'Last Name'}).css({
     //    'border-color': 'red'
     // });
