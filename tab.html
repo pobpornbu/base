@@ -13,13 +13,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'> -->
-  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'><!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <link rel="icon" type="image/png" href="images/favicon.png" /> -->
-
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/style.css">
@@ -148,20 +141,40 @@
         This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a></div>
     </div>
   </div>
+  <div class="ui tabular menu">
+    <div class="item" data-tab="tab-name">Tab Name</div>
+    <div class="item" data-tab="tab-name2">Tab Name 2</div>
+  </div>
+  <div class="ui tab" data-tab="tab-name">
+    <!-- Tab Content !-->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ducimus recusandae natus, qui facilis, laboriosam explicabo eaque blanditiis labore doloremque? Facere modi accusantium aspernatur, voluptate ab enim blanditiis sint repellendus.</p>
+    <p>Honestly, I am impress with what you are doing and hope to be part of this successful time. Now, I am working as a front-end web developer and looking forward to working with the high potential product. Finally, I discover takemetour could give me this meaningful opportunity. My speciality is  ...... </p>
+  </div>
+  <div class="ui tab" data-tab="tab-name2">
+    <!-- Tab Content !-->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ducimus recusandae natus, qui facilis, laboriosam explicabo eaque blanditiis labore doloremque? Facere modi accusantium aspernatur, voluptate ab enim blanditiis sint repellendus.</p>
+  </div>
+
+  <div class="tab-group rel gap-top-md">
+    <div class="tab-btn-group">
+      <a href="#" class="js-popup-btn bs-popup-btn ib-xs social-icon --f" data-popup-btn="fmenu"><i class="ion-social-facebook"></i></a>
+      <a href="#" class="js-popup-btn bs-popup-btn ib-xs social-icon --t" data-popup-btn="tmenu"><i class="ion-social-twitter"></i></a>
+      <a href="#" class="js-popup-btn bs-popup-btn ib-xs social-icon --g" data-popup-btn="gmenu"><i class="ion-social-googleplus"></i></a>
+    </div>
+    <div class="tab-content-group">
+      <div class="bs-popup-menu js-popup-content fmenu" style="display:none;">
+        <h2>Header Facebook</h2>
+      </div>
+      <div class="bs-popup-menu js-popup-content tmenu" style="display:none;">
+        <h2>Header Twitter</h2>
+      </div>
+      <div class="bs-popup-menu js-popup-content gmenu" style="display:none;">
+        <h2>Header G+</h2>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="ui tabular menu">
-  <div class="item" data-tab="tab-name">Tab Name</div>
-  <div class="item" data-tab="tab-name2">Tab Name 2</div>
-</div>
-<div class="ui tab" data-tab="tab-name">
-  <!-- Tab Content !-->
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ducimus recusandae natus, qui facilis, laboriosam explicabo eaque blanditiis labore doloremque? Facere modi accusantium aspernatur, voluptate ab enim blanditiis sint repellendus.</p>
-  <p>Honestly, I am impress with what you are doing and hope to be part of this successful time. Now, I am working as a front-end web developer and looking forward to working with the high potential product. Finally, I discover takemetour could give me this meaningful opportunity. My speciality is  ...... </p>
-</div>
-<div class="ui tab" data-tab="tab-name2">
-  <!-- Tab Content !-->
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ducimus recusandae natus, qui facilis, laboriosam explicabo eaque blanditiis labore doloremque? Facere modi accusantium aspernatur, voluptate ab enim blanditiis sint repellendus.</p>
-</div>
+
 <div class="js-overlay overlay"></div>
 </body>
 <!-- End Document
