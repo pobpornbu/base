@@ -6,7 +6,6 @@
   height: 44px;
   overflow: hidden;
   white-space: nowrap;
-  /* hide text */
   color: transparent;
   z-index: 3;
   &::before,
@@ -101,7 +100,7 @@
   &.search-is-visible::before,
   &.search-is-visible::after {
     /* hide search icon */
-    opacity: 0; 
+    opacity: 0;
     /*display: none;*/
   }
   &.search-is-visible span::before,
@@ -115,5 +114,61 @@
   }
   &.search-is-visible span::after {
     .transform(rotate(45deg));
+  }
+}
+
+.search-icon{
+  &.\--thin{
+    position: absolute;
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: 4px;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: transparent;
+    z-index: 3;
+    clip: initial;
+    &::before,
+    &::after {
+      /* search icon */
+      content: '';
+      position: absolute;
+      -webkit-transition: opacity 0.3s;
+      -moz-transition: opacity 0.3s;
+      transition: opacity 0.3s;
+      /* Force Hardware Acceleration in WebKit */
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      -o-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    &::before {
+      /* lens */
+      top: 2px;
+      left: 0px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 2px solid #2e3233;
+    }
+    &::after {
+      /* handle */
+      bottom: 3px;
+      right: 3px;
+      height: 2px;
+      width: 8px;
+      background: #2e3233;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
   }
 }
