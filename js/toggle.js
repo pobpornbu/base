@@ -13,16 +13,13 @@ $(document).ready(function(){
 
       $this.on('click', '.js-menu-btn', function(e){
           e.preventDefault();
-					// if($('.cd-primary-nav').hasClass('nav-is-visible')) {
           openMenu();
-          // }
       });
 
 			//close lateral menu on mobile
 			$('.js-overlay').on('click swipeleft swiperight', function(){
 				if($('.js-menu-side').hasClass('is-menu-open')) {
 					closeMenu();
-					// toggleSearch('close');
 					$('.js-overlay').removeClass('open');
 				}
 			});
