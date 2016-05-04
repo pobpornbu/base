@@ -5216,6 +5216,12 @@ lesshat-selector {
     top: 0;
   }
 }
+.bs-popup-menu {
+  position: absolute;
+  top: 27px;
+  left: 0;
+  display: none;
+}
 .arrow-down {
   width: 0;
   height: 0;
