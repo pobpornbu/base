@@ -151,6 +151,14 @@ button::-moz-focus-inner {
     .option(face{
       width: 300px; height: 34px;
     });
+    .option(rating{
+      background-color: rgb(0, 147, 91); border:2px solid rgb(255, 255, 255);
+      box-shadow: 0 0 1px 1px rgb(0, 147, 91);
+      border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+      font-family: Arial, Tahoma, sans-serif; font-size: 14px; text-transform: uppercase;
+      color: rgb(255, 255, 255);
+      line-height: 1; text-align: center;
+    });
   });
   .part(face{
     font-family: "Ropa Sans", Arial, sans-serif; font-size: 16px; color: @black; border: 2px solid @black; text-align: center; text-transform: capitalize;
@@ -257,4 +265,36 @@ button::-moz-focus-inner {
       background: #FCD475;
     }
   }
+}
+
+// <div class="starrating">
+//   <span>☆</span><span>☆</span><span>☆</span>
+// </div>
+
+.starrating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.starrating > span {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  font-size: 16px;
+  color: black;
+}
+.starrating > span:hover,
+.starrating > span:hover ~ span {
+  color: transparent;
+}
+.starrating > span:hover:before,
+.starrating > span:hover ~ span:before {
+   content: "\2605";
+   width: 20px;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+.starrating > span:hover:before,
+.starrating > span:hover ~ span:before {
+   color: gold;
 }
