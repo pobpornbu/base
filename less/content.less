@@ -17,6 +17,7 @@
   }
 
     .list__link {
+      list-style: none none;
       display: block;
       border-bottom: 1px solid @gray-light;
       .font-kanda(14px, 700);
@@ -24,8 +25,8 @@
       @media screen and (min-width: @screen-sm-min) {
         font-size: 16px;
       }
-
-      &.\--sub {
+      // bullet-list
+      &.\--sub li {
         &:before {
           content: "\2022";
           display: inline-block;
@@ -106,6 +107,8 @@
 
 .content__scroll {
   max-height: 500px;
+  overflow-y: hidden;
+  position: relative;
   &:before {
     display: block;
     content: '';

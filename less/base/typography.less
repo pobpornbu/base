@@ -98,7 +98,30 @@ mark { background: none; }
   font-size: 20px;
   margin-right: 5px;
 }
-
+.link{
+// Readmore
+  &.\--paperfold {
+    display: block;
+    color: #a79a8f;
+    text-align: left;
+    &:after{
+      content: '';
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 30px;
+      right: 0;
+      border-left: 15px solid #E2DCD8;
+      border-top: 15px solid #E2DCD8;
+      border-right: 15px solid #FFF;
+      border-bottom: 15px solid #FFF;
+    }
+    &:hover {
+      color: @brand-primary;
+    }
+  }
+}
 
 // <h2 class="header__wrap --category --lifestyle">
 //     <a href="" class="header__text" target="_blank">ไลฟ์สไตล์</a>
