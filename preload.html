@@ -15,63 +15,45 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/tab.min.css">
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+  <style>
+#overlay{
+  position:fixed;
+  z-index:99999;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:rgba(0,0,0,0.9);
+  transition: 1s 0.4s;
+}
+#progress{
+  height:1px;
+  background:#fff;
+  position:absolute;
+  width:0;
+  top:50%;
+  transition: 1s;
+}
+#progstat{
+  font-size:0.7em;
+  letter-spacing: 3px;
+  position:absolute;
+  top:50%;
+  margin-top:-40px;
+  width:100%;
+  text-align:center;
+  color:#fff;
+}
+  </style>
 </head>
 <body class="js-menu-side">
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <div class="menu__icon --cross menu-btn-offset js-menu-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-      </div>
-      <a class="navbar-brand" href="#">
-        <img alt="Brand" src="/images/favicon.png">
-      </a>
-    </div>
-    <div class="js-menu-list menu-sidebar-container">
-      <ul class="menu-list">
-        <li><a href="#">Menu List</a></li>
-        <li><a href="#">Menu List</a></li>
-        <li><a href="#">Menu List</a></li>
-        <li><a href="#">Menu List</a></li>
-        <li><a href="#">Menu List</a></li>
-      </ul>
-    </div>
-    <form class="navbar-form navbar-right" role="search">
-      <div class="form-group input__wrap --icon">
-        <input type="search" name="search" class="input__search input --primary" placeholder="Search" results="5" autosave="some_unique_value">
-        <i class="fa fa-search input__icon --search"></i>
-      </div>
-    </form>
-    <div class="tab-content-group">
-      <div class="bs-popup-menu js-popup-content fmenu" style="display:none;">
-        <h2>Header Facebook</h2>
-      </div>
-      <div class="bs-popup-menu js-popup-content tmenu" style="display:none;">
-        <h2>Header Twitter</h2>
-      </div>
-      <div class="bs-popup-menu js-popup-content gmenu" style="display:none;">
-        <h2>Header G+</h2>
-      </div>
-    </div>
-  </div>
-</nav>
+<div id="overlay">
+    <div id="progstat"></div>
+    <div id="progress"></div>
+</div>
 <div class="container">
   <div class="row">
     <ul class="nav nav-tabs [ tab__wrap --primary ]" role="tablist" id="myTab">
@@ -125,10 +107,7 @@
       <a href="#" class="js-popup-btn bs-popup-btn ib-xs social-icon --g" data-popup-btn="gmenu"><i class="ion-social-googleplus"></i></a>
     </div>
   </div>
-  <div class="overlay"></div>
-
 </div>
-
 </body>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -153,9 +132,42 @@
 <script src="bower_components/moment-timezone/moment-timezone-utils.js"></script></body>
  -->
   <script>
+  ;(function(){
+    function id(v){ return document.getElementById(v); }
+    function loadbar() {
+      var ovrl = id("overlay"),
+          prog = id("progress"),
+          stat = id("progstat"),
+          img = document.images,
+          c = 0,
+          tot = img.length;
+      if(tot == 0) return doneLoading();
+
+      function imgLoaded(){
+        c += 1;
+        var perc = ((100/tot*c) << 0) +"%";
+        prog.style.width = perc;
+        stat.innerHTML = "Loading "+ perc;
+        if(c===tot) return doneLoading();
+      }
+      function doneLoading(){
+        ovrl.style.opacity = 0;
+        setTimeout(function(){
+          ovrl.style.display = "none";
+        }, 1200);
+      }
+      for(var i=0; i<tot; i++) {
+        var tImg     = new Image();
+        tImg.onload  = imgLoaded;
+        tImg.onerror = imgLoaded;
+        tImg.src     = img[i].src;
+      }
+    }
+    document.addEventListener('DOMContentLoaded', loadbar, false);
+  }());
+
   $('.tabular.menu .item').tab();
 
   $('.js-menu-side').menutoggle();
-
   </script>
  </html>

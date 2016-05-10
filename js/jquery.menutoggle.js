@@ -30,8 +30,8 @@
     this.$el = $(element);
     this.$body = $('body');
     this.$container = $('.container');
-    this.$btn   = $('.js-menu-btn'),
-    this.$list  = $('.js-menu-list'),
+    this.$btn   = $('.js-menu-btn');
+    this.$list  = $('.js-menu-list');
     this.$overlay = $('.js-overlay');
     // this will be the element which triggers the appearance of the tooltip on hover/click/custom events.
     // it will be the same as this.$el if icons are not used (see in the options), otherwise it will correspond to the created icon
