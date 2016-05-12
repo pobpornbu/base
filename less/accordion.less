@@ -1,0 +1,10 @@
+@import (reference) "lib/lesshat";
+
+.acc-content {
+  max-height: 0;
+  overflow: hidden;
+  .transition(max-height .35s ease-out);
+}
+.acc-content.acc-is-active {
+  max-height: 100px;
+}

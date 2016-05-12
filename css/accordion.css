@@ -1,0 +1,11 @@
+.acc-content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.35s ease-out;
+  -moz-transition: max-height 0.35s ease-out;
+  -o-transition: max-height 0.35s ease-out;
+  transition: max-height 0.35s ease-out;
+}
+.acc-content.acc-is-active {
+  max-height: 100px;
+}

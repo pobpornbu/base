@@ -3007,7 +3007,7 @@ button::-moz-focus-inner {
   display: inline-block;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   padding: 6px 20px;
 }
 .button:focus {

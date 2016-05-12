@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Widget</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/accordion.css">
+  <link rel="stylesheet" href="css/tooltip.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <a class="share-icon round tooltip-button" data-tooltip-text="23 views"><i class="glyphicon glyphicon-user"></i></a>
+      <div class="gap-v-lg">
+        <button id="trigger" class="trigger-button" type="button">Launch Modal</button>
+        <div id="content">
+          <h1>Look at me!</h1>
+          <p>I'm a modal window.</p>
+        </div>
+      </div>
+      <div id="veget_acc_group" class="gap-bottom-lg acc-group col-xs-12 col-sm-10 col-md-8 center-block" data-widget="">
+        <button id="trigger" class="button --width-fluid --solid-secondary acc-button acc-is-active" type="button">Peanut</button>
+        <div class="acc-content acc-is-active" data-acc-active="true">
+          <h2>Look at me!</h2>
+          <p>I'm the first accordion</p>
+        </div>
+        <button id="trigger" class="button --width-fluid --solid-secondary acc-button" type="button">Spanish</button>
+        <div class="acc-content" data-acc-false="false">
+          <h2>Look at me!</h2>
+          <p>I'm the second accordion</p>
+        </div>
+        <button id="trigger" class="button --width-fluid --solid-secondary acc-button" type="button">Oak</button>
+        <div class="acc-content" data-acc-false="false">
+          <h2>Look at me!</h2>
+          <p>I'm the third accordion</p>
+        </div>
+      </div>
+      <div id="bread_acc_group" class="gap-bottom-lg acc-group col-xs-12 col-sm-10 col-md-8 center-block" data-widget="">
+        <button id="trigger" class="button --width-fluid --solid-primary acc-button acc-is-active" type="button">Butter</button>
+        <div class="acc-content acc-is-active" data-acc-active="true">
+          <h2>Look at me!</h2>
+          <p>I'm the first accordion</p>
+        </div>
+        <button id="trigger" class="button --width-fluid --solid-primary acc-button" type="button">Bread</button>
+        <div class="acc-content" data-acc-false="false">
+          <h2>Look at me!</h2>
+          <p>I'm the second accordion</p>
+        </div>
+        <button id="trigger" class="button --width-fluid --solid-primary acc-button" type="button">Jam</button>
+        <div class="acc-content" data-acc-false="false">
+          <h2>Look at me!</h2>
+          <p>I'm the third accordion</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/modal.js"></script>
+  <script src="js/accordion.js"></script>
+  <script src="js/tooltip.js"></script>
+  <script>
+
+    var myContent = document.getElementById('content');
+
+    var myModal = new Modal({
+      content: myContent
+    });
+
+    var triggerButton = document.getElementById('trigger');
+
+    triggerButton.addEventListener('click', function() {
+      myModal.open();
+    });
+    var acc_group = document.querySelector('.acc-group');
+    var myAccordion = new Accordion('#veget_acc_group');
+    var myAnotherAccordion = new Accordion('#bread_acc_group',{ closeAll: true});
+  </script>
+</body>
+</html>
