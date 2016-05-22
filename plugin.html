@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- <div id='item' data-plugin-options='{"message":"Happy World!", "person": "Pizza"}'></div> -->
+  <div id='item' data-myplugin-message="Happy World!" data-myplugin-person="Jean"></div>
+
+  <!-- <input id="helloWorld" type="text" class="{text: 'Watermark Provided Here Instead of Plugin Argument', class: 'specialWatermarkClass'}" /> -->
+  <select id="month">
+    <option value="hide">Month</option>
+    <option value="january">January</option>
+    <option value="february">February</option>
+    <option value="march">March</option>
+    <option value="april">April</option>
+    <option value="may">May</option>
+    <option value="june">June</option>
+    <option value="july">July</option>
+    <option value="august">August</option>
+    <option value="september">September</option>
+    <option value="october">October</option>
+    <option value="november">November</option>
+    <option value="december">December</option>
+  </select>
+
+  <select id="footer">
+    <option value="hide">Link</option>
+    <option value="http://www.google.com">Google</option>
+    <option value="http://www.youtube.com">Youtube</option>
+    <option value="http://www.pinterest.com">Pinterest</option>
+  </select>
+
+  <select id="gender">
+    <option value="hide">Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+
+  <div class="select --outline-primary --mask">
+    <select>
+      <option value="">Link</option>
+      <option value="http://www.google.com">Google</option>
+      <option value="http://www.youtube.com">Youtube</option>
+      <option value="http://www.pinterest.com">Pinterest</option>
+    </select>
+  </div>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="js/jquery.message.js"></script>
+  <!--<script src="js/jquery.selectx.js"></script>-->
+  <script src="js/jquery.selectx.js"></script>
+  <script>
+  $(document).ready(function(){
+    //Set the message per instance:
+    $('#item').plugin({
+      mypluginMessage: 'Goodbye World!',
+      mypluginPerson: 'Peter'
+    });
+
+    $("#month").dropdown({
+      item: 'text',
+      theme: 'select --outline-secondary --select-radius'
+    });
+
+    $("#footer").dropdown({
+      item: 'external-link',
+      theme: 'select --outline-primary --select-round'
+    })
+
+    $("#gender").dropdown({
+      item: 'text',
+      theme: 'select --solid-primary'
+    });
+    // $('#helloWorld').watermark({text: 'Last Name'}).css({
+    //    'border-color': 'red'
+    // });
+    // var p = new Plugin(document.getElementById('item'), {
+    //   message: 'Goodbye World!'
+    // }).init();
+
+    //Or, set the global default message:
+    //Plugin.defaults.message = 'Goodbye World!';
+  });
+  </script>
+</body>

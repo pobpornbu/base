@@ -1,5 +1,58 @@
-$(function() {
+var $wind = $(window),
+    breakpoints = [320, 480, 550, 650, 720, 790, 1000, 1190],
+    currentBreakpoint = 0;
+    mobile = true;
 
+var mobileFunctions = function() {
+    console.log("The window is now mobile.");
+}
+
+var desktopFunctions = function() {
+    console.log("The window is now desktop.");
+}
+
+var breakpointHit = function(breakpoint) {
+    console.log("Breakpoint " + breakpoint + "px was hit!");
+    mobileCheck();
+}
+
+var mobileCheck = function() {
+
+    var window_w = $wind.width();
+
+    if ( window_w < 480 ) {
+        if ( mobile ) {
+            return;
+        } else {
+            mobileFunctions();
+            mobile = true;
+        }
+    } else {
+        if ( !mobile ) {
+            return;
+        } else {
+            desktopFunctions();
+            mobile = false;
+        }
+    }
+    
+};
+mobileCheck();
+
+$wind.resize(function() {
+    var i$, len$; window_w = $wind.width();
+    for (i$ = 0, len$ = breakpoints.length; i$ < len$; i$++) {
+        var testPoint = breakpoints[i$];
+        if (window_w < testPoint) {
+             if (testPoint == currentBreakpoint)
+                 break;
+             currentBreakpoint = testPoint;
+             breakpointHit(testPoint);
+             break;
+        }
+    }
+});
+$(function() {
     // Textarea
     autosize($('textarea'));
     $('.js-comment-textarea').on('focus', function() {

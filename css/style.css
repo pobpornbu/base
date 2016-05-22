@@ -3631,19 +3631,20 @@ button::-moz-focus-inner {
   visibility: hidden;
   padding-right: 10px;
 }
-.select__wrap {
+.select__wrap,
+.select.\--mask {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  width: 250px;
-  height: 34px;
+  width: 150px;
+  height: 28px;
 }
 .select-arrow:after {
   content: "";
   width: 0;
   height: 0;
   position: absolute;
-  top: 16px;
+  top: 11.5px;
   right: 10px;
   border: 5px solid transparent;
   border-color: #000000 transparent transparent transparent;
@@ -3651,7 +3652,7 @@ button::-moz-focus-inner {
 .select__selected {
   background-color: rgba(255, 255, 255, 0.2);
   color: #000000;
-  padding: 6px 10px;
+  padding: 4px 10px;
 }
 .select__selected:hover {
   background-color: rgba(255, 255, 255, 0.5);
@@ -3670,7 +3671,7 @@ button::-moz-focus-inner {
   width: 0;
   height: 0;
   position: absolute;
-  top: 16px;
+  top: 11.5px;
   right: 10px;
   border: 5px solid transparent;
   border-color: #000000 transparent transparent transparent;
@@ -3686,14 +3687,14 @@ button::-moz-focus-inner {
   padding: 0;
   list-style: none;
 }
-.select__option {
+.select__options li {
   margin: 0;
-  padding: 4px 10px;
+  padding: 6px 10px;
 }
-.select__option:hover {
+.select__options li:hover {
   color: #ffffff;
 }
-.select__option[rel="hide"] {
+.select__options li[rel="hide"] {
   display: none;
 }
 .subcategory__select {
@@ -3928,18 +3929,261 @@ button::-moz-focus-inner {
   left: -35px;
   right: auto;
 }
-.subcategory__select .select__option {
+.subcategory__select .select__options li {
   padding: 10px 10px;
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
-.select.\--outline-primary.\--mask {
-  position: relative;
+.select.\--select-round .select__wrap,
+.select.\--select-round .select__selected {
+  -webkit-border-radius: 14px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 14px;
+  -moz-background-clip: padding;
+  border-radius: 14px;
+  background-clip: padding-box;
 }
-.select.\--outline-primary.\--mask select {
+.select.\--select-round .select__selected {
+  -webkit-transition: initial;
+  -moz-transition: initial;
+  -o-transition: initial;
+  transition: initial;
+}
+.select.\--select-round .select__selected.active,
+.select.\--select-round .select__selected:active {
+  -webkit-border-radius: 14px 14px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 14px 14px 0 0;
+  -moz-background-clip: padding;
+  border-radius: 14px 14px 0 0;
+  background-clip: padding-box;
+}
+.select.\--select-round .select__options {
+  -webkit-border-radius: 0 0 14px 14px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0 14px 14px;
+  -moz-background-clip: padding;
+  border-radius: 0 0 14px 14px;
+  background-clip: padding-box;
+  margin: -3px 0 0 0;
+}
+.select.\--select-round .select__options li:last-child:hover {
+  -webkit-border-radius: 0 0 14px 14px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0 14px 14px;
+  -moz-background-clip: padding;
+  border-radius: 0 0 14px 14px;
+  background-clip: padding-box;
+}
+.select.\--select-radius .select__wrap,
+.select.\--select-radius .select__selected {
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+}
+.select.\--select-radius .select__selected {
+  -webkit-transition: initial;
+  -moz-transition: initial;
+  -o-transition: initial;
+  transition: initial;
+}
+.select.\--select-radius .select__selected.active,
+.select.\--select-radius .select__selected:active {
+  -webkit-border-radius: 4px 4px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px 4px 0 0;
+  -moz-background-clip: padding;
+  border-radius: 4px 4px 0 0;
+  background-clip: padding-box;
+}
+.select.\--select-radius .select__options {
+  -webkit-border-radius: 0 0 4px 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0 4px 4px;
+  -moz-background-clip: padding;
+  border-radius: 0 0 4px 4px;
+  background-clip: padding-box;
+  margin: -3px 0 0 0;
+}
+.select.\--select-radius .select__options li:last-child:hover {
+  -webkit-border-radius: 0 0 4px 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0 4px 4px;
+  -moz-background-clip: padding;
+  border-radius: 0 0 4px 4px;
+  background-clip: padding-box;
+}
+.select.\--solid-primary .select__selected {
+  border: 1px solid #52d2ca;
+  background-color: #52d2ca;
+  color: #ffffff;
+}
+.select.\--solid-primary .select__selected:hover {
+  border: 1px solid #75dbd5;
+}
+.select.\--solid-primary .select__selected:focus,
+.select.\--solid-primary .select__selected:active,
+.select.\--solid-primary .select__selected.active {
+  border: 1px solid #36bcb2;
+}
+.select.\--solid-primary .select__selected:disabled,
+.select.\--solid-primary .select__selected.disabled {
+  border: 1px solid #bcc0c4;
+}
+.select.\--solid-primary .select__selected:hover {
+  background-color: #75dbd5;
+}
+.select.\--solid-primary .select__selected:focus,
+.select.\--solid-primary .select__selected:active,
+.select.\--solid-primary .select__selected.active {
+  background-color: #36bcb2;
+}
+.select.\--solid-primary .select__selected:disabled,
+.select.\--solid-primary .select__selected.disabled {
+  background-color: #bcc0c4;
+}
+.select.\--solid-primary .select__selected:hover,
+.select.\--solid-primary .select__selected:focus,
+.select.\--solid-primary .select__selected:active,
+.select.\--solid-primary .select__selected.active,
+.select.\--solid-primary .select__selected:disabled,
+.select.\--solid-primary .select__selected.disabled {
+  color: #ffffff;
+}
+.select.\--solid-primary .select__options {
+  background-color: #52d2ca;
+}
+.select.\--solid-primary .select__options li:hover {
+  background: #75dbd5;
+}
+.select.\--outline-primary .select__selected {
+  border: 1px solid #92a6c2;
+  background-color: #ffffff;
+  color: #435979;
+}
+.select.\--outline-primary .select__selected:hover {
+  border: 1px solid #000000;
+}
+.select.\--outline-primary .select__selected:focus,
+.select.\--outline-primary .select__selected:active,
+.select.\--outline-primary .select__selected.active {
+  border: 1px solid #000000;
+}
+.select.\--outline-primary .select__selected:disabled,
+.select.\--outline-primary .select__selected.disabled {
+  border: 1px solid #92a6c2;
+}
+.select.\--outline-primary .select__selected:hover {
+  background-color: #ffffff;
+}
+.select.\--outline-primary .select__selected:focus,
+.select.\--outline-primary .select__selected:active,
+.select.\--outline-primary .select__selected.active {
+  background-color: #ffffff;
+}
+.select.\--outline-primary .select__selected:disabled,
+.select.\--outline-primary .select__selected.disabled {
+  background-color: #d4dce7;
+}
+.select.\--outline-primary .select__selected:hover {
+  color: #435979;
+}
+.select.\--outline-primary .select__selected:focus,
+.select.\--outline-primary .select__selected:active,
+.select.\--outline-primary .select__selected.active {
+  color: #435979;
+}
+.select.\--outline-primary .select__selected:disabled,
+.select.\--outline-primary .select__selected.disabled {
+  color: #92a6c2;
+}
+.select.\--outline-primary .select__selected.active + .select__options {
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+.select.\--outline-primary .select__options {
+  background-color: #ffffff;
+}
+.select.\--outline-primary .select__options li:hover {
+  background: #000000;
+  color: #ffffff;
+}
+.select.\--outline-secondary .select__selected {
+  -webkit-transition: initial;
+  -moz-transition: initial;
+  -o-transition: initial;
+  transition: initial;
+  border: 1px solid #92a6c2;
+  background-color: #ffffff;
+  color: #435979;
+}
+.select.\--outline-secondary .select__selected:hover {
+  border: 1px solid #92a6c2;
+}
+.select.\--outline-secondary .select__selected:focus,
+.select.\--outline-secondary .select__selected:active,
+.select.\--outline-secondary .select__selected.active {
+  border: 1px solid #92a6c2;
+}
+.select.\--outline-secondary .select__selected:disabled,
+.select.\--outline-secondary .select__selected.disabled {
+  border: 1px solid #92a6c2;
+}
+.select.\--outline-secondary .select__selected:hover {
+  background-color: #ffffff;
+}
+.select.\--outline-secondary .select__selected:focus,
+.select.\--outline-secondary .select__selected:active,
+.select.\--outline-secondary .select__selected.active {
+  background-color: #ffffff;
+}
+.select.\--outline-secondary .select__selected:disabled,
+.select.\--outline-secondary .select__selected.disabled {
+  background-color: #d4dce7;
+}
+.select.\--outline-secondary .select__selected:hover {
+  color: #435979;
+}
+.select.\--outline-secondary .select__selected:focus,
+.select.\--outline-secondary .select__selected:active,
+.select.\--outline-secondary .select__selected.active {
+  color: #435979;
+}
+.select.\--outline-secondary .select__selected:disabled,
+.select.\--outline-secondary .select__selected.disabled {
+  color: #92a6c2;
+}
+.select.\--outline-secondary .select__selected.active + .select__options {
+  border-left: 1px solid #92a6c2;
+  border-right: 1px solid #92a6c2;
+  border-bottom: 1px solid #92a6c2;
+}
+.select.\--outline-secondary .select__options {
+  background-color: #ffffff;
+}
+.select.\--outline-secondary .select__options li:hover {
+  background: #92a6c2;
+  color: #ffffff;
+}
+.select.\--mask:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 11.5px;
+  right: 10px;
+  border: 5px solid transparent;
+  border-color: #000000 transparent transparent transparent;
+}
+.select.\--mask select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  width: 150px;
   font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -3951,157 +4195,6 @@ button::-moz-focus-inner {
   border-radius: 1000px;
   background-clip: padding-box;
   padding: 4px 10px;
-  border: 1px solid #92a6c2;
-  background-color: #ffffff;
-  color: #435979;
-}
-.select.\--outline-primary.\--mask select:hover {
-  border: 1px solid #000000;
-}
-.select.\--outline-primary.\--mask select:focus,
-.select.\--outline-primary.\--mask select:active,
-.select.\--outline-primary.\--mask select.active {
-  border: 1px solid #000000;
-}
-.select.\--outline-primary.\--mask select:disabled,
-.select.\--outline-primary.\--mask select.disabled {
-  border: 1px solid #92a6c2;
-}
-.select.\--outline-primary.\--mask select:hover {
-  background-color: #ffffff;
-}
-.select.\--outline-primary.\--mask select:focus,
-.select.\--outline-primary.\--mask select:active,
-.select.\--outline-primary.\--mask select.active {
-  background-color: #ffffff;
-}
-.select.\--outline-primary.\--mask select:disabled,
-.select.\--outline-primary.\--mask select.disabled {
-  background-color: #d4dce7;
-}
-.select.\--outline-primary.\--mask select:hover {
-  color: #435979;
-}
-.select.\--outline-primary.\--mask select:focus,
-.select.\--outline-primary.\--mask select:active,
-.select.\--outline-primary.\--mask select.active {
-  color: #435979;
-}
-.select.\--outline-primary.\--mask select:disabled,
-.select.\--outline-primary.\--mask select.disabled {
-  color: #92a6c2;
-}
-.select.\--outline-primary.\--mask select:after {
-  content: "";
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 16px;
-  right: 10px;
-  border: 5px solid transparent;
-  border-color: #000000 transparent transparent transparent;
-}
-.select.\--outline-primary .select__wrap {
-  font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  -webkit-border-radius: 14px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 14px;
-  -moz-background-clip: padding;
-  border-radius: 14px;
-  background-clip: padding-box;
-  width: 100px;
-  height: 28px;
-}
-.select.\--outline-primary .select__selected {
-  -webkit-border-radius: 1000px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 1000px;
-  -moz-background-clip: padding;
-  border-radius: 1000px;
-  background-clip: padding-box;
-  padding: 3px 10px;
-  border: 1px solid #92a6c2;
-  background-color: #ffffff;
-  color: #435979;
-}
-.select.\--outline-primary .select__selected:hover {
-  border: 1px solid #000000;
-}
-.select.\--outline-primary .select__selected:focus,
-.select.\--outline-primary .select__selected:active,
-.select.\--outline-primary .select__selected.active {
-  border: 1px solid #000000;
-}
-.select.\--outline-primary .select__selected:disabled,
-.select.\--outline-primary .select__selected.disabled {
-  border: 1px solid #92a6c2;
-}
-.select.\--outline-primary .select__selected:hover {
-  background-color: #ffffff;
-}
-.select.\--outline-primary .select__selected:focus,
-.select.\--outline-primary .select__selected:active,
-.select.\--outline-primary .select__selected.active {
-  background-color: #ffffff;
-}
-.select.\--outline-primary .select__selected:disabled,
-.select.\--outline-primary .select__selected.disabled {
-  background-color: #d4dce7;
-}
-.select.\--outline-primary .select__selected:hover {
-  color: #435979;
-}
-.select.\--outline-primary .select__selected:focus,
-.select.\--outline-primary .select__selected:active,
-.select.\--outline-primary .select__selected.active {
-  color: #435979;
-}
-.select.\--outline-primary .select__selected:disabled,
-.select.\--outline-primary .select__selected.disabled {
-  color: #92a6c2;
-}
-.select.\--outline-primary .select__selected.active {
-  -webkit-border-radius: 14px 14px 0 0;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 14px 14px 0 0;
-  -moz-background-clip: padding;
-  border-radius: 14px 14px 0 0;
-  background-clip: padding-box;
-}
-.select.\--outline-primary .select__selected:after {
-  top: 12px;
-}
-.select.\--outline-primary .select__selected + .select__options {
-  border-left: 1px solid #000000;
-  border-right: 1px solid #000000;
-  border-bottom: 1px solid #000000;
-}
-.select.\--outline-primary .select__options {
-  background-color: #ffffff;
-  -webkit-border-radius: 0 0 14px 14px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 0 0 14px 14px;
-  -moz-background-clip: padding;
-  border-radius: 0 0 14px 14px;
-  background-clip: padding-box;
-}
-.select.\--outline-primary .select__option {
-  padding: 3px 10px;
-}
-.select.\--outline-primary .select__option:hover {
-  background: #000000;
-  color: #ffffff;
-}
-.select.\--outline-primary .select__option:last-child:hover {
-  -webkit-border-radius: 0 0 14px 14px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 0 0 14px 14px;
-  -moz-background-clip: padding;
-  border-radius: 0 0 14px 14px;
-  background-clip: padding-box;
 }
 .i-select-primary .select__wrap {
   border: 1px solid #d3d5d8;
@@ -4154,116 +4247,6 @@ button::-moz-focus-inner {
 .i-select-primary .select__wrap:disabled,
 .i-select-primary .select__wrap.disabled {
   color: #bcc0c4;
-}
-.select.\--outline-secondary .select__wrap {
-  font-family: 'psl_kanda', Arial, sans-serif;
-  letter-spacing: 1px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #718bb0;
-  -webkit-border-radius: 8px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 8px;
-  -moz-background-clip: padding;
-  border-radius: 8px;
-  background-clip: padding-box;
-}
-.select.\--outline-secondary .select__selected {
-  -webkit-border-radius: 3px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 3px;
-  -moz-background-clip: padding;
-  border-radius: 3px;
-  background-clip: padding-box;
-  padding: 6px 10px;
-  -webkit-transition: initial;
-  -moz-transition: initial;
-  -o-transition: initial;
-  transition: initial;
-  border: 1px solid #92a6c2;
-  background-color: #ffffff;
-  color: #435979;
-}
-.select.\--outline-secondary .select__selected:hover {
-  border: 1px solid #000000;
-}
-.select.\--outline-secondary .select__selected:focus,
-.select.\--outline-secondary .select__selected:active,
-.select.\--outline-secondary .select__selected.active {
-  border: 1px solid #000000;
-}
-.select.\--outline-secondary .select__selected:disabled,
-.select.\--outline-secondary .select__selected.disabled {
-  border: 1px solid #92a6c2;
-}
-.select.\--outline-secondary .select__selected:hover {
-  background-color: #ffffff;
-}
-.select.\--outline-secondary .select__selected:focus,
-.select.\--outline-secondary .select__selected:active,
-.select.\--outline-secondary .select__selected.active {
-  background-color: #ffffff;
-}
-.select.\--outline-secondary .select__selected:disabled,
-.select.\--outline-secondary .select__selected.disabled {
-  background-color: #d4dce7;
-}
-.select.\--outline-secondary .select__selected:hover {
-  color: #435979;
-}
-.select.\--outline-secondary .select__selected:focus,
-.select.\--outline-secondary .select__selected:active,
-.select.\--outline-secondary .select__selected.active {
-  color: #435979;
-}
-.select.\--outline-secondary .select__selected:disabled,
-.select.\--outline-secondary .select__selected.disabled {
-  color: #92a6c2;
-}
-.select.\--outline-secondary .select__selected.active,
-.select.\--outline-secondary .select__selected:active {
-  -webkit-border-radius: 8px 8px 0 0;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 8px 8px 0 0;
-  -moz-background-clip: padding;
-  border-radius: 8px 8px 0 0;
-  background-clip: padding-box;
-}
-.select.\--outline-secondary .select__selected.active:after,
-.select.\--outline-secondary .select__selected:active:after {
-  top: 10px;
-}
-.select.\--outline-secondary .select__selected:after {
-  top: 14px;
-}
-.select.\--outline-secondary .select__selected + .select__options {
-  border-left: 1px solid #000000;
-  border-right: 1px solid #000000;
-  border-bottom: 1px solid #000000;
-}
-.select.\--outline-secondary .select__options {
-  background-color: #ffffff;
-  -webkit-border-radius: 0 0 8px 8px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 0 0 8px 8px;
-  -moz-background-clip: padding;
-  border-radius: 0 0 8px 8px;
-  background-clip: padding-box;
-}
-.select.\--outline-secondary .select__option {
-  padding: 3px 10px;
-}
-.select.\--outline-secondary .select__option:hover {
-  background: #000000;
-  color: #ffffff;
-}
-.select.\--outline-secondary .select__option:last-child:hover {
-  -webkit-border-radius: 0 0 8px 8px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 0 0 8px 8px;
-  -moz-background-clip: padding;
-  border-radius: 0 0 8px 8px;
-  background-clip: padding-box;
 }
 .tab-no-style {
   border: none;
