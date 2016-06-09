@@ -42,9 +42,6 @@ BaselineApp.config(['$routeProvider',
       when('/list', {
         templateUrl: 'partials/list.html'
       }).
-      when('/shape', {
-        templateUrl: 'partials/shape.html'
-      }).
       when('/theme', {
         templateUrl: 'partials/theme.html'
       }).

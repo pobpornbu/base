@@ -1,3 +1,6 @@
+@import 'lib/lesshat';
+@import 'base/variables';
+
 // .wrap-clip {
 //   padding-left: 60px;
 // }
@@ -259,3 +262,41 @@
     margin: 0 5px;
   }
 }
+
+// <div class="bin">
+//   <div class="bin-top"></div>
+// </div>
+
+.bin {
+  float: right; position: relative; width: 220px; height: 230px; margin: 50px 8% 0 0;
+  background-color: rgb(217, 221, 223); border-top: 20px solid rgba(188, 188, 188, 0.5);
+  transition: background-color 0.3s;
+  @media screen and (min-width: 48em){
+    margin: 50px 15px 0 0;
+  }
+  &:before, &:after {
+    content: ''; display: block; width: 10px; height: 60%; background-color: rgba(188, 188, 188, 0.53);
+    position: absolute; top: 35px; }
+  &:before { left: 30px; }
+  &:after { right: 30px; }
+}
+    .bin-top {
+      width: 270px; height: 15px;
+      position: absolute; top: -25px; left: 50%; margin-left: -135px;
+      background-color: rgb(217, 221, 223);
+      .transform(rotate(0deg));
+      .transform-origin(100% 50%);
+      .transition(transform .5s ease-out);
+
+      &:after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 35px;
+        border: 10px solid rgb(217, 221, 223);
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        margin-left: -30px;
+      }
+    }
