@@ -22,6 +22,45 @@
   float: none;
 }
 
+// Layout
+
+.fl10 {
+  float: left;
+  margin-right: 10px;
+}
+
+// Ele Width
+
+.\--width-fluid {
+  width: 100%;
+  display: block;
+}
+.\--max-width {
+  max-width: 100%;
+}
+
+// Visible - Hidden
+.is-none {
+  display: none;
+}
+.is-block {
+  display: block;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.is-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+
 .page-full-width {
   position: absolute; top: 0; bottom: 0; left: 0; right: 0;
 }
@@ -69,76 +108,4 @@
 .page-content-wrap {
   padding: 30px 0;
   text-align: center;
-}
-
-.fl10 {
-  float: left;
-  margin-right: 10px;
-}
-.\--width-fluid {
-  width: 100%;
-  display: block;
-}
-.gap-top-xs {
-  .gap(top, xs);
-}
-.gap-top-sm {
-  .gap(top, sm);
-}
-.gap-top-md {
-  .gap(top, md);
-}
-.gap-top-lg {
-  .gap(top, lg);
-}
-.gap-top-row {
-  .gap(top, row);
-}
-
-.gap-bottom-xs {
- .gap(bottom, xs);
-}
-.gap-bottom-sm {
- .gap(bottom, sm);
-}
-.gap-bottom-md {
- .gap(bottom, md);
-}
-.gap-bottom-lg {
- .gap(bottom, lg);
-}
-.gap-bottom-row {
- .gap(bottom, row);
-}
-
-.gap-v-xs {
- .gap(v, xs);
-}
-.gap-v-sm {
- .gap(v, sm);
-}
-.gap-v-md {
- .gap(v, md);
-}
-.gap-v-lg {
- .gap(v, lg);
-}
-.gap-v-row {
- .gap(v, row);
-}
-
-.gap-h-xs {
- .gap(h, xs);
-}
-.gap-h-sm {
- .gap(h, sm);
-}
-.gap-h-md {
- .gap(h, md);
-}
-.gap-h-lg {
- .gap(h, lg);
-}
-.gap-h-row {
- .gap(h, row);
 }

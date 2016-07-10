@@ -183,7 +183,7 @@ button::-moz-focus-inner {
   });
 });
 
-.share-icon {
+.container-icon {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -297,4 +297,21 @@ button::-moz-focus-inner {
 .starrating > span:hover:before,
 .starrating > span:hover ~ span:before {
    color: gold;
+}
+
+// <a class="js-back-to-top bs-back-to-top container-icon" href="#top" title="Back to top">
+//   <i class="ion-chevron-up"></i>
+// </a>
+
+.js-back-to-top.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.js-back-to-top.is-fade-out {
+  opacity: 0.5;
+}
+.js-back-to-top {
+  &:hover {
+    opacity: 1;
+  }
 }
