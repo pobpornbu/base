@@ -1,0 +1,28 @@
+.bg-img {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  .tablet-up ({
+    background-size: cover;
+  });
+}
+.bg-under-txt {
+  .tablet-up ({
+    margin-top: -@menu-height;
+  });
+}
+
+.bg-img-1 {
+  background-image: url(../images/sample11.jpg);
+}
+
+// hilight text
+.jumbotron {
+  background-color: #3a5a79;
+  h2 {
+    .font-size-multiply(@font-size-hilight, 1, @breakpoint, 14);
+  }
+  p {
+    .font-size-multiply(@font-size-content, 1, @breakpoint, 2);
+  }
+}

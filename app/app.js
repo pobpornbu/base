@@ -12,6 +12,9 @@ BaselineApp.config(['$routeProvider',
       when('/', {
         templateUrl: 'partials/home.html'
       }).
+      when('/about', {
+        templateUrl: 'partials/about.html'
+      }).
       when('/form', {
         templateUrl: 'partials/form.html'
       }).
