@@ -35,7 +35,7 @@ var mobileCheck = function() {
             mobile = false;
         }
     }
-    
+
 };
 mobileCheck();
 
@@ -96,11 +96,11 @@ $(function() {
             functionAfter: function(){
               $(this).removeClass('active');
             }
-                
+
         }).click(function(e){e.preventDefault();});
         // }
     });
-    
+
     $(".js-content-scroll").mCustomScrollbar({
       theme:"minimal-dark"
     });
@@ -119,7 +119,7 @@ $(function() {
     $('.menu__icon').click(function(){
         $(this).toggleClass('open');
     });
-      
+
 });
 
     $('.js-tab-list').each(function(){
@@ -152,7 +152,7 @@ $(function() {
                 var getLink             = $(this).data('href'); //get attr data-href for open link
                 if(getLink){
                     window.location.href = getLink;
-                }       
+                }
             });
         }*/
     });
@@ -163,4 +163,22 @@ function printImg() {
     popup.document.write("<img src='images/map.png' />");
     popup.print();
 }
+
+// <footer>
+//     <a class="scroll-top ion-chevron-up" href="#top" title="Back to top"></a>
+// </footer>
+
+window.addEventListener('hashchange', function () {
+    if (location.hash === '#top') {
+        console.log('back to top');
+        if ("pushState" in history) {
+            console.log('pushState');
+              history.pushState("", document.title, location.pathname + location.search);
+        }
+        else {
+            console.log('empty');
+          location.hash = '';
+        }
+    }
+});
 

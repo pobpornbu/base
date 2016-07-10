@@ -1688,6 +1688,32 @@ mark {
   text-shadow: 2px 0 1px #ffffff, -2px 0 1px #ffffff, 0 2px 1px #ffffff, 0 -2px 1px #ffffff, 2px 1px #ffffff, -2px -2px 1px #ffffff, 2px -2px 1px #ffffff, -2px 2px 1px #ffffff, 0 0 55px #3c3c3c;
   color: #000000;
 }
+.content.\--meta-category:before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+  margin-right: 7px;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+}
+.content.\--meta-category.entertainment:before {
+  background-color: #00ccff;
+}
+.content.\--meta-category.sport:before {
+  background-color: #0078ff;
+}
+.content.\--meta-category.politics:before {
+  background-color: #ff00c0;
+}
+.content.\--meta-category.crime:before {
+  background-color: #ff6600;
+}
 .header__wrap--bt1 {
   border-top-width: 3px;
   border-top-style: solid;
@@ -1853,7 +1879,6 @@ mark {
   width: 100%;
   padding: 10px;
   background-color: #d4dce7;
-  text-align: center;
 }
 .footer p {
   margin: 0;
@@ -2260,6 +2285,25 @@ input[type="search"]::-webkit-search-results-decoration {
 .input.\--primary:disabled,
 .input.\--primary.disabled {
   color: #bcc0c4;
+}
+.newsletter .form-control,
+.newsletter .btn {
+  border-radius: 0;
+  border: none;
+}
+.newsletter .form-control {
+  height: 40px;
+  padding: 10px 15px;
+}
+.newsletter .input-group-btn,
+.newsletter .btn-default {
+  background-color: #c7c7c7;
+  border-left: 1px solid #c7c7c7;
+}
+.newsletter .btn-default {
+  width: 60px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .no-textarea-style {
   border: 1px solid rgba(255, 255, 255, 0);
@@ -3007,7 +3051,7 @@ button::-moz-focus-inner {
   display: inline-block;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 14px;
   padding: 6px 20px;
 }
 .button:focus {
@@ -3631,19 +3675,20 @@ button::-moz-focus-inner {
   visibility: hidden;
   padding-right: 10px;
 }
-.select__wrap {
+.select__wrap,
+.select.\--mask {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  width: 250px;
-  height: 34px;
+  width: 150px;
+  height: 28px;
 }
 .select-arrow:after {
   content: "";
   width: 0;
   height: 0;
   position: absolute;
-  top: 16px;
+  top: 11.5px;
   right: 10px;
   border: 5px solid transparent;
   border-color: #000000 transparent transparent transparent;
@@ -3651,7 +3696,7 @@ button::-moz-focus-inner {
 .select__selected {
   background-color: rgba(255, 255, 255, 0.2);
   color: #000000;
-  padding: 6px 10px;
+  padding: 4px 10px;
 }
 .select__selected:hover {
   background-color: rgba(255, 255, 255, 0.5);
@@ -3670,7 +3715,7 @@ button::-moz-focus-inner {
   width: 0;
   height: 0;
   position: absolute;
-  top: 16px;
+  top: 11.5px;
   right: 10px;
   border: 5px solid transparent;
   border-color: #000000 transparent transparent transparent;
@@ -3686,14 +3731,14 @@ button::-moz-focus-inner {
   padding: 0;
   list-style: none;
 }
-.select__option {
+.select__options li {
   margin: 0;
-  padding: 4px 10px;
+  padding: 6px 10px;
 }
-.select__option:hover {
+.select__options li:hover {
   color: #ffffff;
 }
-.select__option[rel="hide"] {
+.select__options li[rel="hide"] {
   display: none;
 }
 .subcategory__select {
@@ -3928,18 +3973,261 @@ button::-moz-focus-inner {
   left: -35px;
   right: auto;
 }
-.subcategory__select .select__option {
+.subcategory__select .select__options li {
   padding: 10px 10px;
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
-.select.\--outline-primary.\--mask {
-  position: relative;
+.select.\--select-round .select__wrap,
+.select.\--select-round .select__selected {
+  -webkit-border-radius: 14px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 14px;
+  -moz-background-clip: padding;
+  border-radius: 14px;
+  background-clip: padding-box;
 }
-.select.\--outline-primary.\--mask select {
+.select.\--select-round .select__selected {
+  -webkit-transition: initial;
+  -moz-transition: initial;
+  -o-transition: initial;
+  transition: initial;
+}
+.select.\--select-round .select__selected.active,
+.select.\--select-round .select__selected:active {
+  -webkit-border-radius: 14px 14px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 14px 14px 0 0;
+  -moz-background-clip: padding;
+  border-radius: 14px 14px 0 0;
+  background-clip: padding-box;
+}
+.select.\--select-round .select__options {
+  -webkit-border-radius: 0 0 14px 14px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0 14px 14px;
+  -moz-background-clip: padding;
+  border-radius: 0 0 14px 14px;
+  background-clip: padding-box;
+  margin: -3px 0 0 0;
+}
+.select.\--select-round .select__options li:last-child:hover {
+  -webkit-border-radius: 0 0 14px 14px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0 14px 14px;
+  -moz-background-clip: padding;
+  border-radius: 0 0 14px 14px;
+  background-clip: padding-box;
+}
+.select.\--select-radius .select__wrap,
+.select.\--select-radius .select__selected {
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+}
+.select.\--select-radius .select__selected {
+  -webkit-transition: initial;
+  -moz-transition: initial;
+  -o-transition: initial;
+  transition: initial;
+}
+.select.\--select-radius .select__selected.active,
+.select.\--select-radius .select__selected:active {
+  -webkit-border-radius: 4px 4px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px 4px 0 0;
+  -moz-background-clip: padding;
+  border-radius: 4px 4px 0 0;
+  background-clip: padding-box;
+}
+.select.\--select-radius .select__options {
+  -webkit-border-radius: 0 0 4px 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0 4px 4px;
+  -moz-background-clip: padding;
+  border-radius: 0 0 4px 4px;
+  background-clip: padding-box;
+  margin: -3px 0 0 0;
+}
+.select.\--select-radius .select__options li:last-child:hover {
+  -webkit-border-radius: 0 0 4px 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0 4px 4px;
+  -moz-background-clip: padding;
+  border-radius: 0 0 4px 4px;
+  background-clip: padding-box;
+}
+.select.\--solid-primary .select__selected {
+  border: 1px solid #52d2ca;
+  background-color: #52d2ca;
+  color: #ffffff;
+}
+.select.\--solid-primary .select__selected:hover {
+  border: 1px solid #75dbd5;
+}
+.select.\--solid-primary .select__selected:focus,
+.select.\--solid-primary .select__selected:active,
+.select.\--solid-primary .select__selected.active {
+  border: 1px solid #36bcb2;
+}
+.select.\--solid-primary .select__selected:disabled,
+.select.\--solid-primary .select__selected.disabled {
+  border: 1px solid #bcc0c4;
+}
+.select.\--solid-primary .select__selected:hover {
+  background-color: #75dbd5;
+}
+.select.\--solid-primary .select__selected:focus,
+.select.\--solid-primary .select__selected:active,
+.select.\--solid-primary .select__selected.active {
+  background-color: #36bcb2;
+}
+.select.\--solid-primary .select__selected:disabled,
+.select.\--solid-primary .select__selected.disabled {
+  background-color: #bcc0c4;
+}
+.select.\--solid-primary .select__selected:hover,
+.select.\--solid-primary .select__selected:focus,
+.select.\--solid-primary .select__selected:active,
+.select.\--solid-primary .select__selected.active,
+.select.\--solid-primary .select__selected:disabled,
+.select.\--solid-primary .select__selected.disabled {
+  color: #ffffff;
+}
+.select.\--solid-primary .select__options {
+  background-color: #52d2ca;
+}
+.select.\--solid-primary .select__options li:hover {
+  background: #75dbd5;
+}
+.select.\--outline-primary .select__selected {
+  border: 1px solid #92a6c2;
+  background-color: #ffffff;
+  color: #435979;
+}
+.select.\--outline-primary .select__selected:hover {
+  border: 1px solid #000000;
+}
+.select.\--outline-primary .select__selected:focus,
+.select.\--outline-primary .select__selected:active,
+.select.\--outline-primary .select__selected.active {
+  border: 1px solid #000000;
+}
+.select.\--outline-primary .select__selected:disabled,
+.select.\--outline-primary .select__selected.disabled {
+  border: 1px solid #92a6c2;
+}
+.select.\--outline-primary .select__selected:hover {
+  background-color: #ffffff;
+}
+.select.\--outline-primary .select__selected:focus,
+.select.\--outline-primary .select__selected:active,
+.select.\--outline-primary .select__selected.active {
+  background-color: #ffffff;
+}
+.select.\--outline-primary .select__selected:disabled,
+.select.\--outline-primary .select__selected.disabled {
+  background-color: #d4dce7;
+}
+.select.\--outline-primary .select__selected:hover {
+  color: #435979;
+}
+.select.\--outline-primary .select__selected:focus,
+.select.\--outline-primary .select__selected:active,
+.select.\--outline-primary .select__selected.active {
+  color: #435979;
+}
+.select.\--outline-primary .select__selected:disabled,
+.select.\--outline-primary .select__selected.disabled {
+  color: #92a6c2;
+}
+.select.\--outline-primary .select__selected.active + .select__options {
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+.select.\--outline-primary .select__options {
+  background-color: #ffffff;
+}
+.select.\--outline-primary .select__options li:hover {
+  background: #000000;
+  color: #ffffff;
+}
+.select.\--outline-secondary .select__selected {
+  -webkit-transition: initial;
+  -moz-transition: initial;
+  -o-transition: initial;
+  transition: initial;
+  border: 1px solid #92a6c2;
+  background-color: #ffffff;
+  color: #435979;
+}
+.select.\--outline-secondary .select__selected:hover {
+  border: 1px solid #92a6c2;
+}
+.select.\--outline-secondary .select__selected:focus,
+.select.\--outline-secondary .select__selected:active,
+.select.\--outline-secondary .select__selected.active {
+  border: 1px solid #92a6c2;
+}
+.select.\--outline-secondary .select__selected:disabled,
+.select.\--outline-secondary .select__selected.disabled {
+  border: 1px solid #92a6c2;
+}
+.select.\--outline-secondary .select__selected:hover {
+  background-color: #ffffff;
+}
+.select.\--outline-secondary .select__selected:focus,
+.select.\--outline-secondary .select__selected:active,
+.select.\--outline-secondary .select__selected.active {
+  background-color: #ffffff;
+}
+.select.\--outline-secondary .select__selected:disabled,
+.select.\--outline-secondary .select__selected.disabled {
+  background-color: #d4dce7;
+}
+.select.\--outline-secondary .select__selected:hover {
+  color: #435979;
+}
+.select.\--outline-secondary .select__selected:focus,
+.select.\--outline-secondary .select__selected:active,
+.select.\--outline-secondary .select__selected.active {
+  color: #435979;
+}
+.select.\--outline-secondary .select__selected:disabled,
+.select.\--outline-secondary .select__selected.disabled {
+  color: #92a6c2;
+}
+.select.\--outline-secondary .select__selected.active + .select__options {
+  border-left: 1px solid #92a6c2;
+  border-right: 1px solid #92a6c2;
+  border-bottom: 1px solid #92a6c2;
+}
+.select.\--outline-secondary .select__options {
+  background-color: #ffffff;
+}
+.select.\--outline-secondary .select__options li:hover {
+  background: #92a6c2;
+  color: #ffffff;
+}
+.select.\--mask:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 11.5px;
+  right: 10px;
+  border: 5px solid transparent;
+  border-color: #000000 transparent transparent transparent;
+}
+.select.\--mask select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  width: 150px;
   font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -3951,157 +4239,6 @@ button::-moz-focus-inner {
   border-radius: 1000px;
   background-clip: padding-box;
   padding: 4px 10px;
-  border: 1px solid #92a6c2;
-  background-color: #ffffff;
-  color: #435979;
-}
-.select.\--outline-primary.\--mask select:hover {
-  border: 1px solid #000000;
-}
-.select.\--outline-primary.\--mask select:focus,
-.select.\--outline-primary.\--mask select:active,
-.select.\--outline-primary.\--mask select.active {
-  border: 1px solid #000000;
-}
-.select.\--outline-primary.\--mask select:disabled,
-.select.\--outline-primary.\--mask select.disabled {
-  border: 1px solid #92a6c2;
-}
-.select.\--outline-primary.\--mask select:hover {
-  background-color: #ffffff;
-}
-.select.\--outline-primary.\--mask select:focus,
-.select.\--outline-primary.\--mask select:active,
-.select.\--outline-primary.\--mask select.active {
-  background-color: #ffffff;
-}
-.select.\--outline-primary.\--mask select:disabled,
-.select.\--outline-primary.\--mask select.disabled {
-  background-color: #d4dce7;
-}
-.select.\--outline-primary.\--mask select:hover {
-  color: #435979;
-}
-.select.\--outline-primary.\--mask select:focus,
-.select.\--outline-primary.\--mask select:active,
-.select.\--outline-primary.\--mask select.active {
-  color: #435979;
-}
-.select.\--outline-primary.\--mask select:disabled,
-.select.\--outline-primary.\--mask select.disabled {
-  color: #92a6c2;
-}
-.select.\--outline-primary.\--mask select:after {
-  content: "";
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 16px;
-  right: 10px;
-  border: 5px solid transparent;
-  border-color: #000000 transparent transparent transparent;
-}
-.select.\--outline-primary .select__wrap {
-  font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  -webkit-border-radius: 14px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 14px;
-  -moz-background-clip: padding;
-  border-radius: 14px;
-  background-clip: padding-box;
-  width: 100px;
-  height: 28px;
-}
-.select.\--outline-primary .select__selected {
-  -webkit-border-radius: 1000px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 1000px;
-  -moz-background-clip: padding;
-  border-radius: 1000px;
-  background-clip: padding-box;
-  padding: 3px 10px;
-  border: 1px solid #92a6c2;
-  background-color: #ffffff;
-  color: #435979;
-}
-.select.\--outline-primary .select__selected:hover {
-  border: 1px solid #000000;
-}
-.select.\--outline-primary .select__selected:focus,
-.select.\--outline-primary .select__selected:active,
-.select.\--outline-primary .select__selected.active {
-  border: 1px solid #000000;
-}
-.select.\--outline-primary .select__selected:disabled,
-.select.\--outline-primary .select__selected.disabled {
-  border: 1px solid #92a6c2;
-}
-.select.\--outline-primary .select__selected:hover {
-  background-color: #ffffff;
-}
-.select.\--outline-primary .select__selected:focus,
-.select.\--outline-primary .select__selected:active,
-.select.\--outline-primary .select__selected.active {
-  background-color: #ffffff;
-}
-.select.\--outline-primary .select__selected:disabled,
-.select.\--outline-primary .select__selected.disabled {
-  background-color: #d4dce7;
-}
-.select.\--outline-primary .select__selected:hover {
-  color: #435979;
-}
-.select.\--outline-primary .select__selected:focus,
-.select.\--outline-primary .select__selected:active,
-.select.\--outline-primary .select__selected.active {
-  color: #435979;
-}
-.select.\--outline-primary .select__selected:disabled,
-.select.\--outline-primary .select__selected.disabled {
-  color: #92a6c2;
-}
-.select.\--outline-primary .select__selected.active {
-  -webkit-border-radius: 14px 14px 0 0;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 14px 14px 0 0;
-  -moz-background-clip: padding;
-  border-radius: 14px 14px 0 0;
-  background-clip: padding-box;
-}
-.select.\--outline-primary .select__selected:after {
-  top: 12px;
-}
-.select.\--outline-primary .select__selected + .select__options {
-  border-left: 1px solid #000000;
-  border-right: 1px solid #000000;
-  border-bottom: 1px solid #000000;
-}
-.select.\--outline-primary .select__options {
-  background-color: #ffffff;
-  -webkit-border-radius: 0 0 14px 14px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 0 0 14px 14px;
-  -moz-background-clip: padding;
-  border-radius: 0 0 14px 14px;
-  background-clip: padding-box;
-}
-.select.\--outline-primary .select__option {
-  padding: 3px 10px;
-}
-.select.\--outline-primary .select__option:hover {
-  background: #000000;
-  color: #ffffff;
-}
-.select.\--outline-primary .select__option:last-child:hover {
-  -webkit-border-radius: 0 0 14px 14px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 0 0 14px 14px;
-  -moz-background-clip: padding;
-  border-radius: 0 0 14px 14px;
-  background-clip: padding-box;
 }
 .i-select-primary .select__wrap {
   border: 1px solid #d3d5d8;
@@ -4154,116 +4291,6 @@ button::-moz-focus-inner {
 .i-select-primary .select__wrap:disabled,
 .i-select-primary .select__wrap.disabled {
   color: #bcc0c4;
-}
-.select.\--outline-secondary .select__wrap {
-  font-family: 'psl_kanda', Arial, sans-serif;
-  letter-spacing: 1px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #718bb0;
-  -webkit-border-radius: 8px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 8px;
-  -moz-background-clip: padding;
-  border-radius: 8px;
-  background-clip: padding-box;
-}
-.select.\--outline-secondary .select__selected {
-  -webkit-border-radius: 3px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 3px;
-  -moz-background-clip: padding;
-  border-radius: 3px;
-  background-clip: padding-box;
-  padding: 6px 10px;
-  -webkit-transition: initial;
-  -moz-transition: initial;
-  -o-transition: initial;
-  transition: initial;
-  border: 1px solid #92a6c2;
-  background-color: #ffffff;
-  color: #435979;
-}
-.select.\--outline-secondary .select__selected:hover {
-  border: 1px solid #000000;
-}
-.select.\--outline-secondary .select__selected:focus,
-.select.\--outline-secondary .select__selected:active,
-.select.\--outline-secondary .select__selected.active {
-  border: 1px solid #000000;
-}
-.select.\--outline-secondary .select__selected:disabled,
-.select.\--outline-secondary .select__selected.disabled {
-  border: 1px solid #92a6c2;
-}
-.select.\--outline-secondary .select__selected:hover {
-  background-color: #ffffff;
-}
-.select.\--outline-secondary .select__selected:focus,
-.select.\--outline-secondary .select__selected:active,
-.select.\--outline-secondary .select__selected.active {
-  background-color: #ffffff;
-}
-.select.\--outline-secondary .select__selected:disabled,
-.select.\--outline-secondary .select__selected.disabled {
-  background-color: #d4dce7;
-}
-.select.\--outline-secondary .select__selected:hover {
-  color: #435979;
-}
-.select.\--outline-secondary .select__selected:focus,
-.select.\--outline-secondary .select__selected:active,
-.select.\--outline-secondary .select__selected.active {
-  color: #435979;
-}
-.select.\--outline-secondary .select__selected:disabled,
-.select.\--outline-secondary .select__selected.disabled {
-  color: #92a6c2;
-}
-.select.\--outline-secondary .select__selected.active,
-.select.\--outline-secondary .select__selected:active {
-  -webkit-border-radius: 8px 8px 0 0;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 8px 8px 0 0;
-  -moz-background-clip: padding;
-  border-radius: 8px 8px 0 0;
-  background-clip: padding-box;
-}
-.select.\--outline-secondary .select__selected.active:after,
-.select.\--outline-secondary .select__selected:active:after {
-  top: 10px;
-}
-.select.\--outline-secondary .select__selected:after {
-  top: 14px;
-}
-.select.\--outline-secondary .select__selected + .select__options {
-  border-left: 1px solid #000000;
-  border-right: 1px solid #000000;
-  border-bottom: 1px solid #000000;
-}
-.select.\--outline-secondary .select__options {
-  background-color: #ffffff;
-  -webkit-border-radius: 0 0 8px 8px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 0 0 8px 8px;
-  -moz-background-clip: padding;
-  border-radius: 0 0 8px 8px;
-  background-clip: padding-box;
-}
-.select.\--outline-secondary .select__option {
-  padding: 3px 10px;
-}
-.select.\--outline-secondary .select__option:hover {
-  background: #000000;
-  color: #ffffff;
-}
-.select.\--outline-secondary .select__option:last-child:hover {
-  -webkit-border-radius: 0 0 8px 8px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 0 0 8px 8px;
-  -moz-background-clip: padding;
-  border-radius: 0 0 8px 8px;
-  background-clip: padding-box;
 }
 .tab-no-style {
   border: none;
@@ -5466,159 +5493,6 @@ lesshat-selector {
   top: 27px;
   left: 0;
   display: none;
-}
-.arrow-down {
-  width: 0;
-  height: 0;
-  border-top: 12.5px solid #36bcb2;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-}
-.arrow-up {
-  width: 0;
-  height: 0;
-  border-bottom: 12.5px solid #36bcb2;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-}
-.arrow-left {
-  width: 0;
-  height: 0;
-  border-right: 12.5px solid #36bcb2;
-  border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent;
-}
-.arrow-right {
-  width: 0;
-  height: 0;
-  border-left: 12.5px solid #36bcb2;
-  border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent;
-}
-.trian-res-down {
-  width: 50%;
-  height: 0;
-  padding-left: 25%;
-  padding-top: 25%;
-  overflow: hidden;
-}
-.trian-res-down div {
-  width: 0;
-  height: 0;
-  border-top: 50px solid #000000;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  margin-top: -100px;
-  margin-left: -100px;
-}
-/* Chrome solution, will display as a square in Firefox */
-.gon {
-  width: 126px;
-  height: 126px;
-  background: url('http://i.imgur.com/IEiqEV0.jpg') no-repeat 50% 50%;
-  background-size: 126px 126px;
-  /* Text styling */
-  line-height: 126px;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 6px;
-  color: #fff;
-  color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: color 500ms ease, text-shadow 500ms ease;
-}
-.gon:hover {
-  color: #fff;
-  text-shadow: 0 0 10px white;
-}
-.hexa {
-  width: 126px;
-  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  -moz-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  -ms-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-}
-/* Firefox solution, will not display in Chrome */
-.firefox-block {
-  position: absolute;
-  margin: 10px;
-  overflow: hidden;
-}
-.firefox-block div {
-  position: relative;
-}
-#clip3 {
-  -webkit-clip-path: url("#absolute_path");
-  -moz-clip-path: url("#absolute_path");
-  -o-clip-path: url("#absolute_path");
-  clip-path: url("#absolute_path");
-}
-.tree {
-  display: block;
-  position: relative;
-  width: 126px;
-  height: 180px;
-  background-color: green;
-  -webkit-border-top-left-radius: 50% 60%;
-  -moz-border-radius-topleft: 50% 60%;
-  border-top-left-radius: 50% 60%;
-  -webkit-border-top-right-radius: 50% 60%;
-  -moz-border-radius-topright: 50% 60%;
-  border-top-right-radius: 50% 60%;
-  -webkit-border-bottom-right-radius: 50% 35%;
-  -moz-border-radius-bottomright: 50% 35%;
-  border-bottom-right-radius: 50% 35%;
-  -webkit-border-bottom-left-radius: 50% 35%;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius-bottomleft: 50% 35%;
-  -moz-background-clip: padding;
-  border-bottom-left-radius: 50% 35%;
-  background-clip: padding-box;
-  border-left: 40px solid darkgreen;
-}
-.tree:after {
-  content: '';
-  display: inline-block;
-  background-color: brown;
-  height: 20px;
-  width: 15px;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -30px;
-}
-.sign {
-  display: inline-block;
-  padding: 10px 15px;
-  color: white;
-  background-color: brown;
-  position: relative;
-}
-.sign:before {
-  content: '';
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-left: 10px solid brown;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  position: absolute;
-  left: 100%;
-  top: 0;
-}
-.sign:after {
-  content: '';
-  display: block;
-  border-left: 5px solid #772020;
-  border-right: 5px solid #772020;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  height: 20px;
-  margin: 0 5px;
 }
 .list__wrap {
   padding: 10px 0;

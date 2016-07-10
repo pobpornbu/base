@@ -76,3 +76,16 @@
     window.Accordion = Accordion;
 
 })( window, document );
+
+
+  // forEach method, could be shipped as part of an Object Literal/Module
+  // var forEach = function (array, callback, scope) {
+  //   for (var i = 0; i < array.length; i++) {
+  //     callback.call(scope, i, array[i]); // passes back stuff we need
+  //   }
+  // };
+  // // Usage:
+  // // optionally change the scope as final parameter too, like ECMA5
+  // forEach(products, function (index, value) {
+  //   console.log(index, value); // passes index + value back!
+  // });

@@ -212,3 +212,11 @@ select {
   border-radius: 0 0 17px 17px;
   background-clip: padding-box;
 }
+
+$footer-menu-size: (100%, 50%, 25%, null);
+
+@for $i from 1 through length($breakpoint){
+  @media screen and (min-width: nth($breakpoint, $i)){
+    width: nth($footer-menu-size, $i);
+  }
+}
