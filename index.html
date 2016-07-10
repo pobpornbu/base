@@ -126,21 +126,34 @@
       </div>
     </div>
   </nav>
-  <div class="container" ng-view></div>
+  <div class="container-fluid" ng-view></div>
 </div>
-<footer class="footer">
+<footer class="footer ">
   <div class="container">
-    <div class="newsletter">
-      <h3 class="footer-head">newsletter</h3>
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Enter your email">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">Go</button>
-        </span>
+    <div class="row">
+      <div class="newsletter col-xs-12 col-sm-6 col-md-4">
+        <h3 class="head --topic">Baseline</h3>
+        <p>Lopsum dolor sit amet, consectetur adipisicing elit. Veritatis ducimus totam officiis unde eveniet deserunt atque nesciunt! Eligendi corporis explicabo, expedita sapiente.</p>
+      </div>
+      <div class="newsletter col-xs-12 col-sm-6 col-md-4">
+        <h3 class="head --topic">About</h3>
+        <ul class="no-list-style">
+          <li><a class="content --link-primary" href="#/whatwedo">What We Do</a></li>
+          <li><a class="content --link-primary" href="#/testimonial">Testimonial</a></li>
+          <li><a class="content --link-primary" href="#/history">History</a></li>
+        </ul>
+      </div>
+      <div class="newsletter col-xs-12 col-sm-6 col-md-4">
+        <h3 class="head --topic">newsletter</h3>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Enter your email">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go</button>
+          </span>
+        </div>
       </div>
     </div>
-
-    <p class="content --text">&copy; Copyright 2016 Baseline.com. All Right Reserved.</p>
+    <p class="content --text text-center">&copy; Copyright 2016 Baseline.com. All Right Reserved.</p>
   </div>
 </footer>
 <!-- End Document
