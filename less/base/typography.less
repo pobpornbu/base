@@ -17,6 +17,33 @@ mark { background: none; }
 	.font-kanda(16px);
 	color: @text-centent-color;
 }
+
+// Responsive Font Size
+// ---------------------------------
+// 1> multiple size
+// ele: jumbotron h2, p
+.font-size-multiply(@font-size, @i: 1, @breakpoint, @multiply) when (@i = 1) {
+  font-size: @font-size;
+}
+.font-size-multiply(@font-size, @i: 1, @breakpoint, @multiply) when (@i < @breakpoint-length) {
+  @media screen and (min-width: extract(@breakpoint, @i) ){
+    font-size: @font-size + @multiply;
+  }
+  .font-size-multiply(@font-size + @multiply, (@i + 1), @breakpoint, @multiply);
+}
+
+// 2> fix size
+// ele: head --topic
+.font-size-fix(@font-size, @i: 1, @breakpoint) when (@i = 1) {
+  font-size: extract(@font-size, 1);
+}
+.font-size-fix(@font-size, @i: 1, @breakpoint) when (@i <= length(@breakpoint)) {
+  @media screen and (min-width: extract(@breakpoint, @i) ){
+    font-size: extract(@font-size, @i + 1);
+  }
+  .font-size-fix(@font-size, (@i + 1), @breakpoint);
+}
+
 // <header class="head__header">
 // 	<p class="head --host">โดย <a class="head --link-primary" href="">สุทธิชัย หยุ่น</a> | <a class="head --link-primary" href="">เทพชัย หย่อง</a></p>
 // 	<p class="head --static">
@@ -29,7 +56,7 @@ mark { background: none; }
 	font-family: 'psl_kanda', Arial, Tahoma, sans-serif;
 	letter-spacing: 1px;
 	&.\--special {
-		font-size: 72px;
+    .font-size-multiply(@font-size-hilight, 1, @breakpoint, 14);
 		font-weight: 700;
 		line-height: 1;
 		color: @brand-hilight;
@@ -41,8 +68,9 @@ mark { background: none; }
     margin-top: 13px;
 	}
 	&.\--topic {
-		font-size: 14px;
+		.font-size-fix(@font-size-topic, 1, @breakpoint-topic);
 		font-weight: 700;
+		text-transform: capitalize;
 		color: @brand-primary;
 	}
 	&.\--header {
@@ -57,6 +85,7 @@ mark { background: none; }
 	}
 }
 
+// Link
 .\--link-primary {
 	color: inherit;
 	&:hover, &:active, &:focus {
@@ -71,7 +100,6 @@ mark { background: none; }
 .\--link-secondary {
 	color: inherit;
 	&:hover, &:active, &:focus {
-		text-decoration: underline;
 		color: @brand-hilight;
 		mark {
 			text-decoration: underline;
@@ -87,6 +115,10 @@ mark { background: none; }
 	}
 }
 
+.\--no-underline {
+	text-decoration: none;
+}
+
 .text-error {
 	.font-kanda(12px);
 	color: @color-error;
@@ -98,6 +130,7 @@ mark { background: none; }
   font-size: 20px;
   margin-right: 5px;
 }
+
 .link{
 // Readmore
   &.\--paperfold {
@@ -360,7 +393,6 @@ mark { background: none; }
 		position: absolute; left: @gap; right: @gap;
 	}
 }
-
 
 .underline(@color: @dark-gold; @width: 40%; @left: 15%; @bottom: -10px) {
 	padding: 15px 0 0; position: relative; margin-bottom: 30px;//margin: 10px 0 0;
