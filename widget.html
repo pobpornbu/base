@@ -58,11 +58,14 @@
           <p>I'm the third accordion</p>
         </div>
       </div>
+      <div id="calendar" class="calendar-bordered"></div>
     </div>
   </div>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/accordion.js"></script>
   <script src="js/tooltip.js"></script>
+  <script src="js/dcalendar.picker.js"></script>
   <script>
 
     var myContent = document.getElementById('content');
@@ -79,6 +82,9 @@
     var acc_group = document.querySelector('.acc-group');
     var myAccordion = new Accordion('#veget_acc_group');
     var myAnotherAccordion = new Accordion('#bread_acc_group',{ closeAll: true});
+
+    $('#calendar').dcalendar();
+
   </script>
 </body>
 </html>

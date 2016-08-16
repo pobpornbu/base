@@ -126,10 +126,12 @@ input[type="search"]::-webkit-search-results-decoration {
     right: 0;
     z-index: 2;
     display: block;
-    .input-text-height();
-    width: @height;
-    height: @height;
     text-align: center;
+    .option(primary{
+      padding: 8px 10px;
+      font-size: 16px;
+      color: @brand-primary;
+    });
   });
   .option(primary{
     .input-text-height();
@@ -366,6 +368,7 @@ input[type=file] {
 // ------------------------------------------------------
 
 .breadcrumb {
+  list-style: none;
   background: none;
   padding: 0;
   li {
@@ -736,3 +739,5 @@ input[type=file] {
   border: 5px solid #fff;
     box-shadow: 0 0 5px #ccc;
 }
+
+@import "calendar";

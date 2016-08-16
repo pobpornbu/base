@@ -1,0 +1,55 @@
+
+.calendar-bordered {
+  margin-bottom: 45px;
+  position: relative;
+  font-family: 'Kanit',sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #7c7c7c;
+  text-align: center;
+  background-color: #fff;
+  thead {
+    display: table;
+    width: 100%;
+    background-color: #f4f4f4;
+    text-transform: uppercase;
+    tr+tr th {
+      font-size: 10px;
+      font-weight: 400;
+    }
+    th {
+      text-align: center;
+    }
+  }
+  #next, #prev {
+    cursor: pointer;
+  }
+  #currM {
+    font-weight: 300;
+    text-transform: capitalize;
+    color: #333;
+    padding-top: 5px;
+  }
+  #currDay {
+    color: #f4bc63;
+  }
+  #today {
+    display: none;
+  }
+  tbody {
+    display: table;
+    width: 100%;
+    border-right: 1px solid #e3e3e3;
+    border-top: 1px solid #e3e3e3;
+    td {
+      display: table-cell;
+      border-left: 1px solid #e3e3e3;
+      border-bottom: 1px solid #e3e3e3;
+      padding: 7px 0;
+    }
+    td.pMDate,
+    td.nMDate{
+      color: #fff;
+    }
+  }
+}
