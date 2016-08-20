@@ -6,12 +6,16 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-kanda.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/accordion.css">
   <link rel="stylesheet" href="css/tooltip.css">
+  <!-- semantic ui - accordion -->
+  <link rel="stylesheet" href="bower_components/semantic/dist/components/accordion.css">
 </head>
 <body>
   <div class="container">
@@ -58,12 +62,35 @@
           <p>I'm the third accordion</p>
         </div>
       </div>
+      <div class="accordion ui accordion-icon">
+        <div class="title">
+          <i class="icon-warning ion-android-bulb"></i><span><span>Gold Treatment ทำให้ผิวขาวใสและดูอ่อนเยาว์ขึ้นได้อย่างไร</span></span> <i class="ion-chevron-down arrow-down"></i>
+        </div>
+        <div class="content">
+          <div class="content-group">
+            <strong>Growth Factor White คืออะไร?</strong>
+            <p>นวัตกรรมเพื่อผิวหน้าที่ขาวกระจ่างใสยิ่งขึ้น แลดูอ่อนวัยกว่าเดิม รักษาฝ้าได้ตั้งแต่ระดับเซลล์
+            </p>
+          </div>
+          <div class="content-group">
+            <strong>ขั้นตอนการทำ Gold Treatment เป็นอย่างไร?</strong>
+            <p>Growth Factor White นำวิตามิน แร่ธาตุ และ Nano Growth Factor เข้าสู่ผิวหนัง โดยตรง เซลล์ผิวจึงนำไปใช้ได้ทันที ผิวจึงฟื้นฟูสภาพได้อย่างรวดเร็ว Growth Factor กระตุ้นการเปลี่ยนแปลงของผิวตั้งแต่ระดับเซลล์ผิว ก่อให้เกิดผิวใหม่ที่อ่อนเยาว์ดุจผิวแรก ผิวขาวใสเปล่งปลั่งมีชีวิตชีวากว่าเคย, สารต้านอนุมูลอิสระชั้นยอด เช่น Arbutin และ Ascorbic Acid ช่วยป้องกันการเกิดริ้วรอยและจุดด่างดำบนผิว, Nano Peptide เพิ่มความขาวใสให้ผิวพร้อมกับทำให้ฝ้าจางลงอย่างเป็นธรรมชาติ
+            </p>
+          </div>
+          <div class="content-group">
+            <strong>สารประกอบสำคัญของ Growth Factor White.</strong>
+            <p>TGP2 สารต่อต้านและยับยั้งการสร้างเม็ดสี (จุดด่างดำ) ทำให้ฝ้าจางลง ป้องกันการเกิดฝ้า ไม่ให้ฝ้าเข้มขึ้น&nbsp;ASP เพิ่มความกระจ่างใสให้ผิว ป้องกันการเกิดฝ้าและรอยดำ ลดการสร้าง เม็ดสีผิดปกติตั้งแต่ระยะเริ่มแรก Licorice ปรับสีผิวให้ขาวขึ้น ยับยั้งการเกิดรอยดำบนผิว Ascorbic Acid ปกป้องผิวจากแสงแดด ป้องกันการเกิดอนุมูลอิสระ,รอยดำและผิวคล้ำเสีย Arbutin ผิวใสขึ้นอย่างเป็นธรรมชาติ ลดอนุมูลอิสระ EGF เพิ่มการสร้างเซลล์ผิวใหม่ที่อ่อนเยาว์กว่า Hyaluronic Acid คืนความชุ่มชื่นให้ผิวและลดเลือนริ้วรอย </p>
+          </div>
+        </div>
+      </div>
       <div id="calendar" class="calendar-bordered"></div>
     </div>
   </div>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/accordion.js"></script>
+  <!-- semantic ui - accordion -->
+  <script src="js/accordion.min.js"></script></body>
   <script src="js/tooltip.js"></script>
   <script src="js/dcalendar.picker.js"></script>
   <script>
@@ -85,6 +112,7 @@
 
     $('#calendar').dcalendar();
 
+    $('.accordion.ui').accordion();
   </script>
 </body>
 </html>
