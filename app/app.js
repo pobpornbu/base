@@ -27,8 +27,8 @@ BaselineApp.config(['$routeProvider',
       when('/button', {
         templateUrl: 'partials/button.html'
       }).
-      when('/function', {
-        templateUrl: 'partials/function.html'
+      when('/faq', {
+        templateUrl: 'partials/faq.html'
       }).
       when('/animation', {
         templateUrl: 'partials/animation.html'
