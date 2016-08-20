@@ -28,8 +28,8 @@ fieldset {
 
 // Search
 // ---------------------------------------
-// <div class="form-group input__wrap --icon">
-//   <input type="search" name="search" class="input__search input --primary" placeholder="Search" results="5" autosave="some_unique_value">
+// <div class="form-group input__wrap --search --icon">
+//   <input type="search" name="search" class="js-input-expand input__search input --primary" placeholder="Search" results="5" autosave="some_unique_value">
 //   <i class="fa fa-search input__icon --search"></i>
 // </div>
 
@@ -48,24 +48,27 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .component(input {
-  .part(search {
-    width: 100px;
-    .round;
-    .transition(all .5s);
-
-    &:focus {
+  .part(wrap{
+    .option(search {
       width: 150px;
+      .transition(all .5s);
+    });
+    &.is-focus {
+      width: 200px;
     }
+  });
+  .part(search {
+    .round;
+    width: 100%;
   });
   .part(icon {
     .option(search {
       font-size: 16px;
       color: @gray;
-      .input-text-height();
-      line-height: @height - 4;
     });
   });
 });
+
 
 // Input
 // ---------------------------------------
@@ -115,6 +118,9 @@ input[type="search"]::-webkit-search-results-decoration {
     .input-text-height();
     height: @height;
     width: 100%;
+    .option(icon{
+      padding: 8px 30px 8px 10px !important;
+    });
   });
   .part(textarea {
     height: 80px;
@@ -127,8 +133,8 @@ input[type="search"]::-webkit-search-results-decoration {
     z-index: 2;
     display: block;
     text-align: center;
+    padding: 7px 10px;
     .option(primary{
-      padding: 8px 10px;
       font-size: 16px;
       color: @brand-primary;
     });
@@ -738,6 +744,68 @@ input[type=file] {
   margin: 30px auto;
   border: 5px solid #fff;
     box-shadow: 0 0 5px #ccc;
+}
+
+.ui.accordion {
+  max-width: 100%;
+  border: 3px solid #d8dcdc;
+  padding: 25px 20px;
+  font-family: 'psl_kanda',sans-serif;
+  font-size: 14px;
+}
+.accordion-icon.ui.accordion .title:not(.ui) {
+  position: relative;
+  cursor: pointer;
+  font-family: 'psl_kanda',sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #5b5b5b;
+  padding: 0;
+}
+.accordion-icon .title span {
+    display: block;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.accordion-icon .icon-warning {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -17px;
+  margin-right: 10px;
+  font-size: 24px;
+  color: #f3d63f;
+}
+
+.accordion-icon .arrow-down {
+  font-size: 20px;
+  color: @brand-secondary;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -15px;
+  -webkit-transition: transform .2s ease;
+  -moz-transition: transform .2s ease;
+  -ms-transition: transform .2s ease;
+  transition: transform .2s ease;
+}
+.accordion-icon .active .icon-arrow-down {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+@media screen and (max-width: 640px){
+  .ui.dropdown-borderless .title {
+    border-bottom: 1px solid #d8d8d8;
+  }
+  .ui.dropdown-borderless .item {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 0;
+  }
+  .phuksa .ui.dropdown-borderless .item.active a {
+    border-bottom: none;
+  }
 }
 
 @import "calendar";

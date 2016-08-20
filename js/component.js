@@ -58,6 +58,11 @@ $(function() {
     $('.js-comment-textarea').on('focus', function() {
     	$(this).parent().toggleClass('active');
     });
+    $('.js-input-expand').on('focus', function(){
+        $(this).parent().addClass('is-focus');
+    }).on('focusout', function(){
+        $(this).parent().removeClass('is-focus');
+    });
 
     // Tab
     // $('#myTab').on('click', 'a', function(e) {
@@ -120,6 +125,10 @@ $(function() {
         $(this).toggleClass('open');
     });
 
+    // var url = window.location.href; console.log(url);
+    // var page = url.split("/"); console.log(page);
+    // var num = (page.length) - 1; console.log(num);
+    // $('.script').attr('src','js/'+page[num]+'.js');
 });
 
     $('.js-tab-list').each(function(){

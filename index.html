@@ -80,7 +80,7 @@
             <a href="#/component" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Component <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="#/menu">Menu</a></li>
-              <li><a href="#/form">Form</a></li>
+              <li><a href="form.html">Form</a></li>
               <li><a href="#/button">Button</a></li>
               <li><a href="#/select">Select</a></li>
               <li class="divider"></li>
@@ -118,8 +118,8 @@
           </li>
         </ul>
         <form class="navbar-form navbar-right" role="search">
-          <div class="form-group input__wrap --icon">
-            <input type="search" name="search" class="input__search input --primary" placeholder="Search" results="5" autosave="some_unique_value">
+          <div class="form-group input__wrap --search --icon">
+            <input type="search" name="search" class="input input__text --primary --icon js-input-expand" placeholder="Search" results="5" autosave="some_unique_value">
             <i class="fa fa-search input__icon --search"></i>
           </div>
         </form>
@@ -128,7 +128,7 @@
   </nav>
   <div class="container-fluid" ng-view></div>
 </div>
-<footer class="footer ">
+<footer class="footer">
   <div class="container">
     <div class="row">
       <div class="newsletter col-xs-12 col-sm-6 col-md-4">
@@ -140,7 +140,8 @@
         <ul class="no-list-style">
           <li><a class="content --link-primary" href="#/whatwedo">What We Do</a></li>
           <li><a class="content --link-primary" href="#/testimonial">Testimonial</a></li>
-          <li><a class="content --link-primary" href="#/history">History</a></li>
+          <li><a class="content --link-primary" href="faq.html">FAQ</a></li>
+          <li><a class="content --link-primary" href="#/team">Team</a></li>
         </ul>
       </div>
       <div class="newsletter col-xs-12 col-sm-6 col-md-4">
@@ -159,7 +160,6 @@
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <script src=""></script>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
@@ -174,7 +174,6 @@
   <script src="js/jquery.tooltipster.min.js"></script>
   <script src="js/jquery.textresizer.min.js"></script>
 
-
   <script src="js/component.js"></script>
-
+  <script src="js/faq.js"></script>
 </html>
