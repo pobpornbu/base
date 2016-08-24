@@ -35,3 +35,37 @@
   .darken-color(@name, (@i + 1), @n, @color, @weight + 10, @property);
 }
 
+.font(@fz: 14px; @fw: 300; @fc: @font-color-text; @tt: capitalize; @flh: 1.33333; @td: none){
+  font-size: @fz;
+  font-weight: @fw;
+  color: @fc;
+  line-height: @flh;
+  text-transform: @tt;
+  text-decoration: @td;
+}
+.font-head-lg {
+  .font(36px; 400; @font-color-text);
+}
+
+.max-xs(@rules) {
+  @media screen and (max-width: 480px) { @rules(); }
+}
+.max-sm(@rules) {
+  @media screen and (max-width: 640px) { @rules(); }
+}
+.max-md(@rules) {
+  @media screen and (max-width: 767px) { @rules(); }
+}
+
+.xs-up(@rules) {
+  @media screen and (min-width: 481px) { @rules(); }
+}
+.sm-up(@rules) {
+  @media screen and (min-width: 641px) { @rules(); }
+}
+.md-up(@rules) {
+  @media screen and (min-width: 768px) { @rules(); }
+}
+.lg-up(@rules) {
+  @media screen and (min-width: 992px) { @rules(); }
+}
