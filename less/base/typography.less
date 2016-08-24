@@ -22,7 +22,7 @@ mark { background: none; }
 // ---------------------------------
 // 1> multiple size
 // ele: jumbotron h2, p
-.font-size-multiply(@font-size, @i: 1, @breakpoint, @multiply) when (@i = 1) {
+.font-size-multiply(@font-size, @i: 1, @breakpoint: @breakpoint, @multiply: 2) when (@i = 1) {
   font-size: @font-size;
 }
 .font-size-multiply(@font-size, @i: 1, @breakpoint, @multiply) when (@i < @breakpoint-length) {
@@ -119,7 +119,7 @@ mark { background: none; }
 	text-decoration: none;
 }
 
-.text-error {
+.error, .text-error {
 	.font-kanda(12px);
 	color: @color-error;
 }

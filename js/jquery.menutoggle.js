@@ -1,10 +1,3 @@
-/*
-* Menutoggle.js - minimal responsive javascript framework
-* Author: Pobporn Burintarathikul
-* Copyright (c) 2016 Pobporn Burintarathikul
-* Dual MIT/BSD license
-*/
-
 ;(function ($, window, document) {
 
   var pluginName = "menutoggle",
@@ -30,6 +23,8 @@
     this.$el = $(element);
     this.$body = $('body');
     this.$container = $('.container');
+    this.$wrapper = $('.js-show-fix-menu');
+    this.$bar   = $('.navbar-header');
     this.$btn   = $('.js-menu-btn');
     this.$list  = $('.js-menu-list');
     this.$overlay = $('.js-overlay');
@@ -46,12 +41,16 @@
     this.Status = 'hidden';
     this.timerHide = null;
     this.timerShow = null;
+    this.firstSec = this.$wrapper.offset().top;
+    this.cursor = window.scrollY;
+    this.current = $(window).scrollTop();
     // this will be the tooltip element (jQuery wrapped HTML element)
     this.$menutoggle;
 
     // for backward compatibility
     // this.options.iconTheme = this.options.iconTheme.replace('.', '');
     // this.options.theme = this.options.theme.replace('.', '');
+    // console.log('init '+this.current+'='+this.cursor);
 
     // launch
     this._init();
@@ -59,7 +58,7 @@
   Plugin.prototype = {
 
     _init: function() {
-
+      // console.log('start');
       var self = this;
 
       // disable the plugin on old browsers (including IE7 and lower)
@@ -67,6 +66,11 @@
         // $('body').addClass('js-menu-side');
         $overlay = $('<div />', {'class': 'js-overlay overlay'}).insertAfter(self.$container);
       }
+      if(self.cursor >= self.firstSec){
+        console.log('more....');
+        self.$bar.addClass('is-menu-fixed show');
+      }
+
       self._resize();
       self._show();
       self._bind();
@@ -92,16 +96,21 @@
       //close lateral menu on mobile
       setTimeout(function(){
         this.$overlay.on('click swipeleft swiperight', function(){
-          // if($('.js-menu-side').hasClass('is-menu-open')) {
             self._close();
-            // $('.js-overlay').removeClass('open');
-          // }
         });
 
       }, 500);
 
       $(window).on('resize', function(){
         self._resize();
+      });
+
+      $(window).on('scroll', function(){
+        if($(window).scrollTop() >= self.firstSec){
+          self._fixed();
+        }else{
+          self._relative();
+        }
       });
     },
 
@@ -125,7 +134,7 @@
 
     },
 
-    _open: function(){ console.log('open');
+    _open: function(){ // console.log('open');
       var self = this;
       self.$btn.addClass('open');
       self.$list.addClass('open');
@@ -133,10 +142,10 @@
       self.$el.addClass('is-menu-open');
     },
 
-    _close: function(){ console.log('close');
+    _close: function(){ //console.log('close xxxx');
       var self = this;
       self.$btn.removeClass('open');
-      self.$list.removeClass('open');
+      self.$list.removeClass('open in');
       self.$overlay.removeClass('open');
       self.$el.removeClass('is-menu-open');
     },
@@ -144,16 +153,24 @@
     _resize: function(){
       var self = this;
       if($(window).width() >= 768){
-        console.log('desktop');
-        self.$btn.hide();
         self.$list.removeClass('menu-sidebar-container');
         self.$list.addClass('menu-topbar-container');
       }else{
-        console.log('mobile');
-        self.$btn.show();
         self.$list.removeClass('menu-topbar-container');
         self.$list.addClass('menu-sidebar-container');
       }
+    },
+
+    _fixed: function(){
+      var self = this;
+        self.$bar.addClass('is-menu-fixed show');
+        self.$list.addClass('is-menu-fixed show');
+    },
+
+    _relative: function(){
+      var self = this;
+        self.$bar.removeClass('is-menu-fixed show');
+        self.$list.removeClass('is-menu-fixed show');
     }
   };
 
@@ -167,3 +184,4 @@
   };
 
 })( jQuery, window, document );
+

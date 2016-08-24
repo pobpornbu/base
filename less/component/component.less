@@ -193,11 +193,12 @@ input[type="search"]::-webkit-search-results-decoration {
 // </fieldset>
 
 input[type=radio],input[type=checkbox]{
-  display: none;
+  visibility: hidden; // to enable validation
 }
 .input__radio, .input__checkbox {
   display: inline-block;
   cursor: pointer;
+  margin-left: -15px; // overlap the actual input
 }
 .input__radio:before, .input__checkbox:before {
   font-size: 20px;

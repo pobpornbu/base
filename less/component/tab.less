@@ -61,3 +61,55 @@
     }
   });
 });
+
+// <div id="products-tab" class="ui tabular menu tab-bordered tab-head-group clearfix">
+//   <div class="item col-xs-12 col-sm-4 tab-head" data-tab="review">รีวิวสินค้า</div>
+//   <div class="item col-xs-12 col-sm-4 tab-head" data-tab="product-image">ภาพสินค้า</div>
+//   <div class="item col-xs-12 col-sm-4 tab-head active" data-tab="comment">แสดงความคิดเห็น (0)</div>
+// </div>
+// <div class="ui tab tab-content products-detail-desc" data-tab="review">
+//   รีวิวสินค้า
+// </div>
+// <div class="ui tab tab-content" data-tab="product-image">
+//   ภาพสินค้า
+// </div>
+// <div class="ui tab tab-content active" data-tab="comment">
+//   แสดงความคิดเห็น
+// </div>
+
+.tab-bordered {
+  .tab-head-group {
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+  }
+  .tab-head {
+    height: 60px;
+    padding: 20px 10px;
+    margin-left: -1px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #5b5b5b;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #cecece;
+    background-color: #f9f9f9;
+  }
+  .tab-head.active {
+    background-color: #fff;
+    border-color: #acacac #acacac #fff #acacac;
+  }
+  @media screen and (max-width: 640px){
+    .tab-primary .tab-head.active {
+      margin-top: -1px;
+    }
+  }
+
+  .tab-title {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #00a49d;
+  }
+}
+

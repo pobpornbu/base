@@ -1,0 +1,121 @@
+// <body class="js-menu-side menu-side">
+//   <nav class="navbar navbar-default">
+//     <div class="container-fluid">
+//       <div class="navbar-header">
+//         <div class="menu__icon --cross menu-btn-offset js-menu-btn">
+//             <span></span>
+//             <span></span>
+//             <span></span>
+//             <span></span>
+//         </div>
+//         <a class="navbar-brand" href="#">
+//           <img alt="Brand" src="images/favicon.png">
+//         </a>
+//       </div>
+//       <div class="js-menu-list menu-sidebar-container">
+//         <ul class="menu-list">
+//           <li><a href="#">Menu List</a></li>
+//           <li><a href="#">Menu List</a></li>
+//           <li><a href="#">Menu List</a></li>
+//           <li><a href="#">Menu List</a></li>
+//           <li><a href="#">Menu List</a></li>
+//         </ul>
+//       </div>
+//     </div>
+//   </nav>
+//   <div class="container js-show-fix-menu">
+//     ...
+//   </div>
+//   <div class="overlay"></div>
+
+// </body>
+// <script src="js/jquery.menutoggle.js"></script>
+// <script> $('.js-menu-side').menutoggle(); </script>
+
+.js-menu-side {
+  &.is-menu-open {
+    position: fixed;
+  }
+}
+
+.menu-btn-offset {
+  top: 15px;
+  left: 15px;
+}
+
+.menu-topbar-container{
+  float: left;
+  .menu-list{
+    margin-top: 15px;
+  }
+  li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
+
+.menu-sidebar-container {
+  width: 100%;
+  max-width: 475px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  z-index: 3;
+  .transition(left .3s linear);
+  @media screen and (min-width: @screen-sm-min){
+    width: 45%;
+  }
+  &.open {
+    left: 0;
+  }
+  background-color: #ccc;
+}
+
+  .menu-list {
+    list-style: none none outside;
+    margin-top: 60px;
+    li {
+      opacity: 0;
+      .transition(opacity .3s linear);
+    }
+    .open & {
+      li {
+        opacity: 1;
+      }
+      li:nth-child(2){
+        transition-delay: .4s;
+      }
+      li:nth-child(3){
+        transition-delay: .5s;
+      }
+      li:nth-child(4){
+        transition-delay: .6s;
+      }
+      li:nth-child(5){
+        transition-delay: .7s;
+      }
+    }
+  }
+
+
+.js-menu-btn {
+  &.open {
+    z-index: 4;
+  }
+}
+
+.overlay {
+  z-index: -100;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .transition(z-index .8s linear);
+  &.open {
+    z-index: 2;
+  }
+}
+

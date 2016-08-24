@@ -27,256 +27,262 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+  <style>label.error{ display:none; }</style>
 </head>
-<body class="js-menu-side menu-side"><div class="row">
-<div class="content-container">
-  <nav class="navbar">
-    <div class="container-fluid nav__container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand brand__wrap" href="#/"><h1 class="brand__text">baseline</h1></a>
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="#/component" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Component <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#/menu">Menu</a></li>
-              <li><a href="form.html">Form</a></li>
-              <li><a href="#/button">Button</a></li>
-              <li><a href="#/select">Select</a></li>
-              <li class="divider"></li>
-              <li><a href="tab.html">Tab</a></li>
-              <li><a href="accordion.html">Accordion</a></li>
-              <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-          <li><a href="#/animation">Animation</a></li>
-          <li><a href="#/theme">Theme</a></li>
-          <li>
-            <a href="#/content" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Content <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#/gridalicious">Grid-a-licious</a></li>
-              <li><a href="#/list">List</a></li>
-              <li><a href="#/select">Select</a></li>
-              <li><a href="tab.html">Tab</a></li>
-              <li class="divider"></li>
-              <li><a href="shape.html">Shape</a></li>
-              <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Sample Page <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#/result">Search Result</a></li>
-              <li><a href="#/sitemap">Sitemap</a></li>
-              <li class="divider"></li>
-              <li><a href="#/error404">404</a></li>
-              <!-- <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li> -->
-            </ul>
-          </li>
-        </ul>
-        <form class="navbar-form navbar-right" role="search">
-          <div class="form-group input__wrap --icon">
-            <input type="search" name="search" class="input__search input --primary" placeholder="Search" results="5" autosave="some_unique_value">
-            <i class="fa fa-search input__icon --search"></i>
-          </div>
-        </form>
-      </div>
-    </div>
-  </nav>
-  <div class="container-fluid">
-    <form class="col-xs-12">
-      <fieldset class="form-group">
-        <div class="col-xs-12 col-sm-3">
-          <label for="firstname" class="text__label">First Name</label>
+<body class="js-menu-side menu-side">
+  <div class="row">
+    <div class="content-container">
+    <nav class="navbar">
+      <div class="container-fluid nav__container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand brand__wrap" href="#/"><h1 class="brand__text">baseline</h1></a>
         </div>
-        <div class="col-xs-12 col-sm-9">
-          <div class="validate__container">
-            <input id="firstname" type="text" class="input input__text --primary" name="firstname"
-             placeholder="firstname" pattern="[a-z]" required/>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="form-group">
-        <div class="col-xs-12 col-sm-3">
-          <label for="skill" class="text__label">Skills</label>
-        </div>
-        <div class="col-xs-12 col-sm-9">
-          <textarea name="skill" id="skill" class="input input__textarea --primary js-comment-textarea" placeholder="Tell us more about yourself"></textarea>
-        </div>
-      </fieldset>
-      <fieldset class="form-group">
-        <div class="col-xs-12 col-sm-3">
-          <label for="gender" class="text__label">Gender</label>
-        </div>
-        <div class="col-xs-12 col-sm-9">
-          <input type="radio" name="gender" id="female">
-          <label class="input__radio input--primary"  for="female"></label>
-          <span class="text__label">Female</span>
-          <input type="radio" name="gender" id="male">
-          <label class="input__radio input--primary" for="male"></label>
-          <span class="text__label">Male</span>
-        </div>
-      </fieldset>
-      <fieldset class="form-group">
-        <div class="col-xs-12 col-sm-9 col-sm-offset-3">
-          <select id="mounth">
-            <option value="hide">Month</option>
-            <option value="january" rel="icon-temperature">January</option>
-            <option value="february">February</option>
-            <option value="march">March</option>
-            <option value="april">April</option>
-            <option value="may">May</option>
-            <option value="june">June</option>
-            <option value="july">July</option>
-            <option value="august">August</option>
-            <option value="september">September</option>
-            <option value="october">October</option>
-            <option value="november">November</option>
-            <option value="december">December</option>
-          </select>
-          <div class="i-select-primary">
-            <select id="year">
-              <option value="hide">-- Year --</option>
-              <option value="2010">2010</option>
-              <option value="2011">2011</option>
-              <option value="2012">2012</option>
-              <option value="2013">2013</option>
-              <option value="2014">2014</option>
-              <option value="2015">2015</option>
-            </select>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="form-group">
-        <div class="col-xs-12 col-sm-3">
-          <label for="skill" class="text__label">Age</label>
-        </div>
-        <div class="col-xs-12 col-sm-9">
-          <input type="number" min="18" max="60" step="1" name="age" id="age" class="input input__text --primary"></input>
-        </div>
-      </fieldset>
-      <fieldset class="form-group">
-        <div class="col-xs-12 col-sm-3">
-          <label for="appointdate" class="text__label">Appointment date</label>
-        </div>
-        <div class="col-xs-12 col-sm-9">
-          <div class="input__wrap --icon input-wrap-calendar">
-            <input id="appointdate" type="text" class="input input__text --primary --icon" name="appointdate" required/>
-            <i class="fa fa-calendar input__icon --primary"></i>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="form-group">
-        <div class="col-xs-12 col-sm-9 col-sm-offset-3">
-          <label>Your favorite fruit:
-            <datalist id="fruits">
-              <select name="fruits">
-                <option value="Blackberry">Blackberry</option>
-                <option value="Blackcurrant">Blackcurrant</option>
-                <option value="Blueberry">Blueberry</option>
-                <!-- … -->
-              </select>
-              If other, please specify:
-            </datalist>
-              <input type="text" name="fruit" list="fruits" multiple>
-          </label>
-        </div>
-      </fieldset>
-      <fieldset class="form-group">
-        <div class="col-xs-12 col-sm-9 col-sm-offset-3">
-          <input type="checkbox" id="subscribe" name="subscribe">
-          <label class="input__checkbox input--primary" for="subscribe"></label>
-          <span class="text__label">I agree to the Term of Use and Privacy Policy</span>
-        </div>
-      </fieldset>
-      <fieldset class="form-group">
-        <div class="col-xs-12 col-sm-9 col-sm-offset-3">
-          <input type="reset" value="Cancel" class="button --outline-secondary" formnovalidate></input>
-          <input type="submit" value="Save" class="button --solid-primary"
-            formaction="process.php"
-            formenctype="application/x-www-form-urlencoded"
-            formmethod="POST"
-            formtarget="_self"
-            formnovalidate></input>
-        </div>
-      </fieldset>
-    </form>
-
-    <form class="col-xs-12" name="register_form" id="register_form" novalidate>
-      <div class="row">
-        <div class="col-xs-12 col-sm-3">
-          <div class="input-file__group">
-            <div id="showfile" class="input-file__wrap"><img src="images/avatar-default.png" width="200" height="200" id="avatar" class="input-file__img"></div>
-            <span class="input-file__btn">เปลี่ยนรูปของคุณ<input id="imagefile" type="file" multiple="multiple" class="input-file__input" name="photo"></span>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-9">
-          <fieldset class="form-group">
-            <div class="label-wrap">
-              <label for="name" class="head --static">ชื่อ</label>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#/component" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Component <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#/menu">Menu</a></li>
+                <li><a href="form.html">Form</a></li>
+                <li><a href="#/button">Button</a></li>
+                <li><a href="#/select">Select</a></li>
+                <li class="divider"></li>
+                <li><a href="tab.html">Tab</a></li>
+                <li><a href="accordion.html">Accordion</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+            <li><a href="#/animation">Animation</a></li>
+            <li><a href="#/theme">Theme</a></li>
+            <li>
+              <a href="#/content" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Content <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#/gridalicious">Grid-a-licious</a></li>
+                <li><a href="#/list">List</a></li>
+                <li><a href="#/select">Select</a></li>
+                <li><a href="tab.html">Tab</a></li>
+                <li class="divider"></li>
+                <li><a href="shape.html">Shape</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Sample Page <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#/result">Search Result</a></li>
+                <li><a href="#/sitemap">Sitemap</a></li>
+                <li class="divider"></li>
+                <li><a href="#/error404">404</a></li>
+                <!-- <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li> -->
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group input__wrap --icon">
+              <input type="search" name="search" class="input__search input --primary" placeholder="Search" results="5" autosave="some_unique_value">
+              <i class="fa fa-search input__icon --search"></i>
             </div>
-            <div class="input-wrap">
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <form class="col-xs-12" id="register_form" name="register_form" method="post" novalidate="novalidate">
+        <fieldset class="form-group">
+          <div class="col-xs-12 col-sm-3">
+            <label for="firstname" class="text__label">First Name</label>
+          </div>
+          <div class="col-xs-12 col-sm-9">
             <div class="validate__container">
-              <input id="name" type="text" class="input input__text --primary" name="name" required/>
+              <input id="firstname" type="text" class="input input__text --primary" name="firstname"
+               placeholder="firstname" pattern="[a-z]" required/>
             </div>
           </div>
-          </fieldset>
-          <fieldset class="form-group">
-            <div class="label-wrap">
-              <label for="email" class="head --static">อีเมล์</label>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-xs-12 col-sm-3">
+            <label for="skill" class="text__label">Skills</label>
+          </div>
+          <div class="col-xs-12 col-sm-9">
+            <textarea name="skill" id="skill" class="input input__textarea --primary js-comment-textarea" placeholder="Tell us more about yourself"></textarea>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-xs-12 col-sm-3">
+            <label for="gender" class="text__label">Gender</label>
+          </div>
+          <div class="col-xs-12 col-sm-9">
+            <input type="radio" name="gender" id="female" required>
+            <label class="input__radio input--primary" value="female" for="female"></label>
+            <span class="text__label">Female</span>
+
+            <input type="radio" name="gender" id="male" required>
+            <label class="input__radio input--primary" value="male" for="male"></label>
+            <span class="text__label">Male</span>
+            <label for="gender" id="gender-error" class="error text-error"></label>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+            <select id="mounth" class="pull-left gap-right-sm" required="true">
+              <option value="hide">Month</option>
+              <option value="january" rel="icon-temperature">January</option>
+              <option value="february">February</option>
+              <option value="march">March</option>
+              <option value="april">April</option>
+              <option value="may">May</option>
+              <option value="june">June</option>
+              <option value="july">July</option>
+              <option value="august">August</option>
+              <option value="september">September</option>
+              <option value="october">October</option>
+              <option value="november">November</option>
+              <option value="december">December</option>
+            </select>
+            <div class="i-select-primary pull-left">
+              <select id="year">
+                <option value="hide">-- Year --</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+              </select>
             </div>
-            <div class="input-wrap">
-              <input id="email" type="email" class="input input__text --primary" name="email" required/>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-xs-12 col-sm-3">
+            <label for="age" class="text__label">Age</label>
+          </div>
+          <div class="col-xs-12 col-sm-9">
+            <input type="number" min="18" max="60" step="1" name="age" id="age" class="input input__text --primary" required="true"></input>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-xs-12 col-sm-3">
+            <label for="appointdate" class="text__label">Appointment date</label>
+          </div>
+          <div class="col-xs-12 col-sm-9">
+            <div class="input__wrap --icon input-wrap-calendar">
+              <input id="appointdate" type="text" class="input input__text --primary --icon" name="appointdate" required/>
+              <i class="fa fa-calendar input__icon --primary"></i>
             </div>
-          </fieldset>
-          <fieldset class="form-group">
-            <div class="label-wrap">
-              <label for="channel" class="head --static">ชื่อรายการ</label>
-            </div>
-            <div class="input-wrap">
-              <div class="select --outline-secondary">
-                <select id="subject" name="subject">
-                    <option value="hide">เลือกรายการ</option>
-                    <option value="aaaaa">aaaaa</option>
-                    <option value="bbbbb">bbbbb</option>
-                    <option value="ccccc">ccccc</option>
-                    <option value="ddddd">ddddd</option>
-                    <option value="eeeee">eeeee</option>
-                    <option value="fffff">fffff</option>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+            <label>Your favorite fruit:
+              <datalist id="fruits">
+                <select name="fruits">
+                  <option value="Blackberry">Blackberry</option>
+                  <option value="Blackcurrant">Blackcurrant</option>
+                  <option value="Blueberry">Blueberry</option>
+                  <!-- … -->
                 </select>
+                If other, please specify:
+              </datalist>
+                <input type="text" name="fruit" list="fruits" multiple required>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+            <input type="checkbox" id="agree" name="agree" aria-required="true" required>
+            <label class="input__checkbox input--primary" for="agree"></label>
+            <span class="text__label">I agree to the Term of Use and Privacy Policy</span>
+            <label for="agree" id="agree-error" class="error text-error"></label>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+            <input type="reset" value="Cancel" class="button --outline-secondary" formnovalidate></input>
+            <input type="submit" value="Save" class="button --solid-primary" />
+            <!-- <input type="submit" value="Save" class="button --solid-primary"
+              formaction="process.php"
+              formenctype="application/x-www-form-urlencoded"
+              formmethod="POST"
+              formtarget="_self"
+              formnovalidate></input> -->
+          </div>
+        </fieldset>
+      </form>
+
+      <form class="col-xs-12" name="comment_form" id="comment_form" method="post" novalidate>
+        <div class="row">
+          <div class="col-xs-12 col-sm-3">
+            <div class="input-file__group">
+              <div id="showfile" class="input-file__wrap"><img src="images/avatar-default.png" width="200" height="200" id="avatar" class="input-file__img"></div>
+              <span class="input-file__btn">เปลี่ยนรูปของคุณ<input id="imagefile" type="file" multiple="multiple" class="input-file__input" name="photo"></span>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-9">
+            <fieldset class="form-group">
+              <div class="label-wrap">
+                <label for="name" class="head --static">ชื่อ <span>*</span></label>
+              </div>
+              <div class="input-wrap">
+              <div class="validate__container">
+                <input id="name" type="text" class="input input__text --primary" name="name" required/>
               </div>
             </div>
-          </fieldset>
-          <fieldset class="form-group">
-            <div class="label-wrap">
-              <label for="comment" class="head --static">แสดงความคิดเห็น</label>
-            </div>
-            <div class="input-wrap">
-              <textarea name="comment" id="comment" class="input input__textarea --primary"></textarea>
-            </div>
-          </fieldset>
-          <fieldset class="form-group">
-            <div class="button-wrap">
-              <!-- <input type="submit" value="ส่ง" class="button --solid-primary"></input> -->
-              <input type="submit" value="ส่ง" class="button --solid-primary disabled" disabled></input>
-            </div>
-          </fieldset>
+            </fieldset>
+            <fieldset class="form-group">
+              <div class="label-wrap">
+                <label for="email" class="head --static">อีเมล์ <span>*</span></label>
+              </div>
+              <div class="input-wrap">
+                <input id="email" type="email" class="input input__text --primary" name="email" required/>
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <div class="label-wrap">
+                <label for="channel" class="head --static">ชื่อรายการ <span>*</span></label>
+              </div>
+              <div class="input-wrap">
+                <div class="select --outline-secondary">
+                  <select id="subject" name="subject">
+                      <option value="hide">เลือกรายการ</option>
+                      <option value="aaaaa">aaaaa</option>
+                      <option value="bbbbb">bbbbb</option>
+                      <option value="ccccc">ccccc</option>
+                      <option value="ddddd">ddddd</option>
+                      <option value="eeeee">eeeee</option>
+                      <option value="fffff">fffff</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <div class="label-wrap">
+                <label for="comment" class="head --static">แสดงความคิดเห็น</label>
+              </div>
+              <div class="input-wrap">
+                <textarea name="comment" id="comment" class="input input__textarea --primary"></textarea>
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <div class="button-wrap">
+                <!-- <input type="submit" value="ส่ง" class="button --solid-primary"></input> -->
+                <input type="submit" value="ส่ง" class="button --solid-primary"></input>
+              </div>
+            </fieldset>
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
 
+    </div>
   </div>
-</div>
   <footer class="footer">
     <div class="container">
       <div class="row">
@@ -316,16 +322,38 @@
 <script src="js/select.js"></script>
 <script src="js/preview-image.js"></script>
 <script src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+<script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
 <script>
-      $('input[name="appointdate"]').daterangepicker({
-        parentEl: '.input-wrap-calendar',
-        singleDatePicker: true,
-        showDropdowns: false,
-        timePicker: false,
-        autoUpdateInput: true,
-        opens: 'center',
-        locale: {
-            format: 'DD/MM/YYYY'
+    $('input[name="appointdate"]').daterangepicker({
+      parentEl: '.input-wrap-calendar',
+      singleDatePicker: true,
+      showDropdowns: false,
+      timePicker: false,
+      autoUpdateInput: true,
+      opens: 'center',
+      locale: {
+          format: 'DD/MM/YYYY'
+      }
+  });
+
+  $('#register_form').validate({
+    rules: {
+      age: {
+        digits: true
+      }
+    },
+    messages: {
+      gender: { required: "Why don't you answer! Secret!" },
+      agree: { required: "You must accept our policy." }
+    }
+  });
+
+  $("#comment_form").validate({
+      rules: {
+        email: {
+          email: true
         }
-    });
+      }
+  });
 </script>
